@@ -8,22 +8,38 @@ const session = require('express-session');
 const app = express();
 
 // *** Middlewares ******
-app.use(express.static(path.join(__dirname,'public')));  // Para los archivos estaticos //
-app.use(express.urlencoded({extended: false }));   // Con la linea 11 y 12, aclaramos que lo que llegue de un formulario
-app.use(express.json());               // lo vamos a capturar en forma de Objeto Literal (para luego convertirlo en JSON), sin esto toda informacion de un formulario se pierde, salvo que se use express-generator. 
+
+//URL encode  - Para que nos pueda llegar la información desde el formulario al req.body
+app.use(express.urlencoded({ extended: false }));
+app.use(express.json());
+
+//configuracion en los formularios para el uso de los metodos put y delete 
 app.use(methodOverride('_method'));
+
+// Para los archivos estaticos //
+app.use(express.static(path.join(__dirname,'public')));             
 app.use(session({secret: "Funko-DH"}));
 
 // ****** sistemas de rutas *******
-const mainRouter = require('./routes/mainRouter');
-const productsRouter = require('./routes/productsRouter');
+const indexRouter = require('./routes/indexRouter');
 const usersRouter = require('./routes/usersRouter');
+const productsRouter = require('./routes/productsRouter');
 
-app.use('/', mainRouter);
-app.use('/products', productsRouter);  // Entregable Sprint 4
+//Aquí llamo a las rutas de las APIs
+// const apiArtistasRouter = require('./routes/api/artistas');      declaro la constante de las apis y las requiero .
+
+
+app.use('/', indexRouter);
 app.use('/users', usersRouter) 
+app.use('/products', productsRouter);  // Entregable Sprint 4
 
-// ****** template Engine *****
+
+//Aquí creo la colección de mis recursos de APIs
+// app.use('/api/artistas',apiArtistasRouter);              definir rutas de las apis 
+
+
+
+// ****** template Engine / views engine setup *****
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, '/views'));
 
