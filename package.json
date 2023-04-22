@@ -1,7 +1,7 @@
 {
   "name": "mundotech",
   "version": "1.0.0",
-  "main": "app.js",
+  "main": "src/app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -23,7 +23,7 @@
     "express-validator": "^7.0.0",
     "method-override": "^3.0.0",
     "multer": "^1.4.5-lts.1",
-    "mysql2": "^3.2.1",
+    "mysql2": "^3.2.3",
     "package.json": "^2.0.1",
     "sequelize": "^6.31.0",
     "sequelize-cli": "^6.6.0"
