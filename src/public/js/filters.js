@@ -7,7 +7,7 @@ const icon = document.querySelector('.fa-mobile-button');
         mobile.classList.toggle('mostrar');
     });
 
-    mobile.addEventListener('mouseover', () =>{
+    mobile.addEventListener('mouseleave', () =>{
         mobile.classList.toggle('mostrar');
     })
 
@@ -20,7 +20,7 @@ const icon2 = document.querySelector('.fa-desktop');
         desktop.classList.toggle('mostrar');
     });
     
-    desktop.addEventListener('mouseover', () =>{
+    desktop.addEventListener('mouseleave', () =>{
         desktop.classList.toggle('mostrar');
     })
 
@@ -33,6 +33,6 @@ const icono3 = document.querySelector('.fa-headphones');
         accesories.classList.toggle('mostrar');
     });
         
-    accesories.addEventListener('mouseover', () =>{
+    accesories.addEventListener('mouseleave', () =>{
         accesories.classList.toggle('mostrar');
     })

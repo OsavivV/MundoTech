@@ -9,99 +9,127 @@ a {
     color: inherit;
 }
 
-header {
-    
-    background-image: url('/images/background/backgHeader.jpg');
+ul ,li {
+    color: #fff;
+    list-style: none;
+    text-align: center;
+    justify-content: space-between
+}
+
+header{
+    background-image: url("/images/background/back.jpg");
     background-repeat: no-repeat;
-    background-size: 100%;
-    height: 75px;
+    background-size: cover;
     width: 100%;
+    
 }
 
 .headerContainer{
     display: flex;
-    justify-content: space-between;
-    align-items:center;
-    
+    align-items: center;
+    margin: 1px;
+    justify-content: space-evenly;
 }
 
-.headerAccess{
-    display: flex;
-    direction: column;
+.menu{
+    position: fixed;
+    width: 160px;
+    height: 21%;
+    background-color: rgba(37, 37, 37, 0.88);
+    left: -200px;
+}   
+
+.menu ul li {
     color: #fff;
-    padding-left: 20px;
-    padding-right: 20px;
-    
+    list-style: none;
+    text-align: left;
+    padding: 15px 5px;
+    border-bottom: 1px solid rgb(100, 100, 100, .88);
+  }
+
+.mostrar2{
+    left:0;
 }
-nav{
+
+
+.aboutUs{
+    display: flex;
     padding-left: 10px;
     padding-right: 10px;
 }
+
+.aboutUs li {
+    font-size: small;
+    margin-right: 10px;
+}
+
+
 .logo{
     border-radius: 65px;
     height: 65px;
     width: 65px;    
 }
 
-button  {
-    background-color: plum;
+button {
     border-radius: 20px;
-    color: darkorchid;
+    color: lightslategray;
     width: 35px;
-    border-color: plum;
-
+    border-color: lightgray
 }
 
-.fa-star{
-    /* display: none; */
-}
-
-.filtersContainer img{
-    max-width: 100%; /* Asegurar que las imágenes no se desborden del contenedor */
-    height: auto;
-    position: relative;
-}
-
-.filtersButtonsContainer{
+.filtersButtonsContainer {
     position: absolute;
-    top: 80px;
-    right: 35px;
+    top: 90px;
+    right: 55px;
 }
 
-
-.filtersButtonsContainer, ul ,li {
-    color: #fff;
-    list-style: none;
-    text-align: center;
-    margin-right: 20px;
-    border-bottom: 1px solid rgba(170, 71, 170, 0.88);
-  }
-  
 .mobile, .desktop, .accesories{
-        position: fixed;
-        width: 85px;
-        height: 20%;
-        background-color: darkgray;
-        border-radius: 10px;
-        right: -500px;
+    position: fixed;
+    width: 85px;
+    height: 20%;
+    background-color: rgba(37, 37, 37, 0.88);
+    right: -200px;
   }
 
-  .mobile{
+.mobile{
     margin-top: 10px;
     margin-right: 85px;
   }
 
 .desktop{
     margin-top: 10px;
-    margin-right: 60px;
+    margin-right: 50px;
 }
 
 .accesories{
     margin-top: 10px;
-    margin-right: 30px;
+    margin-right: 20px;
 }
 
-.mostrar {
-    right: 0
+.mostrar{
+    right: 0;
   }
+
+.filtersBrandscontainer{
+    display: flex;
+    flex-direction: column;
+}
+
+.brandImages{
+    display: flex;
+    flex-direction: row-reverse;
+    margin-right: 15px;
+}
+
+.brandImages img{
+    margin: 15px;
+    width: 50px;
+    height: 25px;
+}
+
+.filtersContainer img{
+    max-width: 100%;
+}
+
+
 
