@@ -26,6 +26,46 @@
     width: 100%;
 }
 
+/* Primer carousel  */
+
+h1{
+	text-align: center;
+	color: violet;
+}
+
+.carousel-container {
+	width: 100%;
+  	overflow: hidden;
+}
+
+.carousel {
+	display: flex;
+	flex-direction: column; /*esto es mientras defino el carousel luego por defecto debe ir row */
+	position: relative;
+  }
+  
+.trending{
+ 	width: 100%;
+  	padding: 2rem;
+  	position: relative;
+}
+
+.trending img {
+	width: 90%;
+	height: 40%;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
 @keyframes slide {
 	0% {margin-left: 0;}
 	20% {margin-left: 0;}
