@@ -1,6 +1,7 @@
 * {
     margin: 0;
     padding: 0;
+	box-sizing: border-box;
 }
 
 .slider-frame {
@@ -12,7 +13,6 @@
 	display: flex;
 	padding: 0;
 	width: 400%;
-	
 	animation: slide 20s infinite alternate ease-in-out;
 }
 
@@ -33,37 +33,46 @@ h1{
 	color: violet;
 }
 
-.carousel-container {
-	width: 100%;
-  	overflow: hidden;
-}
 
 .carousel {
 	display: flex;
-	flex-direction: column; /*esto es mientras defino el carousel luego por defecto debe ir row */
-	position: relative;
-  }
+	overflow-x: hidden;
+	transition: transform 0.5s ease-in-out;
+}
   
 .trending{
- 	width: 100%;
-  	padding: 2rem;
-  	position: relative;
+	width: calc(100% / 3);
+	flex: none;
+	padding: 1rem;
+	border-left: #D3D3D3 1px solid;
 }
 
 .trending img {
-	width: 90%;
-	height: 40%;
+	scroll-snap-align: start;
+	width: 85px;
+    height: 65px;
+	border-bottom: #D3D3D3 1px solid;
+	
   }
 
-
-
-
-
-
-
-
-
-
+  
+.btn {
+	width: 40px;
+	height: 30px;
+	background-color: #333;
+	color: #fff;
+	font-weight: bold;
+	position: absolute;
+	transform: translateY(-50%);
+}
+  
+#prev {
+	left: 10px;
+  }
+  
+#next {
+	right: 10px;
+}
 
 
 @keyframes slide {

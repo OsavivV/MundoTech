@@ -27,7 +27,7 @@ header{
 .headerContainer{
     display: flex;
     align-items: center;
-    margin: 1px;
+    margin-left: 5px;
     justify-content: space-evenly;
 }
 
@@ -37,6 +37,7 @@ header{
     height: 21%;
     background-color: rgba(37, 37, 37, 0.88);
     left: -200px;
+    text-align: left;
 }   
 
 .menu ul li {
