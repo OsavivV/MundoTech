@@ -34,20 +34,22 @@ h1{
 }
 
 
-.carousel {
+.carousel, .carouselTwo, .carouselThree {
 	display: flex;
+	margin: 0px 15px;
 	overflow-x: hidden;
 	transition: transform 0.5s ease-in-out;
 }
   
-.trending{
+.trending, .trendingTwo, .trendingThree {
 	width: calc(100% / 3);
 	flex: none;
 	padding: 1rem;
 	border-left: #D3D3D3 1px solid;
+	
 }
 
-.trending img {
+.trending img, .trendingTwo img, .trendingThree img{
 	scroll-snap-align: start;
 	width: 85px;
     height: 65px;
@@ -56,24 +58,39 @@ h1{
   }
 
   
-.btn {
-	width: 40px;
-	height: 30px;
-	background-color: #333;
-	color: #fff;
-	font-weight: bold;
+.btn, .btn2, .btn3 {
 	position: absolute;
 	transform: translateY(-50%);
+	border: none;
+    background-color: transparent;
 }
   
-#prev {
-	left: 10px;
-  }
-  
-#next {
-	right: 10px;
+#prev{
+	bottom: -140px;
 }
 
+#prev2{
+	bottom: -440px;
+}
+
+#prev3{
+	bottom: -640px;
+}
+  
+#next {
+	right: 2px;
+    bottom: -140px;
+}
+
+#next2{
+	right: 2px;
+    bottom: -440px;
+}
+
+#next3{
+	right: 2px;
+    bottom: -640px;
+}
 
 @keyframes slide {
 	0% {margin-left: 0;}
