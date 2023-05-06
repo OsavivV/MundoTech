@@ -1,10 +1,45 @@
 body{
     display: flex;
-    justify-content: center; /* Centrar horizontalmente las imágenes */
+    justify-content: center; 
     flex-direction: column;
 }
 
-
 .bannerBottom img{
+    max-width: 100%;
+}
+
+.shippingContainer{
+    display: flex;
+	padding: 1rem;
+	margin: 15px;
+    flex-direction: row-reverse;
+}
+
+.shipping{
+    text-align: center;
+    margin-left: 10px;
+    padding: 10px;
+    box-shadow: 0px 0px 12px -3px #777;
+}
+
+.shipping p{
+    text-align: justify;
+    font-size: 13px;
+	color: gray ;
+}
+
+.icn{
+    color: black;
+    margin: 10px 0px;
+      
+}
+
+.payments{
+    text-align: center;
+    color: gray ;
+}
+
+.payments img{
+    margin-top: 10px;
     max-width: 100%;
 }

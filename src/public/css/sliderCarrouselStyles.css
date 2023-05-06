@@ -52,14 +52,12 @@
 }
   
 .trending, .trendingTwo, .trendingThree {
-	width: calc(96% / 3);
+	width: calc(95% / 3);
 	flex: none;
 	padding: 1rem;
-	border: #9FD5D1 2px solid;
     border-radius: 18px;
-    margin-right: 5px;
-	margin-top: 5px;
-    margin-bottom: 20px;
+	margin: 5px 5px 20px 2px ;
+	box-shadow: 0px 0px 9px -2px #777;
 }
 
 .trending h3, .trendingTwo h3, .trendingThree h3{
@@ -77,7 +75,7 @@
     height: 65px;
 	border-bottom: #D3D3D3 1px solid;
 	
-  }
+}
 
   
 .btn, .btn2, .btn3 {
