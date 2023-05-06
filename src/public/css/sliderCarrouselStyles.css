@@ -5,7 +5,6 @@
 }
 
 .slider-frame {
-
 	overflow: hidden;
 }
 
@@ -26,13 +25,24 @@
     width: 100%;
 }
 
-/* Primer carousel  */
+/* seccion de carruseles */
 
-h1{
-	text-align: center;
-	color: violet;
+.carousel-container{
+	margin-top: -3px;
 }
 
+.carouselTitle{
+	background-image: url("/images/background/back.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+	color: white;
+	padding-left: 20px;
+}
+
+.carouselTitle p{
+	color: lightgray;
+}
 
 .carousel, .carouselTwo, .carouselThree {
 	display: flex;
@@ -42,16 +52,28 @@ h1{
 }
   
 .trending, .trendingTwo, .trendingThree {
-	width: calc(100% / 3);
+	width: calc(96% / 3);
 	flex: none;
 	padding: 1rem;
-	border-left: #D3D3D3 1px solid;
-	
+	border: #9FD5D1 2px solid;
+    border-radius: 18px;
+    margin-right: 5px;
+	margin-top: 5px;
+    margin-bottom: 20px;
+}
+
+.trending h3, .trendingTwo h3, .trendingThree h3{
+	font-size: 15px ;
+}
+
+.trending p, .trendingTwo p, .trendingThree p{
+	font-size: 13px;
+	color: gray ;
 }
 
 .trending img, .trendingTwo img, .trendingThree img{
 	scroll-snap-align: start;
-	width: 85px;
+	width: 60px;
     height: 65px;
 	border-bottom: #D3D3D3 1px solid;
 	
@@ -66,30 +88,33 @@ h1{
 }
   
 #prev{
-	bottom: -140px;
+	bottom: 100px;
+	left: -7px;
 }
 
 #prev2{
-	bottom: -440px;
+	bottom: -175px;
+	left: -7px;
 }
 
 #prev3{
-	bottom: -640px;
+	bottom: -450px;
+	left: -7px;
 }
   
 #next {
 	right: 2px;
-    bottom: -140px;
+    bottom: 100px;
 }
 
 #next2{
 	right: 2px;
-    bottom: -440px;
+    bottom: -175px;
 }
 
 #next3{
 	right: 2px;
-    bottom: -640px;
+    bottom: -450px;
 }
 
 @keyframes slide {

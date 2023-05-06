@@ -1,17 +1,10 @@
 body{
     display: flex;
     justify-content: center; /* Centrar horizontalmente las imágenes */
-    align-items: center;
     flex-direction: column;
 }
 
-.bodyTittle{
-    background-image: url("/images/background/back.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 100%;
-}
 
-.bodyTittle h1{
-    color: whitesmoke;
+.bannerBottom img{
+    max-width: 100%;
 }
