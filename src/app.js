@@ -18,7 +18,7 @@ app.use(methodOverride('_method'));
 
 // Para los archivos estaticos //
 app.use(express.static(path.join(__dirname,'public')));             
-app.use(session({secret: "Funko-DH"}));
+app.use(session({secret: "undefine"}));
 
 // ****** sistemas de rutas *******
 const indexRouter = require('./routes/indexRouter');
@@ -30,7 +30,7 @@ const productsRouter = require('./routes/productsRouter');
 
 
 app.use('/', indexRouter);
-// app.use('/', usersRouter) 
+app.use('/users', usersRouter) 
 // app.use('/', productsRouter);  // Entregable Sprint 4
 
 

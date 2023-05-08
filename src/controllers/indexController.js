@@ -7,7 +7,8 @@ const controller = {
     },
     car: (req, res) => {
         res.render('shoppingCar');
-    },  
+    },
+    
 }
 
 

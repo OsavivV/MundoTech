@@ -1,0 +1,66 @@
+<%- include('../partials/head') %>
+
+<section class="user">
+
+    <div class="user_options-container">
+
+      <div class="user_options-text">
+        <div class="user_options-unregistered">
+          <h2 class="user_unregistered-title">Aun no te has registrado?</h2>
+          <p class="user_unregistered-text">registrate gratis y empieza a explorar el mundo de la tecnologia como nunca antes.</p>
+          <button class="user_unregistered-signup" id="signup-button">Crear cuenta</button>
+        </div>
+  
+        <div class="user_options-registered">
+          <h2 class="user_registered-title">Tienes alguna cuenta?</h2>
+          <p class="user_registered-text"> Es un placer tenerte nuevamente.</p>
+          <button class="user_registered-login" id="login-button">Login</button>
+        </div>
+      </div>
+
+      <div class="user_options-forms" id="user_options-forms">
+
+        <div class="user_forms-login">
+          <h2 class="forms_title">Iniciar session</h2>
+          <form class="forms_form">
+            <fieldset class="forms_fieldset">
+              <div class="forms_field">
+                <input type="email" placeholder="Correo electronico" class="forms_field-input" required autofocus />
+              </div>
+              <div class="forms_field">
+                <input type="password" placeholder="Contrasenia" class="forms_field-input" required />
+              </div>
+            </fieldset>
+            <div class="forms_buttons">
+              <button type="button" class="forms_buttons-forgot">Has olvidado tu contrasenia?</button>
+              <input type="submit" value="Log In" class="forms_buttons-action">
+            </div>
+          </form>
+        </div>
+
+        <div class="user_forms-signup">
+          <h2 class="forms_title">Registrarse</h2>
+          <form class="forms_form">
+            <fieldset class="forms_fieldset">
+              <div class="forms_field">
+                <input type="text" placeholder="Nombre Completo" class="forms_field-input" required />
+              </div>
+              <div class="forms_field">
+                <input type="email" placeholder="Correo Electronico" class="forms_field-input" required />
+              </div>
+              <div class="forms_field">
+                <input type="password" placeholder="Contrasenia" class="forms_field-input" required />
+              </div>
+            </fieldset>
+            <div class="forms_buttons">
+              <input type="submit" value="Registrarme" class="forms_buttons-action">
+            </div>
+          </form>
+        </div>
+        
+      </div>
+    </div>
+
+    <script src="/js/loginRegister.js"></script>
+
+  </section>

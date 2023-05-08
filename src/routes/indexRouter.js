@@ -3,9 +3,14 @@ const router = Router();
 
 /* GET home page. */
 
-const indexControllers = require('../controllers/indexControllers');
+const indexControllers = require('../controllers/indexController');
 
 router.get('/', indexControllers.index);
+// router.get('/shoppingCar', indexControllers.car)
+
+
+
+
 
   module.exports = router;
 
