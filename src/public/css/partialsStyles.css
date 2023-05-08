@@ -33,26 +33,20 @@ header{
 
 .menu{
     position: fixed;
-    width: 160px;
+    width: 147px;
     height: 21%;
-    background-color: rgba(37, 37, 37, 0.88);
+    background-color: rgba(226,122,163, 0.8);
+    box-shadow: 0px 0px 15px -2px #fff;
+    border-radius: 18px;
     left: -200px;
-    text-align: left;
+    margin-top: 5px;
 }   
 
-.menu ul li {
-    color: #fff;
-    list-style: none;
-    text-align: left;
-    padding: 15px 5px;
-    border-bottom: 1px solid rgb(100, 100, 100, .88);
-  }
-
-.mostrar2{
+.mostrar2 {
     left:0;
+
 }
-
-
+    
 .aboutUs{
     display: flex;
     padding-left: 10px;
@@ -70,27 +64,33 @@ header{
     height: 65px;
     width: 65px;    
 }
-
-button {
-    border-radius: 20px;
-    color: lightslategray;
-    width: 35px;
-    border-color: lightgray
-}
-
 /*--------- Filter container -----------------*/
 
 .filtersButtonsContainer {
     position: absolute;
-    top: 90px;
-    right: 55px;
+    top: 85px;
+    right: 25px;
+}
+
+button {
+    border: white 1px groove;
+    box-shadow: 0px 0px 15px -2px #fff;
+    background-color: transparent;
+    border-radius: 20px;
+    color: aliceblue;
+    width: 35px;
+    height: 20px;
+    margin-left: 15px;
 }
 
 .mobile, .desktop, .accesories{
     position: fixed;
-    width: 85px;
-    height: 20%;
-    background-color: rgba(37, 37, 37, 0.88);
+    width: 90px;
+    height: 17%;
+    background-color: lightsteelblue ;
+    /* box-shadow: 0px 0px 15px -2px #fff; */
+    border-radius: 18px;
+    margin-top: 5px;
     right: -200px;
   }
 
@@ -116,6 +116,9 @@ button {
 .filtersBrandscontainer{
     display: flex;
     flex-direction: column;
+    height: 80px;
+    justify-content: center;
+    
 }
 
 .brandImages{
@@ -165,6 +168,50 @@ footer{
     font-size: 13px;
 }
 
+/* break points ----- */
 
+@media (min-width: 650px){
+	button {
+		width: 55px;
+    	height: 30px;
+	}
+
+	.filtersButtonsContainer {
+		right: 55px;
+	}
+
+    .desktop{
+        margin-right: 100px;
+    }
+
+    .detailsContainer{
+        display: flex;
+        flex-wrap: wrap;
+        margin-left: -15px;
+        justify-content: space-around;
+    }
+
+}
+
+/* Tablet queries ---------- */
+
+@media (min-width: 769px) and (orientation: portrait) {
+
+	.aboutUs li {
+        font-size: medium;
+        margin-right: 15px;
+    }
+
+    button {
+		width: 70px;
+    	height: 40px;
+	}
+
+    
+    .shippingContainer{
+        margin-left: -15px;
+        margin-right: 20px;
+    }
+}
 
 

@@ -16,8 +16,16 @@ nextBtn.addEventListener("click", (e) => {
 });
 
 function updateCarousel() {
+	let maxImages = 3;
+	if (window.innerWidth >= 461) {
+		maxImages = 4;
+	}
+	if (window.innerWidth >= 769) {
+		maxImages = 5;
+	}
+	
 	for (let i = 0; i < images.length; i++) {
-		if (i >= currentIndex && i < currentIndex + 3) {
+		if (i >= currentIndex && i < currentIndex + maxImages) {
 			images[i].style.display = "block";
 		} else {
 			images[i].style.display = "none";
@@ -47,8 +55,16 @@ nextBtnTwo.addEventListener("click", (e) => {
 });
 
 function updateCarouselTwo() {
+	let maxImagesTwo = 3;
+	if (window.innerWidth >= 461) {
+		maxImagesTwo = 4;
+	}
+	if (window.innerWidth >= 769) {
+		maxImagesTwo = 5;
+	}
+	
 	for (let i = 0; i < imagesTwo.length; i++) {
-		if (i >= currentIndexTwo && i < currentIndexTwo + 3) {
+		if (i >= currentIndexTwo && i < currentIndexTwo + maxImagesTwo) {
 			imagesTwo[i].style.display = "block";
 		} else {
 			imagesTwo[i].style.display = "none";
@@ -78,8 +94,16 @@ nextBtnThree.addEventListener("click", (e) => {
 });
 
 function updateCarouselThree() {
+	let maxImagesThree = 3;
+	if (window.innerWidth >= 461) {
+		maxImagesThree = 4;
+	}
+	if (window.innerWidth >= 769) {
+		maxImagesThree = 5;
+	}
+	
 	for (let i = 0; i < imagesThree.length; i++) {
-		if (i >= currentIndexThree && i < currentIndexThree + 3) {
+		if (i >= currentIndexThree && i < currentIndexThree + maxImagesThree) {
 			imagesThree[i].style.display = "block";
 		} else {
 			imagesThree[i].style.display = "none";
