@@ -40,16 +40,32 @@
 
         <div class="user_forms-signup">
           <h2 class="forms_title">Registrarse</h2>
-          <form class="forms_form">
+          <form method="POST" action="/users/loginRegister" class="forms_form">
             <fieldset class="forms_fieldset">
               <div class="forms_field">
-                <input type="text" placeholder="Nombre Completo" class="forms_field-input" required />
+                <input type="text" name="firstName" placeholder="Nombres" class="forms_field-input" required />
+                <% if (locals.errors && errors.firstName) { %>
+                  <%= errors.fullName.msg %>
+                  <% } %>
+ 
               </div>
               <div class="forms_field">
-                <input type="email" placeholder="Correo Electronico" class="forms_field-input" required />
+                <input type="text" name="lastName" placeholder="Apelidos" class="forms_field-input" required />
+                <% if (locals.errors && errors.lastName) { %>
+                  <%= errors.lastName.msg %>
+                  <% } %>
               </div>
               <div class="forms_field">
-                <input type="password" placeholder="Contrasenia" class="forms_field-input" required />
+                <input type="email" name="email"placeholder="Correo Electronico" class="forms_field-input" required />
+                <% if (locals.errors && errors.email) { %>
+                  <%= errors.email.msg %>
+                  <% } %>
+              </div>
+              <div class="forms_field">
+                <input type="password" name="password" placeholder="Contrasenia" class="forms_field-input" required />
+                <% if (locals.errors && errors.password) { %>
+                  <%= errors.password.msg %>
+                  <% } %>
               </div>
             </fieldset>
             <div class="forms_buttons">
