@@ -14,12 +14,15 @@ const controller = {
     registered: (req, res) => {
         const resultValidation = validationResult (req);
 
-        if (resultValidation.errors.length > 0 ) {
-            return res.render ( './users/loginRegister' , {
-                error: resultValidation.mapped(),
-                oldData: req.body
+        if (!resultValidation.isEmpty()) {
+            return res.render ( 'users/loginRegister' , {
+                errors: resultValidation.mapped(),
+                oldData: req.body,
+                form: "register"
             });
         }
+
+        res.redirect('/')
     
     },
 

@@ -1,12 +1,17 @@
+<!DOCTYPE html>
+<html lang="es">
+  
 <%- include('../partials/head') %>
 
+<body>
+  
 <section class="user">
 
     <div class="user_options-container">
 
       <div class="user_options-text">
         <div class="user_options-unregistered">
-          <h2 class="user_unregistered-title">Aun estas registrad@ ?</h2>
+          <h2 class="user_unregistered-title"> Aun no estas registrad@ ?</h2>
           <p class="user_unregistered-text">registrate gratis y empieza a explorar el mundo de la tecnologia como nunca antes.</p>
           <button class="user_unregistered-signup" id="signup-button">Crear cuenta</button>
         </div>
@@ -25,10 +30,10 @@
           <form class="forms_form">
             <fieldset class="forms_fieldset">
               <div class="forms_field">
-                <input type="email" placeholder="Correo electronico" class="forms_field-input" required autofocus />
+                <input type="email" placeholder="Correo electronico" class="forms_field-input" />
               </div>
               <div class="forms_field">
-                <input type="password" placeholder="Contrasenia" class="forms_field-input" required />
+                <input type="password" placeholder="Contrasenia" class="forms_field-input" />
               </div>
             </fieldset>
             <div class="forms_buttons">
@@ -41,28 +46,32 @@
         <div class="user_forms-signup">
           <h2 class="forms_title">Registrarse</h2>
           <form method="POST" action="/users/loginRegister" class="forms_form">
+            
+            <% if (locals.errors && locals.form == "register") { %>
+                <input id="isRegisterError" type="hidden" value="register">
+              <% }  %> 
             <fieldset class="forms_fieldset">
               <div class="forms_field">
-                <input type="text" name="firstName" placeholder="Nombres" class="forms_field-input" required />
+                <input type="text" name="firstName" placeholder="Nombres" class="forms_field-input" id="error-fullName" value="<%= locals.oldData && locals.oldData.firstName%>" />
                 <% if (locals.errors && errors.firstName) { %>
-                  <%= errors.fullName.msg %>
+                  <%= errors.firstName.msg %>
                   <% } %>
  
               </div>
               <div class="forms_field">
-                <input type="text" name="lastName" placeholder="Apelidos" class="forms_field-input" required />
+                <input type="text" name="lastName" placeholder="Apelidos" class="forms_field-input" value="<%= locals.oldData && locals.oldData.lastName%>" />
                 <% if (locals.errors && errors.lastName) { %>
                   <%= errors.lastName.msg %>
                   <% } %>
               </div>
               <div class="forms_field">
-                <input type="email" name="email"placeholder="Correo Electronico" class="forms_field-input" required />
+                <input type="email" name="email"placeholder="Correo Electronico" class="forms_field-input" value="<%= locals.oldData && locals.oldData.email%>"  />
                 <% if (locals.errors && errors.email) { %>
                   <%= errors.email.msg %>
                   <% } %>
               </div>
               <div class="forms_field">
-                <input type="password" name="password" placeholder="Contrasenia" class="forms_field-input" required />
+                <input type="password" name="password" placeholder="Contrasenia" class="forms_field-input" value="<%= locals.oldData && locals.oldData.password%>"/>
                 <% if (locals.errors && errors.password) { %>
                   <%= errors.password.msg %>
                   <% } %>
@@ -77,6 +86,13 @@
       </div>
     </div>
 
-    <script src="/js/loginRegister.js"></script>
-
   </section>
+
+  <script src="/js/registerValidations.js"></script>
+  <script src="/js/loginRegister.js"></script>
+  <!-- <script src="/js/pruebaValidations.js"></script> -->
+
+
+</body>
+
+</html>
