@@ -2,14 +2,15 @@
 // ---------------validations 
 
 
-const validateForms = document.querySelector('form.register')
+const validateForms = document.querySelector('form.forms_form')
+
 
 validateForms.addEventListener('submit', (e) => {
     e.preventDefault();
 
-    const allErrorLabels = document.querySelectorAll('.isRegisterError');
+    const allErrorLabels = document.querySelectorAll('.forms_field-input');
     allErrorLabels.forEach(element => {
-        element.innerHTML = " esto es una prueba " ;
+        element.innerHTML = " " ;
     });
 
 
@@ -31,7 +32,7 @@ function frontValidations (name, message) {
     frontValidations('password', '*Tienes que escribir una contraseña*', );
 
 errors.forEach(error => {
-    const errorLabel = document.getElementById('error-' + error.name);
+    const errorLabel = document.getElementById('isRegisterError' + error.name);
     errorLabel.innerHTML = error.message;
 });
 

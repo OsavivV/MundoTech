@@ -52,7 +52,7 @@
               <% }  %> 
             <fieldset class="forms_fieldset">
               <div class="forms_field">
-                <input type="text" name="firstName" placeholder="Nombres" class="forms_field-input" id="error-fullName" value="<%= locals.oldData && locals.oldData.firstName%>" />
+                <input type="text" name="firstName" placeholder="Nombres" class="forms_field-input" value="<%= locals.oldData && locals.oldData.firstName%>" />
                 <% if (locals.errors && errors.firstName) { %>
                   <%= errors.firstName.msg %>
                   <% } %>
