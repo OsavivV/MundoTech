@@ -1,57 +1,53 @@
-// CRUD Usuario / conectando modelos de usuarios a la bases de datos . 
-const fs = require('fs');
+'use strict';
 
-const User = {
-    fileName: './database/' ,   /* se supone que aca estara la base de datos mencionandos*/
+module.exports = (sequelize, dataTypes) => {
+let alias = 'User';
+let cols ={
     
-    getData: function () {
-        return JSON.parse (fs.readFileSync(this.FileName, 'utf-8'));
-    },
+    id: {
+        type:   dataTypes.INTEGER,
+                autoIncrement: true ,
+                primaryKey: true ,
+                allowNull: false,  
+        },
 
-    generateId : function () {
-    let allUsers = this.findAll() ;
-    let lasUser = allUsers.pop() ;
-    if  (lasUser){
-        return lasUser.id +1 ;
+    firstName: {
+        type:   dataTypes.TEXT,
+                allowNull: false
+        },  
+
+    lastName: {
+        type:   dataTypes.TEXT,
+                allowNull: false
+        },
+
+    email: {
+        type:   dataTypes.TEXT,
+                allowNull: false
+        }, 
+
+    password: {
+        type:   dataTypes.TEXT,
+                allowNull: false
+        },
+
+    roles_id: {
+        type:   dataTypes.INTEGER,
+                    references: {
+                        model:'roles',
+                        key: 'id'
+            }
+        }     
     }
-    return 1
-    },
 
-    findAll: function () {
-        return this.getData();
+let config = {
 
-    },
+        tableName: "users",
+        timestamps: false
+};
 
-    findByPk: function (id) {
-        let allUsers = this.findAll();
-        let userFound = allUsers.find(oneUser => oneUser.id === id);
-        return userFound;
-    },
+const User = sequelize.define (alias, cols, config)
 
-    findByField: function (field, text) {
-        let allUsers = this.findAll();
-        let userFound = allUsers.find(oneUser => oneUser[field] === text);
-        return userFound;
-    },
-
-    create: function (userData) {
-        let allUsers = this.findAll();
-        let newUser = {
-            id: this.generateId(),
-            ... userData
-        }
-        allUsers.push(userData);
-        fs.writeFileSync(this.fileName, JSON.stringify(allUsers, null,  ' '));
-        return true
-    },
-
-    delete: function (id) {
-        let allUsers = this.findAll();
-        let finalUsers = allUsers.filter(oneUser => oneUser.id !== id) ;
-        fs.writeFileSync(this.fileName, JSON.stringify(finalUsers, null,  ' '));
-        return newUser;
-    }
+return User;
 
 }
-
-module.exports = User ;
