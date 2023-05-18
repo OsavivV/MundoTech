@@ -43,6 +43,13 @@ app.use('/users', usersRouter)
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, '/views'));
 
+
+// page not found 
+app.use((req, res, next) => {
+    res.status(404).render("notFound")
+})
+
+
 // ****** Creacion de Servidor *****
 const port = process.env.PORT || 3000;
 app.listen(port, () => {
