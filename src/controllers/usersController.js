@@ -1,10 +1,10 @@
-const path = require('path');
-const fs = require('fs');
-// // const bcrypt = require('bcryptjs');
+// const path = require('path');
+// const fs = require('fs');
+const bcrypt = require('bcryptjs');
 // const { json } = require('express');
 const { validationResult } = require('express-validator') 
 
-const User = require ('../database/models/User')
+// const User = require("../database/models")
 
 const controller = {
     register: (req, res) => {
@@ -12,22 +12,43 @@ const controller = {
     },
 
     registered: (req, res) => {
-        const resultValidation = validationResult (req);
+        let signUpValid = validationResult (req);
 
-        if (!resultValidation.isEmpty()) {
+        if (!signUpValid.isEmpty()) {
             return res.render ( 'users/loginRegister' , {
-                errors: resultValidation.mapped(),
+                errors: signUpValid.mapped(),
                 oldData: req.body,
                 form: "register"
             });
         }
 
-        res.redirect('/')
+        // let password = bcrypt.hashSync (req.body.password, 10 )
+
+        // User.create({
+        //     firstName : req.body.firstName,
+        //     lastName : req.body.lastName,
+        //     email: req.body.email,
+        //     password: req.body.password,
+        // })
+
+    res.send("Esto es solo una muestra de que esta verga funciono por fin")
     
     },
 
     login: (req, res) => {
         res.render('./users/loginRegister');
+    },
+
+    logged: (req, res) => {
+        let signInValid = validationResult (req);
+
+        if (!signInValid.isEmpty()) {
+            return res.render ( 'users/loginRegister' , {
+                errors: signInValid.mapped(),
+                oldData: req.body,
+                form: "login"
+            });
+        }
     },
 
     profile: (req, res) => {

@@ -18,6 +18,9 @@ module.exports = {
     },
     {
       name: 'Cliente'
+    },
+    {
+      name: 'Usuario'
     }], 
   {});
 

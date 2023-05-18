@@ -1,44 +1,39 @@
+const validateForm = document.querySelector('form.forms_form_signUp');
 
-// ---------------validations 
+validateForm.addEventListener('submit', (e) => {
+  e.preventDefault();
 
+  const allErrorLabels = document.querySelectorAll('.error-message');
+  allErrorLabels.forEach(element => {
+    element.innerHTML = " ";
+  });
 
-const validateForms = document.querySelector('form.forms_form')
+  const errors = [];
 
-
-validateForms.addEventListener('submit', (e) => {
-    e.preventDefault();
-
-    const allErrorLabels = document.querySelectorAll('.forms_field-input');
-    allErrorLabels.forEach(element => {
-        element.innerHTML = " " ;
-    });
-
-
-const errors = [];
-
-function frontValidations (name, message) {
-    if (validateForms [name].value) {
-        !errors.push({name, message});
-        validateForms[name].classList.add('is-invalid');
+  function singUpValidations(name, message) {
+    if (!validateForm[name].value) {
+        errors.push({ name, message });
+        validateForm[name].classList.add('is-invalid');
     } else {
-        validateForms[name].classList.remove('is-invalid');
-        validateForms[name].classList.add('is-valid');
+        validateForm[name].classList.remove('is-invalid');
+        validateForm[name].classList.add('is-valid');
     }
 }
 
-    frontValidations('firstName', '*Tienes que escribir un nombre*');
-    frontValidations('lastName', '*Tienes que escribir un apellido*');
-    frontValidations('email', '*Tienes que escribir un correo electrónico*');
-    frontValidations('password', '*Tienes que escribir una contraseña*', );
 
-errors.forEach(error => {
-    const errorLabel = document.getElementById('isRegisterError' + error.name);
+  singUpValidations('firstName', '*Tienes que escribir un nombre*');
+  singUpValidations('lastName', '*Tienes que escribir un apellido*');
+  singUpValidations('email', '*Tienes que escribir un correo electrónico*');
+  singUpValidations('password', '*Tienes que escribir una contraseña*');
+
+  errors.forEach(error => {
+    const errorLabel = document.getElementById(error.name + 'Error' );
     errorLabel.innerHTML = error.message;
+  });
+
+  if (errors.length === 0) {
+    validateForm.submit(); // Envío directo del formulario
+  }
+
 });
-
-if (errors.length === 0) {
-    validateForms.submit();
-}
-
-})
 
