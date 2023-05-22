@@ -1,3 +1,4 @@
+const Product = require("./Product");
 
 module.exports = (sequelize, dataTypes) => {
 
@@ -37,6 +38,13 @@ module.exports = (sequelize, dataTypes) => {
     };
     
     const Product_images = sequelize.define (alias, cols, config)
+
+    Product_images.associate = function(models) {
+      Product_images.belongsTo(models.Product, {
+          as: "product_images",
+          foreignKey: "products_id",
+      });
+  }
     
     return Product_images;
     

@@ -36,7 +36,15 @@ module.exports = (sequelize, dataTypes) => {
           timestamps: false
   };
   
-  const Order = sequelize.define (alias, cols, config)
+const Order = sequelize.define (alias, cols, config)
+
+  Order.associate = function(models) {
+
+    Order.belongsTo(models.Client, {
+            as: "clients",
+            foreignKey: "clients_id"
+        });
+    }
   
   return Order;
   

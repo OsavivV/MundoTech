@@ -48,6 +48,13 @@ let config = {
 
 const User = sequelize.define (alias, cols, config)
 
+    User.associate = function(models) {
+        User.belongsTo(models.Rol, {
+            as: "roles",
+            foreignKey: "roles_id"
+        });
+    }
+
 return User;
 
 }

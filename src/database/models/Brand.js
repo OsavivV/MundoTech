@@ -1,4 +1,3 @@
-
 'use strict';
 
 module.exports = (sequelize, dataTypes) => {
@@ -25,6 +24,13 @@ let config = {
 };
 
 const Brand = sequelize.define(alias, cols, config)
+
+    Brand.associate = function(models) {
+        Brand.hasMany(models.Product, {
+            as: "products",
+            foreignKey: "brands_id",
+        });
+    }
 
 return Brand;
 
