@@ -1,34 +1,62 @@
-<header >
+<header class="headerContainer" > 
 
-    <div class="headerContainer">
-
-        <div class="headerButtonContainer"> 
-            <div class="burgerMenu"> <i class="fa-sharp fa-solid fa-bars"></i> </div>
-                <ul class="menu">
-                    <li> <a href="/"> home </a></li>
-                        <li> <i class="fa-solid fa-user"></i><a href="/users/loginRegister"> Iniciar session </a></li>
-                             <li> <i class="fa-solid fa-cart-shopping"></i> <a href="/shoppingCar"> Carrito de compras </a></li>
-                                 <li> <i class="fa-solid fa-star"></i> Favoritos </li>
-                                    </ul>
-                                        </div> 
-
-        <div class="headerAccess">
-            <ul class="aboutUs">
-                <li><a href="/">INICIO</a></li>
-                    <li><a href="#">¿QUIÉNES SOMOS?</a></li>
-                        <li><a href="/products">PRODUCTOS</a></li>
+    <section >
+        <nav > 
+        <i class="fa-sharp fa-solid fa-bars"></i> 
+            <ul  class="menu">
+                <li><a href="/">Home</a></li>
+                <li><a href="#">Categorias</a>
+                <!-- First Tier Drop Down -->
+                <ul>
+                    <li><a href="#">Celulares</a></li>
+                    <li><a href="#">Computadores</a></li>
+                    <li><a href="#">Accesorios</a></li>
+                </ul>        
+                </li>
+                <li><a href="/products">Productos</a>
+                <!-- First Tier Drop Down -->
+                <ul>
+                    <li><a href="#">Accesorios</a></li>
+                    <li><a href="#">Computadores</a></li>
+                    <li><a href="#">Celulares</a>
+                    <!-- Second Tier Drop Down -->
+                    <ul>
+                        <li><a href="#">Apple</a></li>
+                        <li><a href="#">Samsung</a></li>
+                        <li><a href="#">Huawei</a></li>
+                        <li><a href="#">Realme</a></li>
+                        <li><a href="#">Xioami</a>
+                            <!-- Third Tier Drop Down -->
+                            <ul>
+                                <li><a href="#">MI</a></li>
+                                <li><a href="#">Poco</a></li>
+                                <li><a href="#">Redmi</a></li>
                             </ul>
-                                </div>
-
-
+                        </li>
+                    </ul>
+                    </li>
+                </ul>
+                </li>
+                <li><a href="#">Contactanos</a></li>
+                <li><a href="#">Sobre Nosotros</a></li>
+            </ul>
+            <ul class="loginIcon"> 
+                <li><a href="/users/loginRegister"> Iniciar session <i class="fa-solid fa-user"> </i> </a> </li>
+                <li class="logged"><a href="/shoppingCar"> Carrito de compras <i class="fa-solid fa-cart-shopping"></i> </a> </li>
+                <li class="logged"><a href="#"> Favoritos <i class="fa-solid fa-star"></i> </a> </li>
+            </ul>
+        </nav>
+    
         <div class="headerLogoContainer">
-            <img class="logo" src="/images/logo/logoprueba.jpg" alt="logo">
-                </div>
-
-          
-     </div>
-
-    <script src="/js/header.js"></script>
+            <img class="logo" src="/images/logo/footerlogo.png" alt="logo"><br>
+                <form class="headerForm" action="/">
+                    <input class="searchingBar" type="text" placeholder="Que estas buscando...">
+                        <button class="headerButton"> <i class="fas fa-search"> </i> </button>
+                </form>
+        </div>
+        <br>
+    
+    </section>
 
 </header>
 

@@ -1,75 +1,155 @@
-ul ,li {
-    color: #fff;
-    list-style: none;
-    text-align: center;
-    justify-content: space-between
-}
-
-header{
-    background-image: url("/images/background/back.jpg");
+.headerContainer {
+    margin: 0 auto;
+    background: url("https://static.pexels.com/photos/928/sky-clouds-cloudy-blue.jpg"),
+		linear-gradient(23deg, #ebd40a, #58abf0, #f13493, #911491);
     background-repeat: no-repeat;
     background-size: cover;
-    width: 100%;
-    
-}
-
-.headerContainer{
-    display: flex;
-    align-items: center;
-    margin-left: 5px;
-    justify-content: space-evenly;
+	background-blend-mode: screen;
+	animation: hue-rotate 5s linear infinite;
+	opacity: 0.9;
 }
 
 .menu{
-    position: fixed;
-    width: 147px;
-    height: 21%;
-    background-color: rgba(226,122,163, 0.8);
-    box-shadow: 0px 0px 15px -2px #fff;
-    border-radius: 18px;
-    left: -200px;
-    margin-top: 5px;
-}   
-
-.mostrar2 {
-    left:0;
-
+    display: none;
 }
-    
-.aboutUs{
+  
+  
+nav ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    position: relative;
+}
+
+.fa-bars{
+    color: white;
+    border-radius: 5px;
+    position: absolute;
+    top: 2.7%;
+    left: 15%;
+    text-align: center;
+    font-size: 20px;
+}
+
+.headerLogoContainer{
     display: flex;
-    padding-left: 10px;
-    padding-right: 10px;
+    flex-direction: column;
+    align-items: center;
 }
-
-.aboutUs li {
-    font-size: small;
-    margin-right: 10px;
-}
-
-
+  
 .logo{
-    border-radius: 65px;
-    height: 65px;
-    width: 65px;    
+    width: 50%;
+     box-shadow: 0px 0px 15px -2px #0000;
 }
-/*--------- Filter container -----------------*/
+  
+.loginIcon{
+    text-align: end;
+}
+  
+.logged{
+    display: none;
+}
+  
+.headerForm{
+    display: flex;
+    align-items: baseline;
+    width: -webkit-fill-available;
+}
+  
+.searchingBar{
+    background-color: ghostwhite;
+    color: lightgrey;
+    border: 1px solid whitesmoke;
+    border-radius: 5px;
+    width: 87%;
+    text-align: center;
+    margin-left: 30px;
+}
+  
+.headerButton {
+    border: none;
+    background-color: transparent;
+    border-radius: 20px;
+    color: aliceblue;
+    margin-left: 10px;
+}
+
+
+  
+nav ul li {
+    display: inline-block;
+}
+  
+nav a {
+    display: block;
+    padding: 0 10px;
+    color: #fff;
+    line-height: 60px;
+}
+
+  
+nav a:hover {
+    background-color: #000000;
+  }
+  
+ 
+nav ul ul {
+    display: none;
+    position: absolute;
+    top: 50px; 
+  }
+  
+ 
+nav ul li:hover > ul {
+    display: inherit;
+  }
+  
+ 
+nav ul ul li {
+    width: 170px;
+    float: none;
+    display: list-item;
+    position: relative;
+  }
+  
+
+nav ul ul ul li {
+    position: relative;
+    top: -40px;
+    right: 60px;
+}
+  
+  
+li > a:after {
+    content: " +";
+  }
+li > a:only-child:after {
+    content: "";
+  }
+  
+
+  @keyframes hue-rotate {
+	from {
+		-webkit-filter: hue-rotate(1);
+		-moz-filter: hue-rotate(0);
+		-ms-filter: hue-rotate(1);
+		filter: hue-rotate(0);
+	}
+	to {
+		-webkit-filter: hue-rotate(100deg);
+		-moz-filter: hue-rotate(100deg);
+		-ms-filter: hue-rotate(100deg);
+		filter: hue-rotate(100deg);
+	}
+}
+
+
+/* ----------------- Filters Container -------------*/
 
 .filtersButtonsContainer {
     position: absolute;
     top: 100px;
     right: 25px;
-}
-
-button {
-    border: white 1px groove;
-    box-shadow: 0px 0px 15px -2px #fff;
-    background-color: transparent;
-    border-radius: 20px;
-    color: aliceblue;
-    width: 35px;
-    height: 20px;
-    margin-left: 15px;
 }
 
 .mobile, .desktop, .accesories{
@@ -103,9 +183,9 @@ button {
 
 .filtersBrandscontainer{
     display: flex;
-    flex-direction: column;
     height: 80px;
-    justify-content: center;
+    align-items: center;
+    justify-content: space-evenly;
     
 }
 
@@ -115,9 +195,13 @@ button {
     margin-right: 15px;
 }
 
+.brand{
+    padding: 0px 5px;
+}
+
 .brandImages img{
     margin: 15px;
-    width: 50px;
+    width: 80%;
     height: 25px;
 }
 
@@ -125,14 +209,18 @@ button {
     max-width: 100%;
 }
 
+
 /* ------------footer container ------------------*/
 
 footer{
-    background-image: url("/images/background/back.jpg");
+    margin: 0 auto;
+    background: url(https://static.pexels.com/photos/928/sky-clouds-cloudy-blue.jpg),
+     linear-gradient(23deg, #f13373, #58abf0, #16e7e7, #911491);
     background-repeat: no-repeat;
     background-size: cover;
-    width: 100%;
-    color: #fff;
+    background-blend-mode: unset;
+    animation: hue-rotate 10s linear infinite;
+    opacity: 0.9;
     text-align: center;
 }
 
@@ -141,7 +229,6 @@ footer{
 }
 
 .details{
-    box-shadow: 0px 0px 20px -2px #fff;
     border-radius: 12px;
     padding: 10px;
     margin: 15px;
@@ -153,117 +240,7 @@ footer{
 }
 
 .details h4, .listInfo, .listConditions{
-    font-size: 13px;
-}
-
-/* break points ----- */
-
-@media (min-width: 650px){
-
-	.filtersButtonsContainer {
-        top: 130px;
-		right: 55px;
-	}
-
-    .filtersButtonsContainer button {
-		width: 55px;
-    	height: 30px;
-	}
-
-    .desktop{
-        margin-right: 100px;
-    }
-
-    .detailsContainer{
-        display: flex;
-        flex-wrap: wrap;
-        margin-left: -15px;
-        justify-content: space-around;
-    }
-
-}
-
-/* Tablet queries ---------- */
-
-@media (min-width: 769px) {
-
-    .headerContainer{
-        height: 100px;
-    }
-
-	.aboutUs li {
-        font-size: 20px;
-        margin-right: 15px;
-    }
-
-    .brandImages img {
-        
-        height: 60px;
-    }
-    
-    .shippingContainer{
-        margin-right: -10px;
-        margin-left: 5px;
-        
-    }
+    list-style: none;
 }
 
 
-/* ---------------desktop queries---------------- */
-
-@media (min-width: 900px){
-
-    html {
-        font-size: 25px;
-    }
-    
-    p {
-        font-size: 30px;
-    }
-
-    .headerContainer{
-        height: 150px;
-    }
-
-	.aboutUs li {
-        font-size: 25px;
-        margin-right: 35px;
-    }
-
-    .filtersButtonsContainer {
-        top: 200px;
-        right: 100px;
-    }
-
-    .filtersButtonsContainer button {
-        width: 80px;
-        height: 45px;
-    }
-
-    .filtersBrandscontainer {
-        height: 120px;
-    }
-
-    .brandImages img {
-        width: 100px;
-        height: 80px;
-    }
-
-    .footerTittle h1{
-        font-size: 50px;
-        border-bottom: 3px dotted lightgray;
-    }
-
-    .detailsContainer {
-        flex-wrap: nowrap;
-        flex-direction: row-reverse;
-    }
-
-    .details {
-        box-shadow: 0px 0px 100px -2px lightgray;
-    }
-
-    .details h4, .listInfo, .listConditions {
-        font-size: 20px;
-    }
-}

@@ -7,14 +7,33 @@
 
     <%- include('partials/header') %>
     
-    <%- include('partials/filters') %>
 
     <main>
-        <%- include('sliderBanner') %> 
+
+        <div class="filtersBrandscontainer"> 
+            <div class="brandImages"> 
+                <div class="brand"> <a href="/"><img src="/images/logo/huawei.png" alt="" /></a> </div>
+                    <div class="brand"> <a href="/"><img src="/images/logo/apple.png" alt="" /></a> </div>
+                        <div class="brand"> <a href="/"><img src="/images/logo/realme.png" alt="" /></a> </div>
+                            <div class="brand"> <a href="/"><img src="/images/logo/samsung.jpg" alt="" /></a> </div>
+                                <div class="brand"> <a href="/"><img src="/images/logo/xioami.png" alt="" /></a> </div>
+                                    </div>
+        </div>
+
+        <div class="slider-frame">
+            <ul>
+                <li><img src="/images/banners/celulares.jpg" alt=""> </li>
+                    <li><img src="/images/banners/fundas.jpg" alt=""> </li>
+                        <li><img src="/images/banners/laptop.jpg" alt=""> </li>
+                            <li><img src="/images/banners/headphones.jpg" alt=""></li>
+            </ul>
+            
+        </div>
 
         <%- include('carrousels') %>
 
     </main>
+
 
     <section class="bannerFooterContainer">
 

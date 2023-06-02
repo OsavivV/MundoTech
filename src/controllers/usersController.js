@@ -4,7 +4,8 @@ const bcrypt = require('bcryptjs');
 // const { json } = require('express');
 const { validationResult } = require('express-validator') 
 
-// const User = require("../database/models")
+const db = require('../database/models')
+
 
 const controller = {
     register: (req, res) => {
@@ -22,16 +23,16 @@ const controller = {
             });
         }
 
-        // let password = bcrypt.hashSync (req.body.password, 10 )
+        let password = bcrypt.hashSync (req.body.password, 10 )
 
-        // User.create({
-        //     firstName : req.body.firstName,
-        //     lastName : req.body.lastName,
-        //     email: req.body.email,
-        //     password: req.body.password,
-        // })
+        db.User.create({
+            firstName : req.body.firstName,
+            lastName : req.body.lastName,
+            email: req.body.email,
+            password: password 
+        });
 
-    res.send("Esto es solo una muestra de que esta verga funciono por fin")
+    res.redirect("/notfound")
     
     },
 

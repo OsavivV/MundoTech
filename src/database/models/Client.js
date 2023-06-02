@@ -1,5 +1,3 @@
-'use strict';
-
 module.exports = (sequelize, dataTypes) => {
 let alias = 'Client';
 let cols ={

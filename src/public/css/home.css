@@ -10,10 +10,7 @@ a {
 }
 
 body{
-    font-family: "Montserrat", sans-serif;
-    display: flex;
-    justify-content: center; 
-    flex-direction: column;
+    
 }
 
 .bannerBottom img{
@@ -56,44 +53,7 @@ body{
     max-width: 100%;
 }
 
-@media (min-width: 769px) {
 
-    .shippingContainer{
-        margin-left: -15px;
-        margin-right: 20px;
-    }
-}
 
-/* ----------- desktop queries --------------- */
-
-@media (min-width: 900px) {
-
-    html {
-        font-size: 25px;
-    }
-    
-    p {
-        font-size: 30px;
-    }
-
-    .bannerBottom img {
-        height: 500px;
-    }
-
-    .shipping p {
-        font-size: 30px;
-    }
-
-    .payments h3 {
-        font-size: 45px;
-    }
-
-    .payments img {
-        margin: 25px 0px;
-        max-width: 100%;
-        height: 180px;
-    }
-
-}
 
 

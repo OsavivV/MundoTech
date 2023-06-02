@@ -31,7 +31,7 @@ const productsRouter = require('./routes/productsRouter');
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter) 
-// app.use('/', productsRouter);  // Entregable Sprint 4
+app.use('/products', productsRouter);  //  Sprint 4 saltar json usar db
 
 
 //Aquí creo la colección de mis recursos de APIs
