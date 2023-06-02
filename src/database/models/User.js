@@ -1,11 +1,9 @@
-'use strict';
-
 module.exports = (sequelize, dataTypes) => {
 let alias = 'User';
 let cols ={
     
     id: {
-        type:   dataTypes.INTEGER,
+        type:   dataTypes.INTEGER(10),
                 autoIncrement: true ,
                 primaryKey: true ,
                 allowNull: false,  
@@ -32,7 +30,7 @@ let cols ={
         },
 
     roles_id: {
-        type:   dataTypes.INTEGER,
+        type:   dataTypes.INTEGER(10),
                     references: {
                         model:'roles',
                         key: 'id'

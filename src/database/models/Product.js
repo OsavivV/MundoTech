@@ -1,5 +1,3 @@
-'use strict';
-
 module.exports = (sequelize, dataTypes) => {
   let alias = 'Product';
   let cols ={
@@ -58,25 +56,13 @@ module.exports = (sequelize, dataTypes) => {
 
       categories_id: {
           type: dataTypes.INTEGER,
-                references: {
-                    model:'categories',
-                    key: 'id'
-                        }
+               
       },
       brands_id: {
           type: dataTypes.INTEGER,
-                references: {
-                    model:'brands',
-                    key: 'id'
-                        }
+                
       },
-    //   buys_id: {
-    //     type: dataTypes.INTEGER,
-    //           references: {
-    //               model:'buys',
-    //               key: 'id'
-    //       }  
-    // },
+
           
           }   
   
@@ -90,7 +76,7 @@ module.exports = (sequelize, dataTypes) => {
   
     Product.associate = function(models) {
 
-        Product.belongsTo(models.category, {
+        Product.belongsTo(models.Category, {
                 as: "categories",
                 foreignKey: "categories_id"
             });
@@ -104,6 +90,14 @@ module.exports = (sequelize, dataTypes) => {
                 as: "product_images",
                 otherKey: "image_id",
                 timestamps: false
+        });
+
+        Product.belongsToMany(models.Color, {
+            as: "color",
+            through: "product_has_colors",
+            foreignKey: "products_id",
+            otherKey: "colors_id",
+            timestamps: false
         });
     }
 

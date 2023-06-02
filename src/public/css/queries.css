@@ -1,0 +1,187 @@
+/* break points ----- */
+
+@media (min-width: 461px) {
+
+	.slider-frame img {
+		height: 250px;
+	}
+
+	.trending, .trendingTwo, .trendingThree {
+		width: calc(94% / 4);
+		text-align: center;
+	}
+}
+
+
+@media (min-width: 650px){
+
+    .desktop{
+        margin-right: 100px;
+    }
+
+    .filtersButtonsContainer {
+        top: 130px;
+		right: 55px;
+	}
+
+    .filtersButtonsContainer button {
+		width: 55px;
+    	height: 30px;
+	}
+
+    .detailsContainer{
+        display: flex;
+        flex-wrap: wrap;
+        margin-left: -15px;
+        justify-content: space-around;
+    }
+
+    .menu{
+        display: contents;
+    }
+
+    .fa-bars{
+        display: none;
+    }
+
+    .loginIcon{
+        position: relative;
+        top: -75px;
+    }
+
+    .brand {
+        padding: 0px 20px;
+    }
+
+}
+
+/* Tablet queries ---------- */
+
+@media (min-width: 769px) {
+
+
+    .brandImages img {
+        height: 60px;
+    }
+    
+    .shippingContainer{
+        margin-left: -15px;
+        margin-right: 20px;
+    }
+
+    .carousel, .carouselTwo, .carouselThree{
+		margin-left: 35px;
+	}
+
+	.trending, .trendingTwo, .trendingThree {
+		width: calc(92% / 5);
+		text-align: center;
+	}
+
+	#prev, #prev2, #prev3{
+		margin-left: 2px;
+	}
+
+	#next, #next2, #next3 {
+	    margin-right: 10px;
+	}
+}
+
+
+/* ---------------desktop queries---------------- */
+
+@media (min-width: 900px){
+
+
+    .brandImages img {
+        width: 100px;
+        height: 80px;
+    }
+
+    .slider-frame img {
+        height: 400px;
+	    text-align: center;
+
+	}
+
+	.carouselTitle {
+		height: 85px;
+	}
+
+	.trending, .trendingTwo, .trendingThree {
+		width: calc(97% / 5);
+		text-align: center;
+		font-size: 20px;
+	}
+
+	.trending p, .trendingTwo p, .trendingThree p {
+		font-size: 25px;
+		
+	}
+
+	.trending img, .trendingTwo img, .trendingThree img {
+		width: 110px;
+    	height: 120px;
+		border: none;
+	}
+
+	.trending h3, .trendingTwo h3, .trendingThree h3 {
+		font-size: 30px;
+	}
+
+    .footerTittle h1{
+        font-size: 50px;
+        border-bottom: 3px dotted lightgray;
+    }
+
+    .detailsContainer {
+        flex-wrap: nowrap;
+        flex-direction: row-reverse;
+    }
+
+    .details {
+        box-shadow: 0px 0px 100px -2px lightgray;
+    }
+
+    .details h4, .listInfo, .listConditions {
+        font-size: 20px;
+    }
+
+    .bannerBottom img {
+        height: 500px;
+    }
+
+    .shipping p {
+        font-size: 30px;
+    }
+
+    .payments h3 {
+        font-size: 45px;
+    }
+
+    .payments img {
+        margin: 25px 0px;
+        max-width: 100%;
+        height: 180px;
+    }
+
+    .filtersButtonsContainer {
+        top: 200px;
+        right: 100px;
+    }
+
+    .filtersButtonsContainer button {
+        width: 80px;
+        height: 45px;
+    }
+
+    .filtersBrandscontainer {
+        height: 120px;
+    }
+
+    .brandImages img {
+        width: 100px;
+        height: 80px;
+    }
+}
+
