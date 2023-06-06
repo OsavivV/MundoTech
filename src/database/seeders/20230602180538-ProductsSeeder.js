@@ -1271,7 +1271,7 @@ await queryInterface.bulkInsert('products', [
 
       ram: '8GB',
 
-      memory: '64/256 GB',
+      memory: '64/256GB',
 
       status:  'Nuevo',
 
@@ -1295,7 +1295,7 @@ await queryInterface.bulkInsert('products', [
 
       ram: '8GB',
 
-      memory: '64/256 GB',
+      memory: '64/256GB',
 
       status:  'Nuevo',
 
@@ -1306,6 +1306,438 @@ await queryInterface.bulkInsert('products', [
       salePrice: '2.640.900',
 
       categories_id: '3',
+
+      brands_id: '4',
+    },
+
+    {
+      name: 'Lenovo Tab P12 Pro' ,
+
+      description: 'Se trata de una tablet con una enorme pantalla 2K a 120 Hz, el procesador Snapdragon 870 y compatibilidad con el Precision Pen 3 de Lenovo. Una tablet, en definitiva, pensada para consumo multimedia, para productividad y, por qué no, para echarse alguna que otra partida.',
+
+      processor: 'Qualcomm® Snapdragon™ 870 Processor (3.20 GHz )',
+
+      ram: '8GB',
+
+      memory: '256GB',
+
+      status:  'Nuevo',
+
+      discount: '0',
+
+      purchasePrice: '5.243.900',
+
+      salePrice: '5.999.000',
+
+      categories_id: '3',
+
+      brands_id: '15',
+    },
+
+    {
+      name: 'Lenovo Yoga 13' ,
+
+      description: 'Combinando la productividad de una Ultrabook™, con la experiencia táctil de una tablet, la Yoga de 13,3” es lo último en versatilidad. con una calidad de imagen 2K a través de Dolby Visión ™. y su audio cinematográfico Dolby Atmos® con cuatro altavoces JBL. Obtén una mayor productividad con doble pantalla. El práctico puerto micro-HDMI transforma tu Tablet en una segunda pantalla para tu laptop, Juega sin parar gracias su batería de larga duración que recarga en poco tiempo. lleva la tuya ahora!',
+
+      processor: 'Qualcomm® Snapdragon™ 870 Processor (3.20 GHz )',
+
+      ram: '8GB',
+
+      memory: '128GB',
+
+      status:  'Nuevo',
+
+      discount: '0',
+
+      purchasePrice: '2.521.000',
+
+      salePrice: '2.899.900',
+
+      categories_id: '3',
+
+      brands_id: '15',
+    },
+
+    {
+      name: 'Manilla Apple Watch' ,
+
+      description: 'Hecho con material de primera calidad para lograr un color vibrante que nunca se desvanece. El material de silicona recubierto de goma personalizado da como resultado una correa resistente, duradera e impermeable que se siente súper suave en su muñeca. No se necesitan adaptadores!',
+
+      processor: '',
+
+      ram: '',
+
+      memory: '',
+
+      status:  'Nuevo',
+
+      discount: '0',
+
+      purchasePrice: '37.000',
+
+      salePrice: '50.000',
+
+      categories_id: '9',
+
+      brands_id: '4',
+    },
+
+    {
+      name: 'Estuche Protector Airpods' ,
+
+      description: 'Hecho con material de primera calidad para lograr un color vibrante que nunca se desvanece. El material de silicona recubierto de goma personalizado da como resultado un estuche, duradero e impermeable para proteger tus Airpods en todo momento',
+
+      processor: '',
+
+      ram: '',
+
+      memory: '',
+
+      status:  'Nuevo',
+
+      discount: '0',
+
+      purchasePrice: '12.500',
+
+      salePrice: '25.000',
+
+      categories_id: '9',
+
+      brands_id: '4',
+    },
+
+    {
+      name: 'PopSocket Celulares' ,
+
+      description: 'Diseños únicos e intercambiables que se adaptan a tu estilo y personalidad. Los accesorios originales para tu teléfono, mejor agarre y mayor comodidad',
+
+      processor: '',
+
+      ram: '',
+
+      memory: '',
+
+      status:  'Nuevo',
+
+      discount: '0',
+
+      purchasePrice: '11.500',
+
+      salePrice: '21.000',
+
+      categories_id: '9',
+
+      brands_id: '',
+    },
+
+    {
+      name: 'Soporte Fijador Electromecanico para carro' ,
+
+      description: 'este tipo de soporte tiene un sensor de movimiento integrado. Fijaciones del soporte se abren automáticamente cuando usted acerca la mano con teléfono y se cierran después de colocar el teléfono. Con frecuencia los soportes con fijador automático poseen un cargador inalámbrico integrado. Cabe notar que este tipo de soportes requiere alimentación eléctrica y, por lo tanto, ellos todo el tiempo deben permanecer conectados al encendedor.',
+
+      processor: '',
+
+      ram: '',
+
+      memory: '',
+
+      status:  'Nuevo',
+
+      discount: '0',
+
+      purchasePrice: '36.900',
+
+      salePrice: '52.000',
+
+      categories_id: '9',
+
+      brands_id: '',
+    },
+
+    {
+      name: 'Cable Iphone USB 2M' ,
+
+      description: 'Este cable USB 2.0 de 2 metros conecta tu iPhone, iPad o iPod con conector Lightning al puerto USB-A del ordenador para sincronizarlo o cargarlo, o al Adaptador de corriente USB-A para cargarlo con comodidad en una toma de pared. LA CAJA CONTIENE: Cable Lightning a USB (2 m) de Apple',
+
+      processor: '',
+
+      ram: '',
+
+      memory: '',
+
+      status:  'Nuevo',
+
+      discount: '0',
+
+      purchasePrice: '99.500',
+
+      salePrice: '135.000',
+
+      categories_id: '6',
+
+      brands_id: '4',
+    },
+
+    {
+      name: 'Cabezote iPhone Carga Rapida' ,
+
+      description: 'el cabezote iPhone Carga Rápida (20W) es un accesorio imprescindible para los propietarios de dispositivos iPhone que desean aprovechar al máximo la velocidad de carga. Con su potencia de 20W, diseño compacto y protecciones de seguridad, este cabezote te brinda una experiencia de carga rápida y segura para tu iPhone en cualquier momento y lugar.',
+
+      processor: '',
+
+      ram: '',
+
+      memory: '',
+
+      status:  'Nuevo',
+
+      discount: '0',
+
+      purchasePrice: '62.500',
+
+      salePrice: '85.000',
+
+      categories_id: '6',
+
+      brands_id: '4',
+    },
+
+    {
+      name: 'Cargador Completo iPhone USB' ,
+
+      description: 'El Cargador Completo iPhone USB es un dispositivo de carga diseñado específicamente para los dispositivos iPhone. Con una potencia de salida de hasta 12W, ofrece una carga normal y eficiente. Cuenta con un cable USB de alta calidad y un adaptador de corriente compacto, lo que lo hace fácil de transportar. Además, incorpora tecnología de protección contra sobrecargas y cortocircuitos para garantizar la seguridad de tus dispositivos.',
+
+      processor: '',
+
+      ram: '',
+
+      memory: '',
+
+      status:  'Nuevo',
+
+      discount: '0',
+
+      purchasePrice: '82.500',
+
+      salePrice: '105.000',
+
+      categories_id: '6',
+
+      brands_id: '4',
+    },
+
+    {
+      name: 'Cargador Apple MagSafe' ,
+
+      description: 'El Cargador Apple MagSafe es un cargador inalámbrico diseñado específicamente para dispositivos Apple. Utiliza imanes para alinear de manera precisa el cargador con el dispositivo, lo que permite una carga rápida y segura. Tiene una potencia de hasta 15W y es compatible con modelos de iPhone 12 y versiones posteriores. Además, cuenta con la función de carga inversa, lo que te permite cargar otros dispositivos compatibles con Qi colocándolos en la parte trasera del cargador.',
+
+      processor: '',
+
+      ram: '',
+
+      memory: '',
+
+      status:  'Nuevo',
+
+      discount: '0',
+
+      purchasePrice: '175.500',
+
+      salePrice: '205.000',
+
+      categories_id: '6',
+
+      brands_id: '4',
+    },
+
+    {
+      name: 'Cargador Rapido Completo Samsung' ,
+
+      description: 'El Cargador Rápido Completo Samsung es una solución eficiente y confiable para cargar tus dispositivos. Con una potencia de carga rápida, proporciona una carga rápida y segura en un tiempo reducido. Diseñado por Samsung, garantiza la compatibilidad y la calidad que esperas de la marca.',
+
+      processor: '',
+
+      ram: '',
+
+      memory: '',
+
+      status:  'Nuevo',
+
+      discount: '0',
+
+      purchasePrice: '91.500',
+
+      salePrice: '110.000',
+
+      categories_id: '6',
+
+      brands_id: '2',
+    },
+
+    {
+      name: 'Cargador Tipo C Android Generico' ,
+
+      description: 'El Cargador Tipo C Android Genérico es una opción versátil y económica para cargar dispositivos Android con puerto tipo C. Su diseño genérico asegura la compatibilidad con una amplia gama de dispositivos Android.',
+
+      processor: '',
+
+      ram: '',
+
+      memory: '',
+
+      status:  'Nuevo',
+
+      discount: '0',
+
+      purchasePrice: '28.500',
+
+      salePrice: '40.000',
+
+      categories_id: '6',
+
+      brands_id: '',
+    },
+
+    {
+      name: 'Power Bank Apple' ,
+
+      description: 'El Power Bank Apple es una solución portátil de carga confiable diseñada específicamente para dispositivos Apple. Con una capacidad de batería de larga duración, ofrece carga rápida y segura para tus dispositivos en cualquier lugar. Su diseño elegante y compacto lo convierte en el compañero perfecto para estar siempre conectado',
+
+      processor: '',
+
+      ram: '',
+
+      memory: '',
+
+      status:  'Nuevo',
+
+      discount: '0',
+
+      purchasePrice: '289.500',
+
+      salePrice: '398.000',
+
+      categories_id: '6',
+
+      brands_id: '4',
+    },
+
+    {
+      name: 'Apple AirPods Serie 2' ,
+
+      description: 'Los Apple AirPods Serie 2 Nuevo son unos auriculares inalámbricos de alta calidad y rendimiento. Ofrecen una experiencia de audio envolvente y una conexión inalámbrica estable con dispositivos Apple. Además, cuentan con comandos táctiles y una duración de batería extendida para disfrutar de tu música favorita sin interrupciones.',
+
+      processor: '',
+
+      ram: '',
+
+      memory: '',
+
+      status:  'Nuevo',
+
+      discount: '0',
+
+      purchasePrice: '681.500',
+
+      salePrice: '768.000',
+
+      categories_id: '7',
+
+      brands_id: '4',
+    },
+
+    {
+      name: 'Apple AirPods Serie 3' ,
+
+      description: 'Los Apple AirPods Serie 3, son auriculares inalámbricos de última generación con un diseño elegante y mejorado. Ofrecen una calidad de sonido excepcional y una conexión rápida y estable con dispositivos Apple. Además, cuentan con funciones mejoradas como cancelación de ruido y una duración de batería prolongada para una experiencia auditiva inmersiva y sin interrupciones.',
+
+      processor: '',
+
+      ram: '',
+
+      memory: '',
+
+      status:  'Nuevo',
+
+      discount: '0',
+
+      purchasePrice: '881.500',
+
+      salePrice: '1.000.000',
+
+      categories_id: '7',
+
+      brands_id: '4',
+    },
+
+    {
+      name: 'Apple AirPods Pro' ,
+
+      description: 'Los Apple AirPods Pro son auriculares inalámbricos de gama alta con cancelación activa de ruido. Ofrecen un sonido envolvente y personalizable, adaptándose a tus preferencias auditivas. Además, cuentan con un diseño ergonómico y resistente al agua, brindando comodidad y durabilidad en cualquier situación.',
+
+      processor: '',
+
+      ram: '',
+
+      memory: '',
+
+      status:  'Nuevo',
+
+      discount: '0',
+
+      purchasePrice: '971.500',
+
+      salePrice: '1.150.000',
+
+      categories_id: '7',
+
+      brands_id: '4',
+    },
+
+    {
+      name: 'Apple AirPods Pro' ,
+
+      description: 'Los Apple AirPods Pro son auriculares inalámbricos de gama alta con cancelación activa de ruido. Ofrecen un sonido envolvente y personalizable, adaptándose a tus preferencias auditivas. Además, cuentan con un diseño ergonómico y resistente al agua, brindando comodidad y durabilidad en cualquier situación.',
+
+      processor: '',
+
+      ram: '',
+
+      memory: '',
+
+      status:  'Nuevo',
+
+      discount: '0',
+
+      purchasePrice: '971.500',
+
+      salePrice: '1.100.000',
+
+      categories_id: '7',
+
+      brands_id: '4',
+    },
+
+    {
+      name: 'Apple Earpods' ,
+
+      description: 'Los Apple EarPods son auriculares con cable diseñados por Apple, ofreciendo una experiencia auditiva de alta calidad. Con un diseño ergonómico, brindan comodidad durante su uso prolongado. Son compatibles con una amplia gama de dispositivos Apple y cuentan con un control remoto integrado para un fácil manejo de la reproducción de audio.',
+
+      processor: '',
+
+      ram: '',
+
+      memory: '',
+
+      status:  'Nuevo',
+
+      discount: '0',
+
+      purchasePrice: '71.500',
+
+      salePrice: '100.000',
+
+      categories_id: '7',
 
       brands_id: '4',
     },
