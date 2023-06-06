@@ -16,22 +16,18 @@ module.exports = (sequelize, dataTypes) => {
   
       description: {
           type: dataTypes.TEXT,
-                allowNull: false
           },
   
       processor: {
           type: dataTypes.STRING(50),
-                allowNull: false
           }, 
   
       ram: {
           type: dataTypes.STRING(20),
-                allowNull: false
           },
   
       memory: {
           type: dataTypes.STRING(20),
-                allowNull: false
           },
   
       status: {
@@ -41,7 +37,6 @@ module.exports = (sequelize, dataTypes) => {
   
       discount: {
           type: dataTypes.STRING(20),
-                allowNull: false
           },
 
       purchasePrice: {

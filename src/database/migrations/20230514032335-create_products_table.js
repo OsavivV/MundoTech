@@ -23,19 +23,15 @@ module.exports = {
       },
     description: {
         type: Sequelize.TEXT,
-              allowNull: false
       },
     processor: {
         type: Sequelize.STRING(50),
-              allowNull: false
       },
     ram: {
         type: Sequelize.STRING(20),
-              allowNull: false
       },
     memory: {
         type: Sequelize.STRING(20),
-              allowNull: false
       },
     status: {
         type: Sequelize.STRING(20),
@@ -43,7 +39,6 @@ module.exports = {
       },
     discount: {
         type: Sequelize.STRING(20),
-              allowNull: false
       },
     purchasePrice: {
         type: Sequelize.DECIMAL(11, 10),

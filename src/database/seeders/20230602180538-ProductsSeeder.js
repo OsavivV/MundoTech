@@ -20,11 +20,11 @@ await queryInterface.bulkInsert('products', [
 
       description: 'Apple iPhone 14 llega este año con el mismo chip A15 Bionic del iPhone 13. Con una pantalla de 6.1 pulgadas, el iPhone 14 cuenta con una cámara dual con dos sensores de 12MP, siendo el principal estabilizado. La cámara selfie es de 12MP y suma PDAF y la batería puede cargarse en forma inalámbrica mediante MagSafe o por cable, logrando una carga de 50% en 30 minutos. El iPhone 14 también cuenta con parlantes stereo, Face ID, sistema de mensajería de emergencia vía satélite, y resiste el polvo y agua. ',
 
-      processor: 'Apple A16 Bionic 4nm, Hexa-core 2x3.46 GHz Everest ',
+      processor: 'Apple A16 Bionic 4nm',
 
-      ram: '6 GB',
+      ram: '6GB',
 
-      memory: '128GB, 1TB, 256GB, 512GB',
+      memory: '128/256/512GB',
 
       status:  'Nuevo',
 
@@ -43,19 +43,19 @@ await queryInterface.bulkInsert('products', [
 
       description: 'Apple iPhone 14 llega este año con el mismo chip A15 Bionic del iPhone 13. Con una pantalla de 6.1 pulgadas, el iPhone 14 cuenta con una cámara dual con dos sensores de 12MP, siendo el principal estabilizado. La cámara selfie es de 12MP y suma PDAF y la batería puede cargarse en forma inalámbrica mediante MagSafe o por cable, logrando una carga de 50% en 30 minutos. El iPhone 14 también cuenta con parlantes stereo, Face ID, sistema de mensajería de emergencia vía satélite, y resiste el polvo y agua. ',
 
-      processor: 'Apple A15 Bionic 5nm, Hexa-core 2x3.23 GHz Avalanche + 4x1.82 GHz Blizzard ',
+      processor: 'Apple A15 Bionic 5nm',
 
-      ram: '6 GB',
+      ram: '6GB',
 
-      memory: '128GB, 256GB, 512GB',
+      memory: '128/256/512GB',
 
       status:  'Nuevo',
 
       discount: '0',
 
-      purchasePrice: '3650000',
+      purchasePrice: '3.650.000',
 
-      salePrice: '4050000',
+      salePrice: '4.050.000',
 
       categories_id: '1',
 
@@ -67,19 +67,19 @@ await queryInterface.bulkInsert('products', [
 
       description: 'El Apple iPhone 13 Pro Max es la variante con mayor tamaño de pantalla de la serie iPhone 13. Con una pantalla OLED de 6.7 pulgadas, el iPhone 13 Pro Max cuenta con un procesador Apple A15 Bionic con opciones de 512GB de almacenamiento, cámara cuádruple con tres lentes de 12 megapixels más un lente TOF 3D de tecnología LiDAR, cámara selfie de 12 megapixels, estabilización de imagen, zoom óptico 5x,nuevo modo cine, parlantes stereo, carga rápida e inalámbrica por MagSafe para iPhone o protocolo Qi, resistencia al polvo y agua con certificación iP68, y corre iOS 15. ',
 
-      processor: 'Apple A15 Bionic 5nm, Hexa-core 2.22 GHz Avalanche + 4.8 GHz Blizzard ',
+      processor: 'Apple A15 Bionic 5nm',
 
-      ram: '6 GB',
+      ram: '6GB',
 
-      memory: '128GB, 1TB',
+      memory: '128GB/1TB',
 
       status:  'Nuevo',
 
       discount: '0',
 
-      purchasePrice: '4700000',
+      purchasePrice: '4.700.000',
 
-      salePrice: '5200000',
+      salePrice: '5.200.000',
 
       categories_id: '1',
 
@@ -93,17 +93,17 @@ await queryInterface.bulkInsert('products', [
 
       processor: 'Apple A15 Bionic 5nm, Hexa-core 2x3,22 GHz Avalanche + 4xX.X GHz Blizzard ',
 
-      ram: '4 GB',
+      ram: '4GB',
 
-      memory: '128GB, 256GB ',
+      memory: '128/256GB ',
 
       status:  'Nuevo',
 
       discount: '0',
 
-      purchasePrice: '3250900',
+      purchasePrice: '3.250.900',
 
-      salePrice: '3599900',
+      salePrice: '3.599.900',
 
       categories_id: '1',
 
@@ -115,19 +115,19 @@ await queryInterface.bulkInsert('products', [
 
       description: 'El Apple iPhone 12 Pro Max es la variante con mayor tamaño de pantalla de la serie iPhone 12. Con una pantalla OLED de 6.7 pulgadas, el iPhone 12 Pro Max cuenta con un procesador Apple A14 Bionic con opciones de 128GB de almacenamiento, cámara cuádruple con tres lentes de 12 megapixels más un lente TOF 3D de tecnología LiDAR, cámara selfie de 12 megapixels, estabilización de imagen, zoom óptico 5x, parlantes stereo, carga rápida e inalámbrica por MagSafe para iPhone o protocolo Qi, resistencia al polvo y agua con certificación iP68, y corre iOS 14. ',
 
-      processor: 'Apple A14 Bionic 5nm, Hexa-core 2X3.1 GHz Firestorm + 4X1.8 GHz Icestorm',
+      processor: 'Apple A14 Bionic 5nm',
 
-      ram: '6 GB',
+      ram: '6GB',
 
-      memory: '128GB, 256GB',
+      memory: '128/256GB',
 
       status:  'Usado',
 
       discount: '0',
 
-      purchasePrice: '3150000',
+      purchasePrice: '3.150.000',
 
-      salePrice: '3449000',
+      salePrice: '3.449.000',
 
       categories_id: '1',
 
@@ -139,19 +139,19 @@ await queryInterface.bulkInsert('products', [
 
       description: 'El iPhone 12 cuenta con una pantalla Super Retina XDR de 6.1 pulgadas de tecnología OLED y está potenciado por el nuevo procesador A14 Bionic, con opciones de 64GB almacenamiento interno. El sistema de cámaras trasero es dual, con dos lentes de 12MP que agregan estabilización óptica de imagen, y varias mejoras de software y la cámara frontal TrueDepth es de 12 MP. El iPhone 12 utiliza reconocimiento de rostro Face ID para la seguridad, cuenta con soporte para carga rápida e inalámbrica, y corre iOS 14.',
 
-      processor: 'Apple A14 Bionic 5nm, Hexa-core 2x3.1 GHz Firestorm + 4x1.8 GHz Icestorm',
+      processor: 'Apple A14 Bionic 5nm',
 
-      ram: '4 GB',
+      ram: '4GB',
 
-      memory: '64GB, 128GB, 256GB ',
+      memory: '64/128/256GB ',
 
       status:  'Usado',
 
       discount: '0',
 
-      purchasePrice: '2765000',
+      purchasePrice: '2.765.000',
 
-      salePrice: '3050000',
+      salePrice: '3.050.000',
 
       categories_id: '1',
 
@@ -163,19 +163,19 @@ await queryInterface.bulkInsert('products', [
 
       description: 'El Apple iPhone 11 Pro Max cuenta con pantalla Super Retina XDR de 6.5 pulgadas. El iPhone 11 Pro Max está potenciado por un procesador A13 Bionic de Apple, con almacentamiento de 64GB. Su cámara trasera es triple, de 12 MP + 12 MP + 12 MP integrando zoom óptico, gran angular y estabilización óptica de imagen, mientras que su cámara selfie es de 12 MP y ayuda al reconocimiento de rostro con Face ID. El resto de las características incluyen parlantes stereo, resistencia al agua IP68, batería de carga rápida y sonido Dolby Atmos.',
 
-      processor: 'Apple A13 Bionic 7nm, Hexa-core 2X2.65 GHz Lightning + 4X1.8 GHz Thunder',
+      processor: 'Apple A13 Bionic 7nm',
 
-      ram: '4 GB',
+      ram: '4GB',
 
-      memory: '64GB, 256GB',
+      memory: '64/256GB',
 
       status:  'Usado',
 
       discount: '0',
 
-      purchasePrice: '2350000',
+      purchasePrice: '2.350.000',
 
-      salePrice: '2689900',
+      salePrice: '2.689.900',
 
       categories_id: '1',
 
@@ -189,17 +189,17 @@ await queryInterface.bulkInsert('products', [
 
       processor: 'Apple A13 Bionic 5nm, Hexa-core 2x2.65 GHz Lightning + 4x1.8 GHz Thunder',
 
-      ram: '4 GB',
+      ram: '4GB',
 
-      memory: '64GB, 128GB ',
+      memory: '64/128GB ',
 
       status:  'Usado',
 
       discount: '0',
 
-      purchasePrice: '1765000',
+      purchasePrice: '1.765.000',
 
-      salePrice: '2249000',
+      salePrice: '2.249.000',
 
       categories_id: '1',
 
@@ -213,17 +213,17 @@ await queryInterface.bulkInsert('products', [
 
       processor: 'Apple A12 Bionic 5nm, Hexa-core 2X2.5 GHz Vortex + 4X1.6 GHz Tempest',
 
-      ram: '4 GB',
+      ram: '4GB',
 
-      memory: '64GB, 128GB, 256GB ',
+      memory: '64/128/256GB ',
 
       status:  'Usado',
 
       discount: '0',
 
-      purchasePrice: '1300000',
+      purchasePrice: '1.300.000',
 
-      salePrice: '1549000',
+      salePrice: '1.549.000',
 
       categories_id: '1',
 
@@ -235,19 +235,19 @@ await queryInterface.bulkInsert('products', [
 
       description: ' El iPhone X cuenta con una pantalla de 5.8 pulgadas que abarca todo el frente del teléfono, dejando un espacio arriba para acomodar todos los sensores que contribuyen a Face ID, el nuevo método de desbloqueo por rostro, ya que el botón Touch ID desaparece. Con una atípica resolución de 2436 x 1125 pixels, acomoda 458ppi. La cámara es dual de 12 MP similar a la del iPhone 8, es resistente al agua y corre iOS 11.',
 
-      processor: 'Apple A11 Bionic 5nm, Hexa-core 2.39 GHz 2x Monsoon + 4x Mistral',
+      processor: 'Apple A11 Bionic 5nm',
 
-      ram: '3 GB',
+      ram: '3GB',
 
-      memory: '64GB, 256GB ',
+      memory: '64/256GB ',
 
       status:  'Usado',
 
       discount: '0',
 
-      purchasePrice: '1100000',
+      purchasePrice: '1.100.000',
 
-      salePrice: '1399900',
+      salePrice: '1.399.900',
 
       categories_id: '1',
 
@@ -259,9 +259,9 @@ await queryInterface.bulkInsert('products', [
 
       description: ' el Samsung Galaxy Z Fold 4 cuenta con una pantalla interior AMOLED 2x dinámica de 7,6" con una resolución QXGA+ de 1812 x 2176 píxeles y una capa de cristal UTG ultrafina. Con una frecuencia de refresco adaptativa de 120 Hz, consigues una suavidad sin igual y una inmersión total en tus contenidos favoritos.',
 
-      processor: 'Qualcomm SM8475 Snapdragon 8+ Gen 1/4nm Octa-core ',
+      processor: 'Qualcomm SM8475 Snapdragon 8+ Gen 1/4nm',
 
-      ram: '12 GB',
+      ram: '12GB',
 
       memory: '256GB ',
 
@@ -269,9 +269,9 @@ await queryInterface.bulkInsert('products', [
 
       discount: '0',
 
-      purchasePrice: '6139900',
+      purchasePrice: '6.139.900',
 
-      salePrice: '6649900',
+      salePrice: '6.649.900',
 
       categories_id: '1',
 
@@ -283,9 +283,9 @@ await queryInterface.bulkInsert('products', [
 
       description: 'Con una pantalla AMOLED de 6.7 pulgadas a resolución FHD+ y tasa de refresco de 120Hz al estar abierto, el Galaxy Z Flip 4 tiene una pantalla cover de 1.9 pulgadas para notificaciones y atajos. Potenciado por un procesador Qualcomm Snapdragon 8+ Gen 1, el Galaxy Z Flip4 cuenta con 8GB de RAM y hasta 512GB de almacenamiento interno.',
 
-      processor: 'Qualcomm Snapdragon 8+ Gen 1 a 3,18 GHz-Octa-core 1x3.19 GHz Cortex-X2',
+      processor: 'Qualcomm Snapdragon 8+ Gen 1 a 3,18 GHz-Octa-core',
 
-      ram: '8 GB',
+      ram: '8GB',
 
       memory: '256GB ',
 
@@ -293,9 +293,9 @@ await queryInterface.bulkInsert('products', [
 
       discount: '0',
 
-      purchasePrice: '3799900',
+      purchasePrice: '3.799.900',
 
-      salePrice: '3500000',
+      salePrice: '3.500.000',
 
       categories_id: '1',
 
@@ -307,19 +307,19 @@ await queryInterface.bulkInsert('products', [
 
       description: 'Descubre el Galaxy S23 Ultra, con la potencia del Note. Fino y atrevido, con un marco pulido que rodea la forma extruida para lograr una elegante simetría. Y la cámara lineal, realzada por los aros de la lente de espejo, parece flotar. Por fin ha ocurrido: Galaxy S y S Pen son compatibles. Escribe, dibuja y controla tu móvil con tan solo sacarlo de su parte inferior.',
 
-      processor: 'Qualcomm Snapdragon 8+ Gen 1 a 3,18 GHz-Octa-core 1x3.19 GHz Cortex-X2',
+      processor: 'Qualcomm Snapdragon 8+ Gen 1 a 3,18 GHz-Octa-core',
 
-      ram: '12 GB',
+      ram: '12GB',
 
-      memory: '256GB, 512GB ',
+      memory: '256/512GB ',
 
       status:  'Nuevo',
 
       discount: '0',
 
-      purchasePrice: '5800900',
+      purchasePrice: '5.800.900',
 
-      salePrice: '5480000',
+      salePrice: '5.480.000',
 
       categories_id: '1',
 
@@ -331,9 +331,9 @@ await queryInterface.bulkInsert('products', [
 
       description: 'Este smartphone te cautiva con su diseño, el modulo de cámara cuenta con un diseño exclusivo y su tamaño de 6.1" en su display avanzado, te ofrece máxima portabilidad en un diseño compacto y con materiales sostenibles. La cámara de este modelo te ofrece selfies, retratos y videos nítidos, libres de ruido y con el mayor brillo, cuando capturas en la noche',
 
-      processor: 'Qualcomm SM8550-AC Snapdragon 8 Gen 2,4 nm, Octa-core 1x3.36 GHz Cortex-X3',
+      processor: 'Qualcomm SM8550-AC Snapdragon 8 Gen 2,4 nm',
 
-      ram: '8 GB',
+      ram: '8GB',
 
       memory: '256 GB ',
 
@@ -341,9 +341,9 @@ await queryInterface.bulkInsert('products', [
 
       discount: '0',
 
-      purchasePrice: '4180900',
+      purchasePrice: '4.180.900',
 
-      salePrice: '4520000',
+      salePrice: '4.520.000',
 
       categories_id: '1',
 
@@ -355,19 +355,19 @@ await queryInterface.bulkInsert('products', [
 
       description: 'Equipado con una revolucionaria pantalla curva Quad HD+ de 6.9", el  Samsung Galaxy Note 20 Ultra combina potencia, conectividad, elegancia y facilidad de uso en un solo teléfono inteligente. Alberga un procesador Exynos. 990 Octa-Core sincronizados a 2,73 GHz, 12 GB de RAM y una capacidad de almacenamiento de 256GB. Y con su cámara de triple sensor de 108+12+12MP toma hermosas fotos.',
 
-      processor: 'Octa-core 2x2.73 GHz Mongoose M5 y 4x2.0 GHz Cortex-A55 Exynos 990 7 nm ',
+      processor: 'Cortex-A55 Exynos 990 7 nm ',
 
-      ram: '12 GB',
+      ram: '12GB',
 
-      memory: '256 GB ',
+      memory: '256GB ',
 
       status:  'Nuevo',
 
       discount: '0',
 
-      purchasePrice: '3799900',
+      purchasePrice: '3.799.900',
 
-      salePrice: '3950000',
+      salePrice: '3.950.000',
 
       categories_id: '1',
 
@@ -379,19 +379,19 @@ await queryInterface.bulkInsert('products', [
 
       description: '¡Descubra el Samsung Galaxy A54 5G 128gb | 6gb y disfrute de un celular de última generación al mejor precio! Con su cámara principal triple de 50MP, 12MP y 5MP y su cámara Selfie de 32MP, ¡captura los mejores momentos con la más alta calidad! ¿Estás preparado para la experiencia?',
 
-      processor: 'Exynos 1380 5 nm -Octa-core 4x2.4 GHz Cortex-A78 y 4x2.0 GHz Cortex-A55 ',
+      processor: 'Exynos 1380 5 nm -Octa-core 4x2.4 GHz ',
 
-      ram: '6 GB',
+      ram: '6GB',
 
-      memory: '128 GB ',
+      memory: '128GB ',
 
       status:  'Nuevo',
 
       discount: '0',
 
-      purchasePrice: '1669900',
+      purchasePrice: '1.669.900',
 
-      salePrice: '1850000',
+      salePrice: '1.850.000',
 
       categories_id: '1',
 
@@ -403,19 +403,19 @@ await queryInterface.bulkInsert('products', [
 
       description: 'El Galaxy A53 5G cuenta con una pantalla Super AMOLED Infinity-O de 6,5" con resolución Full HD+ de 1080 x 2400 píxeles. Podrás disfrutar de tus vídeos en Full HD, de tus fotos en tamaño extra grande, y navegar por Internet con una comodidad excepcional, todo ello manteniendo una impresionante reproducción y respeto de los colores. Y con una frecuencia de refresco de 120 Hz, disfrutarás de una experiencia más cómoda y fluida.',
 
-      processor: 'Exynos 1280 5 nm Octa-core 2x2.4 GHz Cortex-A78 y 6x2.0 GHz Cortex-A55 ',
+      processor: 'Exynos 1280 5 nm Octa-core 2x2.4 GHz Cortex-A78 ',
 
-      ram: '6 GB',
+      ram: '6GB',
 
-      memory: '128 GB ',
+      memory: '128GB ',
 
       status:  'Nuevo',
 
       discount: '0',
 
-      purchasePrice: '1260000',
+      purchasePrice: '1.260.000',
 
-      salePrice: '1479900',
+      salePrice: '1.479.900',
 
       categories_id: '1',
 
@@ -429,17 +429,17 @@ await queryInterface.bulkInsert('products', [
 
       processor: 'Octa-core 2x2.6 GHz Cortex-A78 y 6x2.0 GHz Cortex-A55',
 
-      ram: '8 GB',
+      ram: '8GB',
 
-      memory: '128GB, 256GB ',
+      memory: '128/256GB ',
 
       status:  'Nuevo',
 
       discount: '0',
 
-      purchasePrice: '1380000',
+      purchasePrice: '1.380.000',
 
-      salePrice: '1600000',
+      salePrice: '1.600.000',
 
       categories_id: '1',
 
@@ -451,19 +451,19 @@ await queryInterface.bulkInsert('products', [
 
       description: 'El Samsung Galaxy A33 5G maneja cuatro cámaras de 48+8+5+2 MP para ofrecerte fotos nítidas y claras de día o de noche. Utiliza el objetivo ultra gran angular de 8MP para capturar la vista más amplia posible, Con cámara frontal de 13 MP, tus selfies serán de una calidad inigualable.',
 
-      processor: 'Octa-core 2x2.4 GHz Cortex-A78 y 6x2.0 GHz Cortex-A55-Exynos 1280 ',
+      processor: 'Octa-core 2x2.4 GHz Cortex-A78 y 6x2.0 GHz',
 
-      ram: '6 GB',
+      ram: '6GB',
 
-      memory: '128GB, 256GB ',
+      memory: '128/256GB ',
 
       status:  'Nuevo',
 
       discount: '0',
 
-      purchasePrice: '1000000',
+      purchasePrice: '1.000.000',
 
-      salePrice: '1139900',
+      salePrice: '1.139.900',
 
       categories_id: '1',
 
@@ -475,11 +475,11 @@ await queryInterface.bulkInsert('products', [
 
       description: 'REALME C35 un producto de alto performance, con características de alta gama como carga inversa que permite cargar otro teléfono, cámaras 50 MPX + 8MPX para fotografías de una calidad impresionante, adicional su increíble pantalla DE 6.56" permite una mejor visualización con un diseño ergonómico y que da mas amplitud visual, batería de LiPo de 5000 mAh, que te permite mas tiempo de uso sin estar recargando constantemente',
 
-      processor: 'Octa-core 2x2.0 GHz Cortex-A75 y 6x1.8 GHz Cortex-A55',
+      processor: 'Octa-core 2x2.0 GHz Cortex-A75 y 6x1.8 GHz',
 
-      ram: '4 GB',
+      ram: '4GB',
 
-      memory: '128 GB ',
+      memory: '128GB ',
 
       status:  'Nuevo',
 
@@ -501,9 +501,9 @@ await queryInterface.bulkInsert('products', [
 
       processor: 'Unisoc T612 1.8GHz',
 
-      ram: '3GB / 4GB',
+      ram: '3/4GB',
 
-      memory: '32GB / 64GB ',
+      memory: '32/64GB ',
 
       status:  'Nuevo',
 
@@ -525,9 +525,9 @@ await queryInterface.bulkInsert('products', [
 
       processor: 'Unisoc T612 1.8GHz',
 
-      ram: '2GB / 3GB',
+      ram: '2/3GB',
 
-      memory: '32GB / 64GB ',
+      memory: '32/64GB ',
 
       status:  'Nuevo',
 
@@ -549,9 +549,9 @@ await queryInterface.bulkInsert('products', [
 
       processor: 'Octa-núcleo 1,6 GHz',
 
-      ram: '2GB / 3GB',
+      ram: '2/3GB',
 
-      memory: '32GB / 64GB ',
+      memory: '32/64GB ',
 
       status:  'Nuevo',
 
@@ -575,7 +575,7 @@ await queryInterface.bulkInsert('products', [
 
       ram: '8GB',
 
-      memory: '128 GB ',
+      memory: '128GB ',
 
       status:  'Nuevo',
 
@@ -599,7 +599,7 @@ await queryInterface.bulkInsert('products', [
 
       ram: '8GB',
 
-      memory: '128 GB ',
+      memory: '128GB ',
 
       status:  'Nuevo',
 
@@ -623,7 +623,7 @@ await queryInterface.bulkInsert('products', [
 
       ram: '8GB',
 
-      memory: '128 GB ',
+      memory: '128GB ',
 
       status:  'Nuevo',
 
@@ -647,7 +647,7 @@ await queryInterface.bulkInsert('products', [
 
       ram: '8GB',
 
-      memory: '128GB, 256GB',
+      memory: '128/256GB',
 
       status:  'Nuevo',
 
@@ -671,7 +671,7 @@ await queryInterface.bulkInsert('products', [
 
       ram: '12GB',
 
-      memory: '128GB, 256GB',
+      memory: '128/512GB',
 
       status:  'Nuevo',
 
@@ -695,7 +695,7 @@ await queryInterface.bulkInsert('products', [
 
       ram: '8GB',
 
-      memory: '128GB, 256GB',
+      memory: '128/256GB',
 
       status:  'Nuevo',
 
@@ -719,7 +719,7 @@ await queryInterface.bulkInsert('products', [
 
       ram: '12GB',
 
-      memory: '256GB, 512GB',
+      memory: '256GB/512GB',
 
       status:  'Nuevo',
 
@@ -743,7 +743,7 @@ await queryInterface.bulkInsert('products', [
 
       ram: '8GB',
 
-      memory: '128Gb, 256GB',
+      memory: '128/256GB',
 
       status:  'Nuevo',
 
@@ -767,7 +767,7 @@ await queryInterface.bulkInsert('products', [
 
       ram: '6GB',
 
-      memory: '128Gb ',
+      memory: '128GB ',
 
       status:  'Nuevo',
 
@@ -791,7 +791,7 @@ await queryInterface.bulkInsert('products', [
 
       ram: '8GB',
 
-      memory: '128Gb, 256Gb ',
+      memory: '128/256GB ',
 
       status:  'Nuevo',
 
@@ -815,7 +815,7 @@ await queryInterface.bulkInsert('products', [
 
       ram: '8GB',
 
-      memory: '128Gb, 256Gb ',
+      memory: '128/256GB ',
 
       status:  'Nuevo',
 
@@ -839,7 +839,7 @@ await queryInterface.bulkInsert('products', [
 
       ram: '8GB',
 
-      memory: '128Gb, 256Gb ',
+      memory: '128/256GB ',
 
       status:  'Nuevo',
 
@@ -863,7 +863,7 @@ await queryInterface.bulkInsert('products', [
 
       ram: '8GB',
 
-      memory: '64GB, 128Gb',
+      memory: '64/128GB',
 
       status:  'Nuevo',
 
@@ -887,7 +887,7 @@ await queryInterface.bulkInsert('products', [
 
       ram: '6GB',
 
-      memory: '64GB, 128Gb',
+      memory: '64/128GB',
 
       status:  'Nuevo',
 
@@ -911,7 +911,7 @@ await queryInterface.bulkInsert('products', [
 
       ram: '6GB',
 
-      memory: '64GB, 128Gb',
+      memory: '64/128GB',
 
       status:  'Nuevo',
 
@@ -935,7 +935,7 @@ await queryInterface.bulkInsert('products', [
 
       ram: '8GB',
 
-      memory: '128Gb, 256GB',
+      memory: '128/256GB',
 
       status:  'Nuevo',
 
@@ -1068,6 +1068,246 @@ await queryInterface.bulkInsert('products', [
       categories_id: '1',
 
       brands_id: '5',
+    },
+
+    {
+      name: 'Monitor Samsung Curve 32" ' ,
+
+      description: 'Cómoda e inmersiva experiencia de visualización con la pantalla curva,diseño increíblemente delgado y elegante con pantalla sin bisel, resolucion de 1920x1080 y una tasa de refresco de 75Hz,juego suave con AMD Freesync y modo de juego. producto con una garantia directa con Samsung por 36 meses',
+
+      processor: '',
+
+      ram: '',
+
+      memory: '',
+
+      status:  'Nuevo',
+
+      discount: '0',
+
+      purchasePrice: '1.090.900',
+
+      salePrice: '1.259.900',
+
+      categories_id: '4',
+
+      brands_id: '2',
+    },
+
+    {
+      name: 'Samsung Galaxy Book " ' ,
+
+      description: 'Pantalla AMOLED. Con el elegante Galaxy Book, Samsung combina una gran calidad de construcción con una serie de características deseables. El rendimiento del convertible y el S Pen lo convierten en una buena opción para las tareas de productividad diarias a pesar de su delgado diseño.',
+
+      processor: 'Intel Core i5 Séptima Generación 2 nucleos',
+
+      ram: '8GB',
+
+      memory: '128/256 GB ',
+
+      status:  'Nuevo',
+
+      discount: '0',
+
+      purchasePrice: '5.690.900',
+
+      salePrice: '6.700.000',
+
+      categories_id: '2',
+
+      brands_id: '2',
+    },
+
+    {
+      name: 'Apple Macbook Air ' ,
+
+      description: 'El MacBook Air M2 viene con una nueva pantalla. Apple la llama Liquid Retina Display. Es ligeramente más grande que el MacBook Air M1 —13,6 versus 13,3 pulgadas—, con una resolución prácticamente igual —2560 x 1664 versus 2560 x 1600—, pero con mayor brillo: 500 nits cuando antes eran 400 nits.',
+
+      processor: 'Core i5-5250U de Intel Nc2 a 1.6 GHz',
+
+      ram: '4GB',
+
+      memory: '128GB',
+
+      status:  'Nuevo',
+
+      discount: '0',
+
+      purchasePrice: '4.190.900',
+
+      salePrice: '4.600.000',
+
+      categories_id: '2',
+
+      brands_id: '4',
+    },
+
+    {
+      name: 'Apple SmartBook A+' ,
+
+      description: 'El Smartbook es nuestro ordenador de alta calidad. Se destaca por la rapidez de su CPU al ser potencializado por 4 núcleos diferentes. Tiene tarjeta gráfica HD incorporada y una batería 7.4v 5.000 mAh lo que asegura una alta duración CPU: Intel Celeron J4105, Quad Core, 4 hilos Tarjeta gráfica: Gráficos integrados Gráficos Intel HD Pantalla: 15,6 pulgadas LCD 16:9, resolución 1920*1080 Sistema operativo: Windows 10 Cámara: 0,3 M (cámara inteligente 1080p)Bluetooth: Bluetooth 4.0 Disco SSD: 256GB Wi-Fi: 802.11 b/g/n LAN: con interfaz RJ45 Ranura: 3x USB3.0, 1x Mic, 1x conector de audio de 3,5 mm, 1x entrada de CC, 1x HDMI, 1x tarjeta TF Batería: batería de polímero de iones de litio 7.4v 5000mAh Alimentación: CA 90-240 V 50/60 Hz; CC 12 V 2,5 A/3 A, 3,5 mm Altavoz: Altavoces estéreo duales incorporados Dimensión: 371*239*22mm Peso: 1,57 kg',
+
+      processor: 'Intel Celeron J4105',
+
+      ram: '8GB',
+
+      memory: '256GB',
+
+      status:  'Nuevo',
+
+      discount: '0',
+
+      purchasePrice: '1.350.000',
+
+      salePrice: '1.810.000',
+
+      categories_id: '2',
+
+      brands_id: '4',
+    },
+
+    {
+      name: 'Hp Notebook 240 G7' ,
+
+      description: 'Conéctese con el económico portatil empresarial HP 240 G7. Con la ultima tecnología y un chasis resistente que ayuda a proteger la notebook, Un rendimiento potente y una batería de larga duración mantienen la productividad empresarial. Seguridad y durabilidad para los profesionales de empresas en crecimiento que pasan del escritorio a la sala de reuniones y al hogar',
+
+      processor: 'Intel Core i3-8130U/4n 2.20 GHz',
+
+      ram: '4GB',
+
+      memory: '128GB',
+
+      status:  'Nuevo',
+
+      discount: '0',
+
+      purchasePrice: '1.230.000',
+
+      salePrice: '1.589.800',
+
+      categories_id: '2',
+
+      brands_id: '14',
+    },
+
+    {
+      name: 'Hp Notebook Pavilion G4' ,
+
+      description: 'Un equilibrio perfecto de diseño, rendimiento y precio,La HP Pavilion g4-1363la ofrece un excelente equilibrio de rendimiento, diseño y recursos de productividad. Y usted obtiene exactamente por lo que paga: es por eso que es la opción número 1 de notebook PC para uso diario.',
+
+      processor: 'Intel Core i3-2330M ',
+
+      ram: '4GB',
+
+      memory: '64GB',
+
+      status:  'Nuevo',
+
+      discount: '0',
+
+      purchasePrice: '500.000',
+
+      salePrice: '879.900',
+
+      categories_id: '2',
+
+      brands_id: '14',
+    },
+
+    {
+      name: 'Lenovo IdeaPad 330 2019 Premiun' ,
+
+      description: 'A veces es mejor seguir con las cosas sencillas. Equipado con un procesamiento superior y opciones gráficas avanzadas, la portátil Ideapad 330 es tan potente como fácil de usar. Pantalla Full HD IPS LED retroiluminada de 15,6 pulgadas (1920 x 1080), gráficos AMD Radeon Vega 8Procesador AMD 2500U quad-core 2.0 GHz (hasta 3.6GHz) con 4MB cach (Beat Intel i7-7500) 8GB DDR4 SDRAM para multitarea avanzada El disco duro SSD de 256 GB',
+
+      processor: 'Intel® Core™ i7-7500U 4N 3.50 GHz',
+
+      ram: '8GB',
+
+      memory: '256GB',
+
+      status:  'Nuevo',
+
+      discount: '0',
+
+      purchasePrice: '3.720.900',
+
+      salePrice: '4.571.900',
+
+      categories_id: '2',
+
+      brands_id: '15',
+    },
+
+    {
+      name: 'Apple SmatPad A+' ,
+
+      description: 'Tamaño de la pantalla: 10 pulgadas Os: Android 8.1 Pantalla táctil: Pantalla táctil capacitiva, G+G Resolución: IPS 1280X800 Capacidad de la batería: 6000 mAh Wi-fi: 2.4GHz &5GHz 802.11 ac/a/b/g/n Bluetooth: V4.0 Tarjeta Sim: Soporte de banda 2G&3G/4G LTE:B2/B3/B4/B5/B7/B8/B28A Cámara: Frontal 2MP/Trasera 5MP Altavoz y micrófono: Altavoz y micrófono incorporados Ranura de conexión: Doble tarjeta sim, Tipo C-USB.3.5 mm Jack, Cargador, cable USB, cable OTG, funda de silicona, pantalla, protector, pines para la tarjeta SIM y adaptadores para la SIM Color: Plata',
+
+      processor: 'Apple A13 Bionic',
+
+      ram: '2GB',
+
+      memory: '128GB',
+
+      status:  'Nuevo',
+
+      discount: '0',
+
+      purchasePrice: '700.000',
+
+      salePrice: '825.000',
+
+      categories_id: '3',
+
+      brands_id: '4',
+    },
+
+    {
+      name: 'Apple  iPad Air 5' ,
+
+      description: 'Apple iPad Air 2022,también conocido como iPad Air de 5ta generación o iPad Air 5 llega renovada con procesador Apple A15. Manteniendo la pantalla de 10.9 pulgadas Retina, el iPad Air 2022 cuenta con cámara dorsal de 12MP y cámara frontal de 12MP, wide y ultrawide respectivamente, parlantes stereo, lector de huellas, opciones de almacenamiento de 64GB o 256GB, soporte para Apple Pencil de segunda generación y conectividad 5G',
+
+      processor: 'Apple A15 Bionic',
+
+      ram: '8GB',
+
+      memory: '64/256 GB',
+
+      status:  'Nuevo',
+
+      discount: '0',
+
+      purchasePrice: '2.927.000',
+
+      salePrice: '3.350.000',
+
+      categories_id: '3',
+
+      brands_id: '4',
+    },
+
+    {
+      name: 'Apple iPad Mini 6' ,
+
+      description: 'Apple iPad mini (2021) llega este año con una actualización de su hardware que incluye una pantalla Liquid Retina más grande de 8.3 pulgadas. Potenciado por un procesador Apple A15 Bionic, el iPad mini está disponible en versiones de 64GB o 256GB de almacenamiento y cuenta con cámaras de 12MP al frente (ultrawide) y atrás (wide). El nuevo iPad mini cuenta con puerto USB-C, lector de huellas lateral, parlantes stereo, y soporta Apple Pencil hasta su segunda generación.',
+
+      processor: 'Apple A15 Bionic',
+
+      ram: '8GB',
+
+      memory: '64/256 GB',
+
+      status:  'Nuevo',
+
+      discount: '0',
+
+      purchasePrice: '2.124.000',
+
+      salePrice: '2.640.900',
+
+      categories_id: '3',
+
+      brands_id: '4',
     },
   ], 
 
