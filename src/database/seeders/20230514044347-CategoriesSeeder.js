@@ -29,13 +29,13 @@ module.exports = {
         name: 'Consolas'
       },
       {
-        name: 'Cables'
+        name: 'Cargadores'
       },
       {
         name: 'Gadgets'
       },
       {
-        name: 'Adaptadores'
+        name: 'Fundas'
       },
       {
         name: 'Accesorios'
