@@ -614,29 +614,6 @@ await queryInterface.bulkInsert('products', [
       brands_id: '3',
     },
 
-    {
-      name: 'Realme 9  ' ,
-
-      description: 'El Realme 9 es la variante 4G del homónimo, con una pantalla FHD+ de 6.4 pulgadas y tasa de refresco de 90Hz. El Realme 9 está potenciado por un procesador Snapdragon 680 con 6GB o 8GB de RAM con 128GB de almacenamiento interno, y cuenta con cámara triple posterior de 108MP y cámara frontal de 16MP. Una batería de 5000 mAh de carga rápida alimenta al Realme 9, completando sus características con lector de huellas bajo la pantalla, sonido Dolby Atmos, y Android 12',
-
-      processor: 'Qualcomm SM6225 Snapdragon 680 4G (6 nm)',
-
-      ram: '8GB',
-
-      memory: '128GB ',
-
-      status:  'Nuevo',
-
-      discount: '0',
-
-      purchasePrice: '907.900',
-
-      salePrice: '1.043.900',
-
-      categories_id: '1',
-
-      brands_id: '3',
-    },
 
     {
       name: 'Xiaomi MI 12 ' ,
@@ -1075,12 +1052,6 @@ await queryInterface.bulkInsert('products', [
 
       description: 'Cómoda e inmersiva experiencia de visualización con la pantalla curva,diseño increíblemente delgado y elegante con pantalla sin bisel, resolucion de 1920x1080 y una tasa de refresco de 75Hz,juego suave con AMD Freesync y modo de juego. producto con una garantia directa con Samsung por 36 meses',
 
-      processor: '',
-
-      ram: '',
-
-      memory: '',
-
       status:  'Nuevo',
 
       discount: '0',
@@ -1387,12 +1358,6 @@ await queryInterface.bulkInsert('products', [
 
       description: 'Hecho con material de primera calidad para lograr un color vibrante que nunca se desvanece. El material de silicona recubierto de goma personalizado da como resultado un estuche, duradero e impermeable para proteger tus Airpods en todo momento',
 
-      processor: '',
-
-      ram: '',
-
-      memory: '',
-
       status:  'Nuevo',
 
       discount: '0',
@@ -1411,12 +1376,6 @@ await queryInterface.bulkInsert('products', [
 
       description: 'Diseños únicos e intercambiables que se adaptan a tu estilo y personalidad. Los accesorios originales para tu teléfono, mejor agarre y mayor comodidad',
 
-      processor: '',
-
-      ram: '',
-
-      memory: '',
-
       status:  'Nuevo',
 
       discount: '0',
@@ -1427,19 +1386,12 @@ await queryInterface.bulkInsert('products', [
 
       categories_id: '9',
 
-      brands_id: '',
     },
 
     {
       name: 'Soporte Fijador Electromecanico para carro' ,
 
       description: 'este tipo de soporte tiene un sensor de movimiento integrado. Fijaciones del soporte se abren automáticamente cuando usted acerca la mano con teléfono y se cierran después de colocar el teléfono. Con frecuencia los soportes con fijador automático poseen un cargador inalámbrico integrado. Cabe notar que este tipo de soportes requiere alimentación eléctrica y, por lo tanto, ellos todo el tiempo deben permanecer conectados al encendedor.',
-
-      processor: '',
-
-      ram: '',
-
-      memory: '',
 
       status:  'Nuevo',
 
@@ -1451,19 +1403,12 @@ await queryInterface.bulkInsert('products', [
 
       categories_id: '9',
 
-      brands_id: '',
     },
 
     {
       name: 'Cable Iphone USB 2M' ,
 
       description: 'Este cable USB 2.0 de 2 metros conecta tu iPhone, iPad o iPod con conector Lightning al puerto USB-A del ordenador para sincronizarlo o cargarlo, o al Adaptador de corriente USB-A para cargarlo con comodidad en una toma de pared. LA CAJA CONTIENE: Cable Lightning a USB (2 m) de Apple',
-
-      processor: '',
-
-      ram: '',
-
-      memory: '',
 
       status:  'Nuevo',
 
@@ -1483,12 +1428,6 @@ await queryInterface.bulkInsert('products', [
 
       description: 'el cabezote iPhone Carga Rápida (20W) es un accesorio imprescindible para los propietarios de dispositivos iPhone que desean aprovechar al máximo la velocidad de carga. Con su potencia de 20W, diseño compacto y protecciones de seguridad, este cabezote te brinda una experiencia de carga rápida y segura para tu iPhone en cualquier momento y lugar.',
 
-      processor: '',
-
-      ram: '',
-
-      memory: '',
-
       status:  'Nuevo',
 
       discount: '0',
@@ -1506,12 +1445,6 @@ await queryInterface.bulkInsert('products', [
       name: 'Cargador Completo iPhone USB' ,
 
       description: 'El Cargador Completo iPhone USB es un dispositivo de carga diseñado específicamente para los dispositivos iPhone. Con una potencia de salida de hasta 12W, ofrece una carga normal y eficiente. Cuenta con un cable USB de alta calidad y un adaptador de corriente compacto, lo que lo hace fácil de transportar. Además, incorpora tecnología de protección contra sobrecargas y cortocircuitos para garantizar la seguridad de tus dispositivos.',
-
-      processor: '',
-
-      ram: '',
-
-      memory: '',
 
       status:  'Nuevo',
 
@@ -1531,12 +1464,6 @@ await queryInterface.bulkInsert('products', [
 
       description: 'El Cargador Apple MagSafe es un cargador inalámbrico diseñado específicamente para dispositivos Apple. Utiliza imanes para alinear de manera precisa el cargador con el dispositivo, lo que permite una carga rápida y segura. Tiene una potencia de hasta 15W y es compatible con modelos de iPhone 12 y versiones posteriores. Además, cuenta con la función de carga inversa, lo que te permite cargar otros dispositivos compatibles con Qi colocándolos en la parte trasera del cargador.',
 
-      processor: '',
-
-      ram: '',
-
-      memory: '',
-
       status:  'Nuevo',
 
       discount: '0',
@@ -1554,12 +1481,6 @@ await queryInterface.bulkInsert('products', [
       name: 'Cargador Rapido Completo Samsung' ,
 
       description: 'El Cargador Rápido Completo Samsung es una solución eficiente y confiable para cargar tus dispositivos. Con una potencia de carga rápida, proporciona una carga rápida y segura en un tiempo reducido. Diseñado por Samsung, garantiza la compatibilidad y la calidad que esperas de la marca.',
-
-      processor: '',
-
-      ram: '',
-
-      memory: '',
 
       status:  'Nuevo',
 
@@ -1579,12 +1500,6 @@ await queryInterface.bulkInsert('products', [
 
       description: 'El Cargador Tipo C Android Genérico es una opción versátil y económica para cargar dispositivos Android con puerto tipo C. Su diseño genérico asegura la compatibilidad con una amplia gama de dispositivos Android.',
 
-      processor: '',
-
-      ram: '',
-
-      memory: '',
-
       status:  'Nuevo',
 
       discount: '0',
@@ -1595,19 +1510,12 @@ await queryInterface.bulkInsert('products', [
 
       categories_id: '6',
 
-      brands_id: '',
     },
 
     {
       name: 'Power Bank Apple' ,
 
       description: 'El Power Bank Apple es una solución portátil de carga confiable diseñada específicamente para dispositivos Apple. Con una capacidad de batería de larga duración, ofrece carga rápida y segura para tus dispositivos en cualquier lugar. Su diseño elegante y compacto lo convierte en el compañero perfecto para estar siempre conectado',
-
-      processor: '',
-
-      ram: '',
-
-      memory: '',
 
       status:  'Nuevo',
 
@@ -1627,12 +1535,6 @@ await queryInterface.bulkInsert('products', [
 
       description: 'Los Apple AirPods Serie 2 Nuevo son unos auriculares inalámbricos de alta calidad y rendimiento. Ofrecen una experiencia de audio envolvente y una conexión inalámbrica estable con dispositivos Apple. Además, cuentan con comandos táctiles y una duración de batería extendida para disfrutar de tu música favorita sin interrupciones.',
 
-      processor: '',
-
-      ram: '',
-
-      memory: '',
-
       status:  'Nuevo',
 
       discount: '0',
@@ -1650,12 +1552,6 @@ await queryInterface.bulkInsert('products', [
       name: 'Apple AirPods Serie 3' ,
 
       description: 'Los Apple AirPods Serie 3, son auriculares inalámbricos de última generación con un diseño elegante y mejorado. Ofrecen una calidad de sonido excepcional y una conexión rápida y estable con dispositivos Apple. Además, cuentan con funciones mejoradas como cancelación de ruido y una duración de batería prolongada para una experiencia auditiva inmersiva y sin interrupciones.',
-
-      processor: '',
-
-      ram: '',
-
-      memory: '',
 
       status:  'Nuevo',
 
@@ -1675,12 +1571,6 @@ await queryInterface.bulkInsert('products', [
 
       description: 'Los Apple AirPods Pro son auriculares inalámbricos de gama alta con cancelación activa de ruido. Ofrecen un sonido envolvente y personalizable, adaptándose a tus preferencias auditivas. Además, cuentan con un diseño ergonómico y resistente al agua, brindando comodidad y durabilidad en cualquier situación.',
 
-      processor: '',
-
-      ram: '',
-
-      memory: '',
-
       status:  'Nuevo',
 
       discount: '0',
@@ -1698,12 +1588,6 @@ await queryInterface.bulkInsert('products', [
       name: 'Apple AirPods Pro' ,
 
       description: 'Los Apple AirPods Pro son auriculares inalámbricos de gama alta con cancelación activa de ruido. Ofrecen un sonido envolvente y personalizable, adaptándose a tus preferencias auditivas. Además, cuentan con un diseño ergonómico y resistente al agua, brindando comodidad y durabilidad en cualquier situación.',
-
-      processor: '',
-
-      ram: '',
-
-      memory: '',
 
       status:  'Nuevo',
 
@@ -1723,12 +1607,6 @@ await queryInterface.bulkInsert('products', [
 
       description: 'Los Apple EarPods son auriculares con cable diseñados por Apple, ofreciendo una experiencia auditiva de alta calidad. Con un diseño ergonómico, brindan comodidad durante su uso prolongado. Son compatibles con una amplia gama de dispositivos Apple y cuentan con un control remoto integrado para un fácil manejo de la reproducción de audio.',
 
-      processor: '',
-
-      ram: '',
-
-      memory: '',
-
       status:  'Nuevo',
 
       discount: '0',
@@ -1740,6 +1618,131 @@ await queryInterface.bulkInsert('products', [
       categories_id: '7',
 
       brands_id: '4',
+    },
+
+    {
+      name: 'Apple Watch SE 2022' ,
+
+      description: 'Tres colores con mucho estilo. Poderosos sensores que te mantienen al día sobre tu salud y estado físico. Innovadoras funcionalidades de seguridad. Muchas formas de seguir conectado. Y un procesador más rápido de doble núcleo que hace todo volando. El Apple Watch SE está en su mejor momento y está más a tu alcance que nunca.',
+
+      processor: 'Apple S8 2X Thunder a 1.8 GHz',
+
+      ram: '0.5GB',
+
+      memory: '32GB',
+
+      status:  'Nuevo',
+
+      discount: '0',
+
+      purchasePrice: '1.123.500',
+
+      salePrice: '1.300.000',
+
+      categories_id: '7',
+
+      brands_id: '4',
+    },
+
+    {
+      name: 'Apple Watch Serie 8' ,
+
+      description: 'La pantalla Retina siempre encendida de borde a borde es brillante en todos los sentidos, con un color y una claridad increíbles. Las esferas del reloj son más brillantes y fáciles de leer, incluso cuando la muñeca está baja.',
+
+      processor: 'Apple S8 Dual-core',
+
+      ram: '1GB',
+
+      memory: '32GB',
+
+      status:  'Nuevo',
+
+      discount: '0',
+
+      purchasePrice: '1.923.500',
+
+      salePrice: '2.100.000',
+
+      categories_id: '7',
+
+      brands_id: '4',
+    },
+
+    {
+      name: 'Apple Watch Ultra' ,
+
+      description: 'Diseñado para la exploración, la aventura y los deportes de resistencia. Con una caja de 49 mm fabricada con titanio de calidad aeroespacial, batería para varios días, apps especializadas que trabajan en equipo con los sensores avanzados y un nuevo Botón de Acción personalizable.',
+
+      processor: 'Apple S8 SiP 1.8 GHz',
+
+      ram: '1GB',
+
+      memory: '32GB',
+
+      status:  'Nuevo',
+
+      discount: '0',
+
+      purchasePrice: '3.913.500',
+
+      salePrice: '4.280.000',
+
+      categories_id: '7',
+
+      brands_id: '4',
+    },
+
+    {
+      name: 'Xiaomi Redmi Airdots' ,
+
+      description: 'Los Xiaomi Redmi Airdots Cuentan con controladores dinámicos de 7.2 mm que brindan un sonido de alta calidad con graves profundos y agudos claros. Además, ofrecen hasta 4 horas de reproducción continua y vienen con un estuche de carga que proporciona una duración total de batería de hasta 12 horas. Su diseño compacto y ligero los hace ideales para su uso en actividades deportivas y diarias.',
+
+      status:  'Nuevo',
+
+      discount: '0',
+
+      purchasePrice: '88.000',
+
+      salePrice: '120.000',
+
+      categories_id: '7',
+
+      brands_id: '1',
+    },
+
+    {
+      name: 'Audifonos i12' ,
+
+      description: 'Los audífonos i12 son auriculares inalámbricos que se conectan a dispositivos mediante Bluetooth 5.0, brindando una conexión estable y de bajo consumo de energía. Cuentan con control táctil para controlar funciones como reproducción de música, llamadas y asistentes de voz. Además, los i12 tienen un estuche de carga que proporciona una duración total de batería de hasta 4 horas de reproducción continua y se recargan fácilmente en su estuche compacto.',
+
+      status:  'Nuevo',
+
+      discount: '0',
+
+      purchasePrice: '29.900',
+
+      salePrice: '50.000',
+
+      categories_id: '7',
+
+    },
+
+    {
+      name: 'Samsung Galaxy Buds 2' ,
+
+      description: 'Los Samsung Galaxy Buds 2 Cuentan con controladores de altavoces de 2 vías y sonido envolvente AKG, brindando una experiencia de audio inmersiva y de alta calidad. Además, ofrecen cancelación activa de ruido para bloquear el ruido ambiental no deseado y permiten ajustar el nivel de transparencia para escuchar el entorno. Con una duración de batería de hasta 7.5 horas y resistencia al agua y al sudor IPX2, son ideales para uso diario y actividades deportivas.',
+
+      status:  'Nuevo',
+
+      discount: '0',
+
+      purchasePrice: '479.900',
+
+      salePrice: '512.000',
+
+      categories_id: '7',
+
+      brands_id: '2',
     },
   ], 
 

@@ -30,11 +30,8 @@ let cols ={
         },
 
     roles_id: {
-        type:   dataTypes.INTEGER(10),
-                    references: {
-                        model:'roles',
-                        key: 'id'
-            }
+        type:   dataTypes.INTEGER,
+           
         }     
     }
 
@@ -50,6 +47,11 @@ const User = sequelize.define (alias, cols, config)
         User.belongsTo(models.Rol, {
             as: "roles",
             foreignKey: "roles_id"
+        });
+
+        User.hasMany(models.Profile, {
+            as: "profiles",
+            foreignKey: "users_id",
         });
     }
 

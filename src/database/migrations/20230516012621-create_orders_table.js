@@ -24,10 +24,10 @@ await queryInterface.createTable('orders', {
         type: Sequelize.DOUBLE,
               allowNull: false,
       },
-    clients_id: {
+    users_id: {
         type: Sequelize.INTEGER,
           references: {
-            model:'clients',
+            model:'users',
             key: 'id'
           }
       }
