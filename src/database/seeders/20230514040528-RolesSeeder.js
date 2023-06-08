@@ -17,11 +17,12 @@ module.exports = {
       name: 'Administrador'
     },
     {
-      name: 'Cliente'
+      name: 'Usuario'
     },
     {
-      name: 'Usuario'
-    }], 
+      name: 'proveedor'
+    }
+  ], 
   {});
 
   },

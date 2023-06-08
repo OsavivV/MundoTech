@@ -20,10 +20,10 @@ module.exports = (sequelize, dataTypes) => {
               allowNull: false
           },
   
-    clients_id: {
+    users_id: {
         type: dataTypes.INTEGER,
           references: {
-            model:'clients',
+            model:'users',
             key: 'id'
           }
       }    
@@ -39,9 +39,9 @@ const Order = sequelize.define (alias, cols, config)
 
   Order.associate = function(models) {
 
-    Order.belongsTo(models.Client, {
-            as: "clients",
-            foreignKey: "clients_id"
+    Order.belongsTo(models.User, {
+            as: "users",
+            foreignKey: "users_id"
         });
     }
   

@@ -41,12 +41,12 @@ module.exports = {
         type: Sequelize.STRING(20),
       },
     purchasePrice: {
-        type: Sequelize.DECIMAL(11, 10),
+        type: Sequelize.INTEGER,
               allowNull: false
         },
         
     salePrice: {
-        type: Sequelize.DECIMAL(11, 10),
+        type: Sequelize.INTEGER,
               allowNull: false
         },
 

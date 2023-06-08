@@ -1,5 +1,5 @@
 module.exports = (sequelize, dataTypes) => {
-let alias = 'Client';
+let alias = 'Profile';
 let cols ={
     
     id: {
@@ -9,25 +9,15 @@ let cols ={
                 allowNull: false,  
         },
 
-    firstName: {
-        type:   dataTypes.TEXT,
-                allowNull: false
-        },  
-
-    lastName: {
-        type:   dataTypes.TEXT,
-                allowNull: false
-        },
-
-    email: {
-        type:   dataTypes.TEXT,
-                allowNull: false
-        }, 
-
     phoneNumber: {
         type:   dataTypes.STRING(20),
                 allowNull: false
         },
+
+    avatar: {
+            type: dataTypes.TEXT,
+            allowNull: false,
+          },
 
     homeAddress: {
         type:   dataTypes.STRING(70),
@@ -52,25 +42,30 @@ let cols ={
     zipCode: {
         type:   dataTypes.STRING(20),
                 allowNull:false
-        },    
+        },
+        
+    users_id: {
+        type:   dataTypes.INTEGER,
+           
+        }
     }
 
 let config = {
 
-        tableName: "clients",
+        tableName: "profiles",
         timestamps: false
 };
 
-const Client = sequelize.define (alias, cols, config)
+const Profile = sequelize.define (alias, cols, config)
 
-    Client.associate = function(models) {
+    Profile.associate = function(models) {
 
-        Client.hasMany(models.Product, {
-            as: "products",
-            foreignKey: "clients_id",
+        Profile.belongsTo(models.User, {
+            as: "users",
+            foreignKey: "profiles_id",
         });
     }
 
-return Client;
+return Profile;
 
 }

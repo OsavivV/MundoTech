@@ -1,16 +1,18 @@
+const db = require('../database/models')
+
 const controller = {
 
     list: (req, res) => {
-        res.render('products');
+        res.render('./products/indexProduct');
     },
-
+    
 
     detail: (req, res) => {
-        res.redirect('/products');
+        res.redirect('products/products');
     },
 
     create: (req, res) => {
-        res.redirect('/products');
+        res.redirect('products/products');
     },
 
     save: async (req, res) => {
@@ -24,19 +26,19 @@ const controller = {
         //  })
         //  despues de tener el array de colores del prducto creado, inserto esos datos en la tabla pivote osea en la tabla
         //  product_has_colors eso lo hago con await db.ProductHasColor.bulkCreate(colorsToCreate)
-        res.redirect('/products');
+        res.redirect('products/products');
     },
 
     edit: (req, res) => {
-        res.redirect('/products');
+        res.redirect('products/products');
     },
 
     update: (req, res) => {
-        res.redirect('/products');
+        res.redirect('products/products');
     },
 
     destroy: (req, res) => {
-        res.redirect('/products');
+        res.redirect('products/products');
     },
 }
 

@@ -4,7 +4,7 @@ const router = express.Router();
 const productsControllers = require('../controllers/productsControllers');
 
 
-router.get('/', productsControllers.list);
+router.get('/indexProduct', productsControllers.list);
 
 // router.get('/create', productsControllers.create);   
 // router.post('/', uploadFile.single("image"), productsControllers.save);  
@@ -13,7 +13,7 @@ router.get('/', productsControllers.list);
  
 // router.get('/editProducts/:id', productsControllers.edit);   
 // router.put('/detail/:id', uploadFile.single("image"), productsControllers.update);  
-// router.delete('/detail/:id', productsControllers.destroy); 
+// router.delete('/detail/:id', productsControllers.destroy);  
 
 
-module.exports = router
+module.exports = router 

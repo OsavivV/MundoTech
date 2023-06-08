@@ -9,28 +9,20 @@ module.exports = {
      * Example:
      * await queryInterface.createTable('users', { id: Sequelize.INTEGER });
      */
-    await queryInterface.createTable('clients', { 
+    await queryInterface.createTable('profiles', { 
       id: {
         type: Sequelize.INTEGER,
               autoIncrement: true,
               primaryKey: true,
               allowNull:false
       },
-      firstName: {
-        type: Sequelize.TEXT,
-              allowNull: false
-      },
-      lastName: {
-        type: Sequelize.TEXT,
-              allowNull: false
-      },
-      email: {
-        type: Sequelize.TEXT,
-              allowNull: false
-      },
       phoneNumber: {
         type: Sequelize.STRING(20),
               allowNull: false
+      },
+      avatar: {
+        type: Sequelize.TEXT,
+        allowNull: false,
       },
       homeAddress: {
         type: Sequelize.STRING(70),
@@ -52,6 +44,13 @@ module.exports = {
         type: Sequelize.STRING(20),
               allowNull: false
       },
+      users_id: {
+        type: Sequelize.INTEGER,
+        references: {
+          model:'users',
+          key:'id'
+        }
+      }
     });
   },
 
@@ -62,6 +61,6 @@ module.exports = {
      * Example:
      * await queryInterface.dropTable('clients');
      */
-    await queryInterface.dropTable('clients');
+    await queryInterface.dropTable('profiles');
   }
 };

@@ -1,6 +1,6 @@
 .headerContainer {
     margin: 0 auto;
-    background: url("https://static.pexels.com/photos/928/sky-clouds-cloudy-blue.jpg"),
+    background: url("/images/background/back.jpg"),
 		linear-gradient(23deg, #ebd40a, #58abf0, #f13493, #911491);
     background-repeat: no-repeat;
     background-size: cover;
@@ -11,6 +11,8 @@
 
 .menu{
     display: none;
+    
+    
 }
   
   
@@ -89,7 +91,7 @@ nav a {
 
   
 nav a:hover {
-    background-color: #000000;
+    background-color: rgba(35, 57, 80, 0.7);
   }
   
  
@@ -214,7 +216,7 @@ li > a:only-child:after {
 
 footer{
     margin: 0 auto;
-    background: url(https://static.pexels.com/photos/928/sky-clouds-cloudy-blue.jpg),
+    background: url("/images/background/back.jpg"),
      linear-gradient(23deg, #f13373, #58abf0, #16e7e7, #911491);
     background-repeat: no-repeat;
     background-size: cover;
