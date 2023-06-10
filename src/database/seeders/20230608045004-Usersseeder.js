@@ -18,7 +18,6 @@ module.exports = {
         LastName: 'Vivas',
         email: 'oklan002blog@gmail.com',
         password: 'Fundebas002',
-        avatar: 'profile.jpg',
         roles_id: 1
       },
       {
@@ -26,7 +25,6 @@ module.exports = {
         LastName: 'Puerto Araque',
         email: 'Secapuar@hotmail.com',
         password: '472316',
-        avatar: 'profile.jpg',
         roles_id: 1
       },
       {
@@ -34,7 +32,6 @@ module.exports = {
         LastName: 'Rodriguez Mesa',
         email: 'Ross24@gmail.com',
         password: 'Test12345*',
-        avatar: 'profile.jpg',
         roles_id: 2
       },
 
@@ -43,7 +40,6 @@ module.exports = {
         LastName: 'Joves Sandoval',
         email: 'Jovesjoves74@gmail.com',
         password: 'Test12345*',
-        avatar: 'profile.jpg',
         roles_id: 2
       },
 
@@ -52,7 +48,6 @@ module.exports = {
         LastName: 'Koologi',
         email: 'MichaelKolCanada@bellsouth.net',
         password: 'Englishpass12345',
-        avatar: 'profile.jpg',
         roles_id: 3
       },
       

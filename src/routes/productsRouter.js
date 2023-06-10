@@ -9,10 +9,10 @@ router.get('/indexProduct', productsControllers.list);
 // router.get('/create', productsControllers.create);   
 // router.post('/', uploadFile.single("image"), productsControllers.save);  
 
-// router.get('/detail/:id', productsControllers.detail);   
+router.get('/detail/:id', productsControllers.detail);   
  
 // router.get('/editProducts/:id', productsControllers.edit);   
-// router.put('/detail/:id', uploadFile.single("image"), productsControllers.update);  
+// router.put('/detail/:id', uploadFile.single("img"), productsControllers.update);  
 // router.delete('/detail/:id', productsControllers.destroy);  
 
 

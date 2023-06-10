@@ -53,7 +53,7 @@ const controller = {
     },
 
     profile: (req, res) => {
-        res.render('/');
+        res.render('users/profile');
     },
 }
 

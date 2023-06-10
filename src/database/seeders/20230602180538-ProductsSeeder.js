@@ -30,9 +30,9 @@ await queryInterface.bulkInsert('products', [
 
       discount: '0',
 
-      purchasePrice: '500.000',
+      purchasePrice: '5.000.000',
 
-      salePrice: '599.900',
+      salePrice: '5.990.900',
 
       categories_id: '1',
 
