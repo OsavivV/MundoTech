@@ -446,23 +446,7 @@ module.exports = {
         isPrimary: true,
         products_id:'76',
       },
-      {
-        url: '',
-        isPrimary: true,
-        products_id:'',
-      },
-
-      {
-        url: '',
-        isPrimary: true,
-        products_id:'',
-      },
       
-      {
-        url: '',
-        isPrimary: true,
-        products_id:'',
-      },
 
       
       

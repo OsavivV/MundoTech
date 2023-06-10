@@ -4,6 +4,8 @@
 <%- include('../partials/head') %>
 
 <body>
+
+  <%- include('../partials/header') %>
   
 <section class="user">
 
@@ -27,7 +29,7 @@
 
         <div class="user_forms-login">
           <h2 class="forms_title">Iniciar session</h2>
-          <form method="POST" action="/users/loginRegister" class="forms_form_signIn">
+          <form method="POST" action="/users/loginRegister" class="forms_form_signIn" id="formLogin">
             <% if (locals.errors && locals.form == "login") { %>
               <input id="isLoginError" type="hidden" value="login">
             <% }  %>
@@ -47,7 +49,7 @@
             </fieldset>
             <div class="forms_buttons">
               <button type="button" class="forms_buttons-forgot">Has olvidado tu contrasenia?</button>
-              <input type="submit" value="Log In" class="forms_buttons-action">
+              <button type="submit" id="submitButton" class="forms_buttons-action"> Login </button>
             </div>
           </form>
         </div>
@@ -102,9 +104,9 @@
 
   </section>
 
+
   <script src="/js/registerValidations.js"></script>
   <script src="/js/loginRegister.js"></script>
-  <!-- <script src="/js/pruebaValidations.js"></script> -->
 
 
 </body>

@@ -37,16 +37,21 @@
     }
 
     .menu{
-        display: contents;
+        display: flex;
     }
 
     .fa-bars{
         display: none;
     }
 
-    .loginIcon{
+    nav{
         position: relative;
-        top: -75px;
+    }
+
+    .loginIcon{
+        position: absolute;
+        top: -1px;
+        right: -5px;
     }
 
     .brand {

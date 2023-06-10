@@ -2,13 +2,22 @@ const db = require('../database/models')
 
 const controller = {
 
-    list: (req, res) => {
-        res.render('./products/indexProduct');
+    list: async (req, res) => {
+
+        const products = await db.Product.findAll({include: [{model: db.Product_images, as: "product_images"}]})
+       
+        res.render('./products/indexProduct' , {products});
+
     },
     
 
-    detail: (req, res) => {
-        res.redirect('products/products');
+    detail: async (req, res) => {
+        const product = await db.Product.findByPk(req.params.id,{include: [
+            {model: db.Product_images, as: "product_images"},
+            {model: db.Category, as: "categories"},
+            {model: db.Brand, as: "brands"},
+        ]})
+        res.render('./products/indexProduct' , {products:[product]});
     },
 
     create: (req, res) => {
