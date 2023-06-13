@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include('../partials/head') %>
+
+    <body>
+
+        <%- include('../partials/header') %>
+
+            <main>
+
+        <button class="btn-add"><a class='volver' href="/products/indexProduct">Volver </a></button>
+
+                <h2> Detalle de producto %></h2>
+                
+                <section class="">
+                    <article class="">
+                        <% products.forEach((product)=> { %>
+
+                            <h4>
+                                <%= product.brands.name %> > <%= product.categories.name %>
+                            </h4>
+
+                            <button class="btn-add prod">Agregar al carrito</button>
+
+                        </div>
+                            <div class="">
+                                <img src="/img/<%= product.product_images[0]?product.product_images[0].url:'default.jpg' %>"
+                                    alt="ST">
+                                <h4>
+                                    <%= product.name %>
+                                </h4>
+                                <p>
+                                    <%= product.description %>
+                                </p>
+                                <h4>
+                                    <%= product.processor %>
+                                </h4>
+                                <h4>
+                                    <%= product.ram %>
+                                </h4>
+                                <h4>
+                                    <%= product.memory %>
+                                </h4>
+                                <h4>
+                                    <%= product.status %>
+                                </h4>
+                                <h4>
+                                    <%= product.discount %>%
+                                </h4>
+                                
+                                <h4>
+                                    <%= product.salePrice.toLocaleString('en-US', { style: 'currency' , currency: 'COP'
+                                        }) %>
+                                </h4>
+
+                                <button class="btn-add"><a class='button-detalle-de-producto'
+                                        href="/products/edit/<%= product.id %>">Editar </a></button>
+                                <form action="/products/delete/<%=product.id %>?_method=DELETE" method="POST">
+                                <button type="submit"> bORRAR </button>
+
+                        </form>
+                                
+                            <% }) %>
+                    </article>
+                </section>
+
+
+            </main>
+
+            <%- include('../partials/footer') %>
+
+    </body>
+
+</html>

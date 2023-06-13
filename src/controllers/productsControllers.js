@@ -5,20 +5,22 @@ const controller = {
 
     list: async (req, res) => {
 
-        const products = await db.Product.findAll({include: [{model: db.Product_images, as: "product_images"}]})
+        const products = await db.Product.findAll({ include: [{ model: db.Product_images, as: "product_images" }] })
 
-        res.render('./products/indexProduct' , {products});
+        res.render('./products/indexProduct', { products });
 
     },
 
 
     detail: async (req, res) => {
-        const product = await db.Product.findByPk(req.params.id,{include: [
-            {model: db.Product_images, as: "product_images"},
-            {model: db.Category, as: "categories"},
-            {model: db.Brand, as: "brands"},
-        ]})
-        res.render('./products/indexProduct' , {products:[product]});
+        const product = await db.Product.findByPk(req.params.id, {
+            include: [
+                { model: db.Product_images, as: "product_images" },
+                { model: db.Category, as: "categories" },
+                { model: db.Brand, as: "brands" },
+            ]
+        })
+        res.render('./products/detailProduct', { products: [product] });
     },
 
     create: async (req, res) => {
@@ -26,38 +28,38 @@ const controller = {
         const categories = await db.Category.findAll();
         const brands = await db.Brand.findAll();
 
-        res.render('./products/createProduct' ,
-        {categories, brands});
+        res.render('./products/createProduct',
+            { categories, brands });
 
 
     },
 
     save: async (req, res) => {
 
-    const product = await db.Product.create({
-        name: req.body.name,
-        description: req.body.description,
-        processor: req.body.processor,
-        ram: req.body.ram,
-        memory: req.body.memory,
-        status : req.body.status,
-        discount : req.body.discount,
-        purchasePrice: req.body.purchasePrice,
-        salePrice: req.body.salePrice,
-        categories_id: req.body.categories,
-        brands_id: req.body.brand
-    });
+        const product = await db.Product.create({
+            name: req.body.name,
+            description: req.body.description,
+            processor: req.body.processor,
+            ram: req.body.ram,
+            memory: req.body.memory,
+            status: req.body.status,
+            discount: req.body.discount,
+            purchasePrice: req.body.purchasePrice,
+            salePrice: req.body.salePrice,
+            categories_id: req.body.categories,
+            brands_id: req.body.brand
+        });
 
-    if (req.file) {
-        db.Product_images.create({
-            url: req.file.filename,
-            isPrimary: true,
-            products_id: product.id
-        })
-    }
-    console.log(req.file)
-    res.redirect('/products/indexProduct')
-    
+        if (req.file) {
+            await db.Product_images.create({
+                url: req.file.filename,
+                isPrimary: true,
+                products_id: product.id
+            })
+        }
+        console.log(req.file)
+        res.redirect('/products/indexProduct')
+
 
         // recibo los datos del producto en req.body
         // creo el producto con const productCreated = await db.Product.create ({ name})
@@ -69,20 +71,69 @@ const controller = {
         //  })
         //  despues de tener el array de colores del prducto creado, inserto esos datos en la tabla pivote osea en la tabla
         //  product_has_colors eso lo hago con await db.ProductHasColor.bulkCreate(colorsToCreate)
-        
+
     },
 
-    editProducts: (req, res) => {
-        res.redirect('products/products');
+    edit: async (req, res) => {
+        let categories = await db.Category.findAll();
+        let brands = await db.Brand.findAll();
+
+
+        db.Product.findByPk(req.params.id, {
+            include: [
+                { model: db.Product_images, as: "product_images" },
+                { model: db.Category, as: "categories" },
+                { model: db.Brand, as: "brands" },
+            ]
+        }).then(function (product) {
+            res.render('./products/editProduct', { categories, brands, product });
+
+        })
     },
 
-    updateProducts: (req, res) => {
-        res.redirect('products/products');
+    update: async (req, res) => {
+
+        const product = await db.Product.update({
+            name: req.body.name,
+            description: req.body.description,
+            processor: req.body.processor,
+            ram: req.body.ram,
+            memory: req.body.memory,
+            status: req.body.status,
+            discount: req.body.discount,
+            purchasePrice: req.body.purchasePrice,
+            salePrice: req.body.salePrice,
+            categories_id: req.body.categories,
+            brands_id: req.body.brand
+        }, {
+            where: {
+                id: req.params.id
+            }
+        })
+        if (req.file) {
+            const img = await db.Product_images.findOne({ where: { products_id: product.id } })
+            img.url = req.file.filename;
+            img.save()
+        }
+        res.redirect('/products/detail/' + req.params.id)
     },
 
-    destroyProducts: (req, res) => {
-        res.redirect('products/products');
+    destroy: async (req, res) => {
+
+        await db.Product_images.destroy({
+            where: {
+                products_id: req.params.id
+            }
+        })
+
+        await db.Product.destroy({
+            where: {
+                id: req.params.id
+            }
+        })
+
+        res.redirect('/products/indexProduct');
     },
 }
 
-module.exports = controller ;
+module.exports = controller;
