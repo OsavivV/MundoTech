@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include('../partials/head') %>
+
+    <body>
+
+        <%- include('../partials/header') %>
+
+            <section>
+
+                <button class="btn-add"><a class='volver' href="/products/indexProduct">Volver </a></button>
+
+                <h1> MODIFICAR UN PRODUCTO</h1>
+
+                <form method="POST" action="/products/detail/<%=product.id %>?_method=PUT" class=""
+                    enctype="multipart/form-data">
+
+                    <fieldset class="editForm">
+
+                        <div>
+                            <label> NOMBRE DEL PRODUCTO :</label>
+                            <input type="text" id="name" name="name" value="<%=product.name %>" required>
+                        </div>
+
+                        <div>
+                            <label> IMAGEN </label>
+                            <input type="file" name="img" value="<%=product.img %>" required>
+                        </div>
+
+                        <div>
+                            <label> INGRESE UNA DESCRIPCION: </label>
+                            <textarea name="description" placeholder="Descripción" value="<%=product.description %>"
+                                required></textarea>
+
+                        </div>
+                        <div>
+                            <label> CUAL ES EL PROCESADOR: </label>
+                            <input type="text" id="processor" name="processor" value="<%=product.processor %>">
+                        </div>
+                        <div>
+                            <label> CUAL ES LA RAM: </label>
+                            <input type="text" id="ram" name="ram" value="<%=product.ram %>">
+                        </div>
+                        <div>
+                            <label> CUAL ES LA MEMORIA: </label>
+                            <input type="text" id="memory" name="memory" value="<%=product.memory %>">
+                        </div>
+                        <div>
+                            <label> STATUS: </label>
+                            <input type="radio" id="status" name="status"> Nuevo
+                            <input type="radio" id="status" name="status"> Usado <br>
+
+                        </div>
+                        <div>
+                            <label> DESCUENTO:</label>
+                            <input type="number" id="discount" name="discount" value="<%=product.descuento %>">
+                        </div>
+                        <div>
+                            <label> PRECIO DE COMPRA: </label>
+                            <input type="number" id="purchasePrice" name="purchasePrice"
+                                value="<%=product.purchasePrice %>" required>
+                        </div>
+                        <div>
+                            <label> PRECIO DE VENTA: </label>
+                            <input type="number" id="salePrice" name="salePrice" value="<%=product.salePrice %>"
+                                required>
+                        </div>
+                        <div>
+                            <label>SELECCIONE LA CATEGORIA:</label>
+                            <select name="categories" id="categoriesSelect">
+                                <% for(let i=0; i < categories.length; i++) { %>
+                                    <option value="<%= categories[i].id %>"
+                                        selected="<%= categories[i].name === 'none' ? 'selected' : '' %>">
+                                        <%= categories[i].name %>
+                                    </option>
+                                    <% } %>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label>SELECCIONE LA MARCA:</label>
+                            <select name="brand" id="brandsSelect">
+                                <% for(let i=0; i < brands.length; i++) { %>
+                                    <option value="<%= brands[i].id %>"
+                                        selected="<%= brands[i].name === 'none' ? 'selected' : '' %>">
+                                        <%= brands[i].name %>
+                                    </option>
+                                    <% } %>
+                            </select>
+                        </div>
+
+                    </fieldset>
+
+                    <div class="boxButton">
+
+                        <form action="/products/Edit/<%=product.id %>?_method=PUT" method="POST">
+                            <button type="submit"> Actualizar Producto </button>
+
+                        <form action="/products/delete/<%=product.id %>?_method=DELETE" method="POST">
+                            <button type="submit"> Eliminar Producto </button>
+
+                        </form>
+                    </div>
+
+                </form>
+
+            </section>
+
+    </body>
+
+</html>

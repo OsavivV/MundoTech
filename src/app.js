@@ -1,13 +1,18 @@
-// *******Require's ***
-const express = require('express');
-const path = require('path');
-const methodOverride =  require('method-override');
-const session = require('express-session');
 
-// ********* Express/use *****
+const path = require('path');
+const express = require('express');
 const app = express();
 
+
+const methodOverride =  require('method-override');
+const session = require('express-session');
+const cookies = require('cookie-parser');
+
+
 // *** Middlewares ******
+
+// const userLogged = require('./middleware/loggedMiddleware')
+
 
 //URL encode  - Para que nos pueda llegar la información desde el formulario al req.body
 app.use(express.urlencoded({ extended: false }));
@@ -18,7 +23,10 @@ app.use(methodOverride('_method'));
 
 // Para los archivos estaticos //
 app.use(express.static(path.join(__dirname,'public')));             
-app.use(session({secret: "undefine"}));
+app.use(session({secret: "undefine", resave:false, saveUninitialized: false}));
+
+app.use(cookies());
+// app.use(userLogged)
 
 // ****** sistemas de rutas *******
 const indexRouter = require('./routes/indexRouter');

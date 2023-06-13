@@ -1,7 +1,6 @@
 const signupButton = document.getElementById('signup-button'),
       loginButton = document.getElementById('login-button'),
-      userForms = document.getElementById('user_options-forms'),
-      submitButton = document.getElementById('formLogin')
+      userForms = document.getElementById('user_options-forms')
 
       const urlParams = new URLSearchParams(window.location.search);
       const form = urlParams.get("form") || document.getElementById('isRegisterError')?.value;
@@ -10,7 +9,11 @@ const signupButton = document.getElementById('signup-button'),
           userForms.classList.remove('bounceRight')
           userForms.classList.add('bounceLeft')
           break;
-   
+  
+        // case "login":
+        //   userForms.classList.remove('bounceRight')
+        //   userForms.classList.add('bounceLeft')
+        //   break;  
       
         default:
           userForms.classList.remove('bounceLeft')
@@ -27,13 +30,8 @@ signupButton.addEventListener('click', () => {
 })
 
 /*** Clickear bottom logearme */
-loginButton.addEventListener('click', (e) => {
+loginButton.addEventListener('click', () => {
   userForms.classList.remove('bounceLeft')
   userForms.classList.add('bounceRight')
-})
-
-submitButton.addEventListener('submit', (e) => {
-  e.preventDefault(),
-  console.log('submit');
 })
 
