@@ -4,20 +4,22 @@ const router = express.Router();
 const usersController = require('../controllers/usersController');
 
 // middlewares
-const signUpValidations = require('../middleware/signUpValidationsMiddleware');
-const signInValidations = require('../middleware/signInValidationsMiddleware');
 
+const guest = require('../middleware/guestMiddleware');
+const auth = require('../middleware/authMiddleware');
+const lRValidations = require('../middleware/loginRegisterValidationsMiddleware');
 
+router.get('/loginRegister',guest, usersController.register);
 
-router.get('/loginRegister', usersController.register);
+router.post('/loginRegister', lRValidations, usersController.registered);
 
-router.post('/loginRegister', signUpValidations, usersController.registered);
+router.get('/loginRegister',guest, usersController.login);
 
-router.get('/loginRegister', usersController.login);
+router.post('/loginRegister', lRValidations, usersController.logged);
 
-router.post('/loginRegister', signInValidations, usersController.logged);
+router.get('/profile/:usersId',auth, usersController.profile);
 
-router.get('/profile/:usersId', usersController.profile);
+router.get('/logout/', usersController.logout);
 
 
 module.exports = router
