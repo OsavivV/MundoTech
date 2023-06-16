@@ -1,5 +1,6 @@
 const path = require("path");
 const db = require('../database/models')
+const { validationResult } = require('express-validator')
 
 const controller = {
 
@@ -36,6 +37,10 @@ const controller = {
 
     save: async (req, res) => {
 
+        // let productValidations = validationResult (req)
+
+        // if (!productValidations)
+
         const product = await db.Product.create({
             name: req.body.name,
             description: req.body.description,
@@ -60,17 +65,6 @@ const controller = {
         console.log(req.file)
         res.redirect('/products/indexProduct')
 
-
-        // recibo los datos del producto en req.body
-        // creo el producto con const productCreated = await db.Product.create ({ name})
-        // armo el array para crear los colores del producto const colorsToCreate = req.body.colors.map(color => {
-        //    return {
-        //    colors_id: color ,
-        //    products_id: productCreated.id
-        //      }
-        //  })
-        //  despues de tener el array de colores del prducto creado, inserto esos datos en la tabla pivote osea en la tabla
-        //  product_has_colors eso lo hago con await db.ProductHasColor.bulkCreate(colorsToCreate)
 
     },
 
@@ -110,11 +104,7 @@ const controller = {
                 id: req.params.id
             }
         })
-        if (req.file) {
-            const img = await db.Product_images.findOne({ where: { products_id: product.id } })
-            img.url = req.file.filename;
-            img.save()
-        }
+
         res.redirect('/products/detail/' + req.params.id)
     },
 

@@ -7,19 +7,32 @@ const usersController = require('../controllers/usersController');
 
 const guest = require('../middleware/guestMiddleware');
 const auth = require('../middleware/authMiddleware');
-const lRValidations = require('../middleware/loginRegisterValidationsMiddleware');
+const {loginValidator,  registerValidator} = require('../middleware/loginRegisterValidationsMiddleware');
+// Rutas de usuarios
 
-router.get('/loginRegister',guest, usersController.register);
+router.get('/', usersController.listUser);
 
-router.post('/loginRegister', lRValidations, usersController.registered);
+router.get('/register',guest, usersController.register);
 
-router.get('/loginRegister',guest, usersController.login);
+router.post('/register', registerValidator, usersController.createUser);
 
-router.post('/loginRegister', lRValidations, usersController.logged);
 
-router.get('/profile/:usersId',auth, usersController.profile);
+router.put('/update/:id', registerValidator, usersController.updateUser);
+
+router.delete('/Delete/:id', registerValidator, usersController.destroyUser);
+
+
+// Rutas de autenticación
+router.get('/login',guest, usersController.login);
+
+
+router.post('/login', loginValidator, usersController.logged);
+
+router.get('/profile',auth, usersController.profile);
+
 
 router.get('/logout/', usersController.logout);
 
+router.get('/:id', usersController.readUser);
 
 module.exports = router

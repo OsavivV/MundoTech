@@ -1,117 +1,140 @@
 <!DOCTYPE html>
 <html lang="es">
-  
+
 <%- include('../partials/head') %>
 
-<body>
+  <body>
 
-  <%- include('../partials/header') %>
-  
-<section class="user">
+    <%- include('../partials/header') %>
 
-    <div class="user_options-container">
+      <section class="user">
 
-      <div class="user_options-text">
-        <div class="user_options-unregistered">
-          <h2 class="user_unregistered-title"> Aun no estas registrad@ ?</h2>
-          <p class="user_unregistered-text">registrate gratis y empieza a explorar el mundo de la tecnologia como nunca antes.</p>
-          <button class="user_unregistered-signup" id="signup-button">Crear cuenta</button>
-        </div>
-  
-        <div class="user_options-registered">
-          <h2 class="user_registered-title">Tienes alguna cuenta?</h2>
-          <p class="user_registered-text"> Sera un placer tenerte de vuelta.</p>
-          <button class="user_registered-login" id="login-button">Login</button>
-        </div>
-      </div>
+        <div class="user_options-container">
 
-      <div class="user_options-forms" id="user_options-forms">
-
-        <div class="user_forms-login">
-          <h2 class="forms_title">Iniciar session</h2>
-          <form method="POST" action="/users/loginRegister" class="forms_form_signIn" id="formLogin">
-            <% if (locals.errors && locals.form == "login") { %>
-              <input id="isLoginError" type="hidden" value="login">
-            <% }  %>
-            <fieldset class="forms_fieldset">
-              <div class="forms_field">
-                <input type="email" name="emaiL" placeholder="Correo Electronico" class="forms_field-input-signIn" value="<%= locals.oldData && locals.oldData.emaiL%>" />
-                <% if (locals.errors && locals.errors.emaiL) { %>
-                  <div id="emailError" class="error-message"><%= locals.errors.emaiL.msg %></div>
-                <% } %>
-              </div>
-              <div class="forms_field">
-                <input type="password" name="passW" placeholder="Contrasenia" class="forms_field-input-signIn" value="<%= locals.oldData && locals.oldData.passW%>" />
-                <% if (locals.errors && locals.errors.passW) { %>
-                  <div id="passwordError" class="error-message"><%= locals.errors.passW.msg %></div>
-                <% } %>
-              </div>
-              <label >
-                <input type="checkbox" name="remenberMe"> Recordar mi usuario
-              </label>
-            </fieldset>
-            <div class="forms_buttons">
-              <button type="button" class="forms_buttons-forgot">Has olvidado tu contrasenia?</button>
-              <button type="submit" id="submitButton" class="forms_buttons-action"> Logearme </button>
+          <div class="user_options-text">
+            <div class="user_options-unregistered">
+              <h2 class="user_unregistered-title"> Aun no estas registrad@ ?</h2>
+              <p class="user_unregistered-text">registrate gratis y empieza a explorar el mundo de la tecnologia como
+                nunca antes.</p>
+              <button class="user_unregistered-signup" id="signup-button">Crear cuenta</button>
             </div>
-          </form>
-        </div>
 
-        <div class="user_forms-signup">
-          <h2 class="forms_title">Registrarse</h2>
-          <form method="POST" action="/users/loginRegister" class="forms_form_signUp">
-            <% if (locals.errors && locals.form == "register") { %>
-              <input id="isRegisterError" type="hidden" value="register">
-            <% }  %> 
-            <fieldset class="forms_fieldset">
-              <div class="forms_field">
-                <input type="text" name="firstName" placeholder="Nombres" class="forms_field-input" value="<%= locals.oldData && locals.oldData.firstName%>" />
-                <% if (locals.errors && locals.errors.firstName) { %>
-                  <div id="firstNameError" class="error-message"><%= locals.errors.firstName.msg %></div>
-                <% } %>
-                <div id="firstNameError" class="error-message"></div>
-              </div>
-              <div class="forms_field">
-                <input type="text" name="lastName" placeholder="Apellidos" class="forms_field-input" value="<%= locals.oldData && locals.oldData.lastName%>" />
-                <% if (locals.errors && locals.errors.lastName) { %>
-                  <div id="lastNameError" class="error-message"><%= locals.errors.lastName.msg %></div>
-                <% } %>
-                <div id="lastNameError" class="error-message"></div>
-
-              </div>
-              <div class="forms_field">
-                <input type="email" name="email" placeholder="Correo Electrónico" class="forms_field-input" value="<%= locals.oldData && locals.oldData.email%>" />
-                <% if (locals.errors && locals.errors.email) { %>
-                  <div id="emailError" class="error-message"><%= locals.errors.email.msg %></div>
-                <% } %>
-                <div id="emailError" class="error-message"></div>
-
-              </div>
-              <div class="forms_field">
-                <input type="password" name="password" placeholder="Contraseña" class="forms_field-input" value="<%= locals.oldData && locals.oldData.password%>" />
-                <% if (locals.errors && locals.errors.password) { %>
-                  <div id="passwordError" class="error-message"><%= locals.errors.password.msg %></div>
-                <% } %>
-                <div id="passwordError" class="error-message"></div>
-
-              </div>
-            </fieldset>
-            <div class="forms_buttons">
-              <button type="submit" class="forms_buttons-action"> registrame </button>
+            <div class="user_options-registered">
+              <h2 class="user_registered-title">Tienes alguna cuenta?</h2>
+              <p class="user_registered-text"> Sera un placer tenerte de vuelta.</p>
+              <button class="user_registered-login" id="login-button">Login</button>
             </div>
-          </form>
+          </div>
+
+          <div class="user_options-forms" id="user_options-forms">
+
+            <div class="user_forms-login">
+              <h2 class="forms_title">Iniciar session</h2>
+              <form method="POST" action="/users/login" class="forms_form_signIn" id="formLogin">
+                <% if (locals.errors && locals.form=="login" ) { %>
+                  <input id="isLoginError" type="hidden" value="login">
+                  <% } %>
+                    <fieldset class="forms_fieldset">
+                      <div class="forms_field">
+                        <input type="email" name="emaiL" placeholder="Correo Electronico"
+                          class="forms_field-input-signIn" value="<%= locals.oldData && locals.oldData.emaiL%>" />
+                        <% if (locals.errors && locals.errors.emaiL) { %>
+                          <div id="emailError" class="error-message">
+                            <%= locals.errors.emaiL.msg %>
+                          </div>
+                          <% } %>
+                      </div>
+                      <div class="forms_field">
+                        <input type="password" name="passW" placeholder="Contrasenia" class="forms_field-input-signIn"
+                          value="<%= locals.oldData && locals.oldData.passW%>" />
+                        <% if (locals.errors && locals.errors.passW) { %>
+                          <div id="passwordError" class="error-message">
+                            <%= locals.errors.passW.msg %>
+                          </div>
+                          <% } %>
+                      </div>
+                      <label>
+                        <input type="checkbox" name="remenberMe"> Recordar mi usuario
+                      </label>
+                    </fieldset>
+                    <div class="forms_buttons">
+                      <button type="button" class="forms_buttons-forgot">Has olvidado tu contrasenia?</button>
+                      <button type="submit" id="submitButton" class="forms_buttons-action"> Logearme </button>
+                    </div>
+              </form>
+            </div>
+
+            <div class="user_forms-signup">
+              <h2 class="forms_title">Registrarse</h2>
+
+              <form method="POST" action="/users/register" class="forms_form_signUp">
+                <% if (locals.errors && locals.form=="register" ) { %>
+                  <input id="isRegisterError" type="hidden" value="register">
+                  <% } %>
+                    <fieldset class="forms_fieldset">
+                      <div class="forms_field">
+                        <input type="text" name="firstName" placeholder="Nombres" class="forms_field-input"
+                          value="<%= locals.oldData && locals.oldData.firstName%>" />
+                        <% if (locals.errors && locals.errors.firstName) { %>
+                          <div id="firstNameError" class="error-message">
+                            <%= locals.errors.firstName.msg %>
+                          </div>
+                          <% } %>
+                            <div id="firstNameError" class="error-message"></div>
+                      </div>
+                      <div class="forms_field">
+                        <input type="text" name="lastName" placeholder="Apellidos" class="forms_field-input"
+                          value="<%= locals.oldData && locals.oldData.lastName%>" />
+                        <% if (locals.errors && locals.errors.lastName) { %>
+                          <div id="lastNameError" class="error-message">
+                            <%= locals.errors.lastName.msg %>
+                          </div>
+                          <% } %>
+                            <div id="lastNameError" class="error-message"></div>
+
+                      </div>
+                      <div class="forms_field">
+                        <input type="email" name="email" placeholder="Correo Electrónico" class="forms_field-input"
+                          value="<%= locals.oldData && locals.oldData.email%>" />
+                        <% if (locals.errors && locals.errors.email) { %>
+                          <div id="emailError" class="error-message">
+                            <%= errors.email.msg %>
+                          </div>
+                          <% } %>
+                            <div id="emailError" class="error-message"></div>
+
+                      </div>
+                      <div class="forms_field">
+                        <input type="password" name="password" placeholder="Contraseña" class="forms_field-input"
+                          value="<%= locals.oldData && locals.oldData.password%>" />
+                        <% if (locals.errors && locals.errors.password) { %>
+                          <div id="passwordError" class="error-message">
+                            <%= locals.errors.password.msg %>
+                          </div>
+                          <% } %>
+                            <div id="passwordError" class="error-message"></div>
+
+                      </div>
+
+                     
+
+                    </fieldset>
+                    <div class="forms_buttons">
+                      <button type="submit" class="forms_buttons-action"> registrame </button>
+                    </div>
+              </form>
+            </div>
+
+          </div>
         </div>
-        
-      </div>
-    </div>
 
-  </section>
+      </section>
 
 
-  <script src="/js/registerValidations.js"></script>
-  <script src="/js/loginRegister.js"></script>
+      <script src="/js/registerValidations.js"></script>
+      <script src="/js/loginRegister.js"></script>
 
 
-</body>
+  </body>
 
 </html>

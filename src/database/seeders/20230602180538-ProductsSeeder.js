@@ -1584,23 +1584,6 @@ await queryInterface.bulkInsert('products', [
       brands_id: '4',
     },
 
-    {
-      name: 'Apple AirPods Pro' ,
-
-      description: 'Los Apple AirPods Pro son auriculares inalámbricos de gama alta con cancelación activa de ruido. Ofrecen un sonido envolvente y personalizable, adaptándose a tus preferencias auditivas. Además, cuentan con un diseño ergonómico y resistente al agua, brindando comodidad y durabilidad en cualquier situación.',
-
-      status:  'Nuevo',
-
-      discount: '0',
-
-      purchasePrice: '971.500',
-
-      salePrice: '1.100.000',
-
-      categories_id: '7',
-
-      brands_id: '4',
-    },
 
     {
       name: 'Apple Earpods' ,

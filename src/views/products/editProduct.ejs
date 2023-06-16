@@ -13,8 +13,7 @@
 
                 <h1> MODIFICAR UN PRODUCTO</h1>
 
-                <form method="POST" action="/products/detail/<%=product.id %>?_method=PUT" class=""
-                    enctype="multipart/form-data">
+                <form method="POST" action="/products/edit/<%=product.id %>?_method=PUT" class="">
 
                     <fieldset class="editForm">
 
@@ -24,14 +23,8 @@
                         </div>
 
                         <div>
-                            <label> IMAGEN </label>
-                            <input type="file" name="img" value="<%=product.img %>" required>
-                        </div>
-
-                        <div>
                             <label> INGRESE UNA DESCRIPCION: </label>
-                            <textarea name="description" placeholder="Descripción" value="<%=product.description %>"
-                                required></textarea>
+                            <textarea name="description" placeholder="Descripción" required ><%=product.description %></textarea>
 
                         </div>
                         <div>
@@ -94,14 +87,13 @@
 
                     <div class="boxButton">
 
-                        <form action="/products/Edit/<%=product.id %>?_method=PUT" method="POST">
                             <button type="submit"> Actualizar Producto </button>
 
-                        <form action="/products/delete/<%=product.id %>?_method=DELETE" method="POST">
-                            <button type="submit"> Eliminar Producto </button>
-
-                        </form>
                     </div>
+                </form>
+
+                <form action="/products/delete/<%=product.id %>?_method=DELETE" method="POST">
+                    <button type="submit"> Eliminar Producto </button>
 
                 </form>
 

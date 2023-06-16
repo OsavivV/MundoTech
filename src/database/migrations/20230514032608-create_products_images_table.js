@@ -17,7 +17,7 @@ module.exports = {
               allowNull: false
       },
       url: {
-        type: Sequelize.INTEGER,
+        type: Sequelize.TEXT,
               allowNull: false
       },
       isPrimary: {
