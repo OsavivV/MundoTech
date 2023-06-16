@@ -1,0 +1,43 @@
+
+
+            <section>
+
+                <button class="btn-add"><a class='volver' href="/">Volver </a></button>
+
+                <h1> MODIFICAR UN USUARIO</h1>
+
+                <form method="POST" action="/users/update/<%=user.id %>?_method=PUT" class="">
+
+                    <fieldset class="editForm">
+
+                        <div>
+                            <label> NOMBRES :</label>
+                            <input type="text"  name="firstName" value="<%=user.firstName %>" required>
+                        </div>
+                        <div>
+                            <label> APELLIDOS :</label>
+                            <input type="text"  name="lastName" value="<%=user.lastName %>" required>
+                        </div>
+                        <div>
+                            <label> CORREO ELECTRONICO :</label>
+                            <input type="email"  name="email" value="<%=user.email %>" required>
+                        </div>
+                     
+                     
+
+
+                    </fieldset>
+
+                    <div class="boxButton">
+
+                            <button type="submit"> Actualizar usuario </button>
+
+                    </div>
+                </form>
+
+                <form action="/users/Delete/<%=user.id %>?_method=DELETE" method="POST">
+                    <button type="submit"> Eliminar Usuario </button>
+
+                </form>
+
+            </section>

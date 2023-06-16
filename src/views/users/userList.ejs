@@ -1,0 +1,20 @@
+
+<section class="listUser">
+    <article class="">
+        <% users.forEach((user)=> { %>
+            <div class="infoDestacado">
+                
+                <h4>
+                    <%= user.firstName %>
+                </h4>
+                <h4>
+                    <%= user.lastName %>
+                </h4>
+               
+                <button class="btn-add"><a class='button-detalle-de-usuario'
+                        href="/users/<%= user.id %>">DETALLE</a></button>
+                
+            </div>
+            <% }) %>
+    </article>
+</section>

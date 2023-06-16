@@ -11,7 +11,7 @@ const cookies = require('cookie-parser');
 
 // *** Middlewares ******
 
-// const userLogged = require('./middleware/loggedMiddleware')
+const userLogged = require('./middleware/loggedMiddleware')
 
 
 //URL encode  - Para que nos pueda llegar la información desde el formulario al req.body
@@ -26,7 +26,7 @@ app.use(express.static(path.join(__dirname,'public')));
 app.use(session({secret: "undefine", resave:false, saveUninitialized: false}));
 
 app.use(cookies());
-// app.use(userLogged)
+app.use(userLogged)
 
 // ****** sistemas de rutas *******
 const indexRouter = require('./routes/indexRouter');
