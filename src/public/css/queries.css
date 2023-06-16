@@ -15,26 +15,6 @@
 
 @media (min-width: 650px){
 
-    .desktop{
-        margin-right: 100px;
-    }
-
-    .filtersButtonsContainer {
-        top: 130px;
-		right: 55px;
-	}
-
-    .filtersButtonsContainer button {
-		width: 55px;
-    	height: 30px;
-	}
-
-    .detailsContainer{
-        display: flex;
-        flex-wrap: wrap;
-        margin-left: -15px;
-        justify-content: space-around;
-    }
 
     .menu{
         display: flex;
@@ -57,6 +37,28 @@
     .brand {
         padding: 0px 20px;
     }
+
+    /* /--------* footer */ 
+
+    .footerTop{
+       display: flex;
+    }
+
+    .logofoot{
+        width: 60%
+    }
+
+    .detailsContainer{
+        margin-top: 15%;
+        padding: 20px;
+    }
+
+    .detailTittle {
+        display: block;
+        font-size: 22px;
+    }
+
+
 
 }
 
@@ -90,7 +92,34 @@
 	#next, #next2, #next3 {
 	    margin-right: 10px;
 	}
+
+    /* footer /////  */
+
+    footer p {
+        font-size: 15px;
+    }
+
+    footer h3 {
+        font-size: 22px;
+    }
+
+    .footerForm{
+        align-items: flex-start; 
+        margin-left: 16%;
+    }
+    .footerFormInput{
+        width: 100%;
+        height: 40px;
+
+    }
+
+    .footerFormButton{
+        height: 40px;
+        font-size: 1.1rem;
+        padding: 0px 20px;
+    }
 }
+
 
 
 /* ---------------desktop queries---------------- */
@@ -134,23 +163,6 @@
 		font-size: 30px;
 	}
 
-    .footerTittle h1{
-        font-size: 50px;
-        border-bottom: 3px dotted lightgray;
-    }
-
-    .detailsContainer {
-        flex-wrap: nowrap;
-        flex-direction: row-reverse;
-    }
-
-    .details {
-        box-shadow: 0px 0px 100px -2px lightgray;
-    }
-
-    .details h4, .listInfo, .listConditions {
-        font-size: 20px;
-    }
 
     .bannerBottom img {
         height: 500px;
@@ -188,5 +200,22 @@
         width: 100px;
         height: 80px;
     }
-}
 
+    /* ///// footer  */
+
+    footer p {
+        font-size: 20px;
+    }
+
+    footer h3 {
+        font-size: 25px;
+    }
+
+    .logofoot{
+       width: 45%
+    }
+
+    .detailsContainer{
+        margin-top: 8%;
+    }
+}
