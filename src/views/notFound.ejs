@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="es">
 
-    <%- include('partials/head') %>
+    <%- include('partials/head' , {title: 'Pagina no Encontrada' , styles: ['404']}) %>
         <div class="notFoundContainer">
             <span class="not-found">404! </span>
-            <p> No hemos podido encontrar esta pagina</p> <br>
+            <p> !Lo sentimos!</p>
+            <p> Probablemente la Pagina a la cual deseas acceder no existe</p>
+            <button class="button404"><a class='volver' href="/">Volver a la pagina anterior</a></button>
         </div>
 
 </html>

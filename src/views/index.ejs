@@ -1,73 +1,114 @@
 <!DOCTYPE html>
 <html lang="es">
-    
+
 <%- include('partials/head') %>
 
-<body>
+    <body>
 
-    <%- include('partials/header') %>
-    
+        <%- include('partials/header') %>
 
-    <main>
+            <section class="searchingContainer">
 
-        <div class="filtersBrandscontainer"> 
-            <div class="brandImages"> 
-                <div class="brand"> <a href="/"><img src="/images/logo/huawei.png" alt="" /></a> </div>
-                    <div class="brand"> <a href="/"><img src="/images/logo/apple.png" alt="" /></a> </div>
+                <img class="logoSearch" src="/images/logo/logoprueba.jpg" alt="logo">
+
+                <form action="submit" class="searchForm">
+                    <input class="searchFormInput" type="text" placeholder="Que estas Buscando ...?">
+                    <button class="searchFormButton"> Buscar </button>
+                </form>
+
+                <div class="menuSearchContainer">
+
+                    <div class="productsCategories">
+                        <ul class="menuCategories">
+                            <li><a href="/products/categories">Categorias</a>
+                                <!-- First Tier Drop Down -->
+                                <ul>
+                                    <li><a href="/products/categories">Categorias</a></li>
+                                    <li><a href="#">Gadgets</a></li>
+                                    <li><a href="#">Computadores</a></li>
+                                    <li><a href="#">Accesorios</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="/products/indexProduct">Productos</a>
+                                <!-- First Tier Drop Down -->
+                                <ul>
+                                    <li><a href="/products/indexProduct">Productos</a></li>
+                                    <li><a href="#">Tablet</a></li>
+                                    <li><a href="#">Computadores</a></li>
+                                    <li><a href="#">Celulares</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <br>
+                <br>
+
+                <section class="filtersBrandscontainer">
+                    <div class="brandImages">
+                        <div class="brand"> <a href="/"><img src="/images/logo/huawei.png" alt="" /></a> </div>
+                        <div class="brand"> <a href="/"><img src="/images/logo/apple.png" alt="" /></a> </div>
                         <div class="brand"> <a href="/"><img src="/images/logo/realme.png" alt="" /></a> </div>
-                            <div class="brand"> <a href="/"><img src="/images/logo/samsung.jpg" alt="" /></a> </div>
-                                <div class="brand"> <a href="/"><img src="/images/logo/xioami.png" alt="" /></a> </div>
-                                    </div>
-        </div>
+                        <div class="brand"> <a href="/"><img src="/images/logo/samsung.jpg" alt="" /></a> </div>
+                        <div class="brand"> <a href="/"><img src="/images/logo/xioami.png" alt="" /></a> </div>
+                    </div>
 
-        <div class="slider-frame">
-            <ul>
-                <li><img src="/images/banners/celulares.jpg" alt=""> </li>
-                    <li><img src="/images/banners/fundas.jpg" alt=""> </li>
+                </section>
+
+            </section>
+
+            <main>
+
+                <div class="slider-frame">
+                    <ul>
+                        <li><img src="/images/banners/celulares.jpg" alt=""> </li>
+                        <li><img src="/images/banners/fundas.jpg" alt=""> </li>
                         <li><img src="/images/banners/laptop.jpg" alt=""> </li>
-                            <li><img src="/images/banners/headphones.jpg" alt=""></li>
-            </ul>
-            
-        </div>
+                        <li><img src="/images/banners/headphones.jpg" alt=""></li>
+                    </ul>
 
-        <%- include('carrousels') %>
+                </div>
 
-    </main>
+                <%- include('carrousels') %>
+
+            </main>
 
 
-    <section class="bannerFooterContainer">
+            <section class="bannerFooterContainer">
 
-        <div class="bannerBottom">
-            <img src="/images/banners/reportados.png" alt="" >
-        </div>
+                <div class="bannerBottom">
+                    <img src="/images/banners/reportados.png" alt="">
+                </div>
 
-        <div class="shippingContainer">
-            
-            <div class="shipping">
-                <h3>Recibe tu producto</h3>
-                    <i class="fa-sharp fa-solid fa-truck-fast icn"></i>
-                        <p> Recibe el producto en tu casa o en una sucursal de correo, y sigue tu compra hasta que llegue a tus manos </p>
+                <div class="shippingContainer">
+
+                    <div class="shipping">
+                        <h3>Recibe tu producto</h3>
+                        <i class="fa-sharp fa-solid fa-truck-fast icn"></i>
+                        <p> Recibe el producto en tu casa o en una sucursal de correo, y sigue tu compra hasta que
+                            llegue a tus manos </p>
                     </div>
 
-            <div class="shipping">
-                <h3>Compra protegida</h3>
-                    <i class="fa-sharp fa-solid fa-bag-shopping icn"></i>
-                        <p> Te acompañamos hasta que recibas lo que compraste y si no es lo que esperabas te devolvemos el dinero</p>
+                    <div class="shipping">
+                        <h3>Compra protegida</h3>
+                        <i class="fa-sharp fa-solid fa-bag-shopping icn"></i>
+                        <p> Te acompañamos hasta que recibas lo que compraste y si no es lo que esperabas te devolvemos
+                            el dinero</p>
                     </div>
 
-        </div>
+                </div>
 
 
-        <div class="payments">
-            <h3>Metodos de pago</h3>
-                    <img src="/images/logo/medios.jpg" alt="hilera tablero de pagos" >
-        </div>
+                <div class="payments">
+                    <h3>Metodos de pago</h3>
+                    <img src="/images/logo/medios.jpg" alt="hilera tablero de pagos">
+                </div>
 
-    </section>
+            </section>
 
-    <%- include('partials/footer') %>
+            <%- include('partials/footer') %>
 
-</body>
+    </body>
 
 </html>
-
