@@ -1,62 +1,67 @@
-<header class="headerContainer" > 
+<header class="headerContainer">
 
-    <section >
-        <nav > 
-        <i class="fa-sharp fa-solid fa-bars"></i> 
-            <ul  class="menu">
-                <li><a href="/">Home</a></li>
-                <li><a href="/products/categories">Categorias</a>
-                <!-- First Tier Drop Down -->
-                <ul>
-                    <li><a href="#">Celulares</a></li>
-                    <li><a href="#">Computadores</a></li>
-                    <li><a href="#">Accesorios</a></li>
-                </ul>        
-                </li>
-                <li><a href="/products/indexProduct">Productos</a>
-                <!-- First Tier Drop Down -->
-                <ul>
-                    <li><a href="#">Accesorios</a></li>
-                    <li><a href="#">Computadores</a></li>
-                    <li><a href="#">Celulares</a>
-                    <!-- Second Tier Drop Down -->
-                    <ul>
-                        <li><a href="#">Apple</a></li>
-                        <li><a href="#">Samsung</a></li>
-                        <li><a href="#">Huawei</a></li>
-                        <li><a href="#">Realme</a></li>
-                        <li><a href="#">Xioami</a></li>
-                    </ul>
-                    </li>
-                </ul>
-                </li>
-                <li><a href="#aboutUs">Contactanos</a></li>
-                <li><a href="#">Sobre Nosotros</a></li>
-            </ul>
-            <ul class="loginIcon">
-                <% if (locals.userLogged) { %>
-                <li><a href="/users/profile"> Perfil <i class="fa-solid fa-user"> </i> </a> </li>
-                 
-                <% } else { %> 
-                    <li><a href="/users/login"> Iniciar session <i class="fa-solid fa-user"> </i> </a> </li>
-                    <li><a href="/users/register"> Registrarse <i class="fa-solid fa-user"> </i> </a> </li>
-                <% } %>
-                
-                <li class="logged"><a href="/shoppingCar"> Carrito de compras <i class="fa-solid fa-cart-shopping"></i> </a> </li>
-                <li class="logged"><a href="#"> Favoritos <i class="fa-solid fa-star"></i> </a> </li>
-            </ul>
-        </nav>
-    
-        <div class="headerLogoContainer">
-            <img class="logo" src="/images/logo/footerlogo.png" alt="logo"><br>
-                <form class="headerForm" action="/">
-                    <input class="searchingBar" type="text" placeholder="Que estas buscando...">
-                        <button class="headerButton"> <i class="fas fa-search"> </i> </button>
-                </form>
+    <nav>
+        <section class="smallScreen">
+            <a><img src="/images/logo/footerlogo.png" /></a>
+                <button id="showIcon" class="fa-sharp fa-solid fa-bars"> </button>
+                    <div class="hiddenIcons" id="hiddenIcons">
+                        <a href="/" class="smallIcons"> <i class="fa-sharp fa-solid fa-house"></i>
+                        <a class="smallIcons"><i class="fa-solid fa-globe"></i>
+                        <a href="/shoppingCar" class="smallIcons"> <i class="fa-solid fa-cart-shopping"></i>
+                            <% if (locals.userLogged) { %>
+                        <a href="#" class="smallIcons"> <i class="fa-solid fa-star"></i>
+                        <a class="smallIcons"> <i class="fa-solid fa-flag"></i>
+                        <a href="/users/profile" class="smallIcons"> <i class="fa-solid fa-person"></i>
+                        <a href="/users/logout" class="smallIcons"> <i class="fa-solid fa-right-from-bracket"></i>
+                            <% } else { %>
+                        <a href="/users/login" class="smallIcons"><i class="fa-solid fa-right-to-bracket"></i>
+                        <a href="/users/register" class="smallIcons"> <i class="fa-solid fa-registered"></i>
+                            <% } %>
+                    </div>
+        </section>
+        <div class="menuProfileContainer">
+            <a href="/" class="menu-nav" id="test"> <i class="fa-sharp fa-solid fa-house"></i>
+                <p>Inicio</p>
+            </a>
+            <a class="menu-nav"><i class="fa-solid fa-globe"></i>
+                <p>Sobre nosotros</p>
+            </a>
+            <a href="/shoppingCar" class="menu-nav"> <i class="fa-solid fa-cart-shopping"></i>
+                <p>Mis compras</p>
+            </a>
+            <% if (locals.userLogged) { %>
+                <a href="#" class="menu-nav"> <i class="fa-solid fa-star"></i>
+                    <p> Favoritos </p>
+                </a>
+                <a class="menu-nav"> <i class="fa-solid fa-flag"></i>
+                    <p>Notificaciones</p>
+                </a>
+                <a class="menu-nav"><i class="fa-solid fa-person"></i>
+                    <label for="me-toggle"> Perfil </label>
+                    <input id="me-toggle" type="checkbox" />
+                    <div class="me-information-toggle">
+                        <h3 id="mi-perfil">Mi Perfil</h3>
+                        <% if (locals.userLogged) { %>
+                            <h3 id="editar-producto">Editar un Producto</h3>
+                            <h3 id="configuracion">Configuración</h3>
+                            <!-- else adm -->
+                            <h3 id="centro-ayuda">Centro de Ayuda</h3>
+                            <h3 id="cerrar-sesion">Cerrar Sesión</h3>
+                            <% } %>
+                    </div>
+                </a>
+                <% } else { %>
+                    <a href="/users/login" class="menu-nav"><i class="fa-solid fa-right-to-bracket"></i>
+                        <p>Iniciar session</p>
+                    </a>
+                    <a href="/users/register" class="menu-nav"> <i class="fa-solid fa-registered"></i>
+                        <p>Registrarse</p>
+                    </a>
+                    <% } %>
+
         </div>
-        <br>
-    
-    </section>
+    </nav>
 
 </header>
 
+<script src="/js/header.js"></script>

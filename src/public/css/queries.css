@@ -2,33 +2,49 @@
 
 @media (min-width: 461px) {
 
-	.slider-frame img {
-		height: 250px;
-	}
+    .slider-frame img {
+        height: 250px;
+    }
 
-	.trending, .trendingTwo, .trendingThree {
-		width: calc(94% / 4);
-		text-align: center;
-	}
+    .trending,
+    .trendingTwo,
+    .trendingThree {
+        width: calc(94% / 4);
+        text-align: center;
+    }
+
+
 }
 
 
-@media (min-width: 650px){
+@media (min-width: 650px) {
 
 
-    .menu{
+    .menu {
         display: flex;
     }
 
-    .fa-bars{
-        display: none;
+    .fa-bars, .hiddenIcons {
+        display: none !important;
     }
 
-    nav{
-        position: relative;
+    nav .menuProfileContainer {
+        margin-right: 50px;
+        display: flex !important;
+        
     }
 
-    .loginIcon{
+
+    nav {
+        flex-direction: row !important;
+        justify-content: space-between !important; 
+    }
+
+    nav img {
+        margin-bottom: 0px;
+      }
+
+    .loginIcon {
         position: absolute;
         top: -1px;
         right: -5px;
@@ -38,17 +54,17 @@
         padding: 0px 20px;
     }
 
-    /* /--------* footer */ 
+    /* /--------* footer */
 
-    .footerTop{
-       display: flex;
+    .footerTop {
+        display: flex;
     }
 
-    .logofoot{
+    .logofoot {
         width: 60%
     }
 
-    .detailsContainer{
+    .detailsContainer {
         margin-top: 15%;
         padding: 20px;
     }
@@ -66,32 +82,44 @@
 
 @media (min-width: 769px) {
 
+    .menu-nav i {
+        display: block !important;
+      }
+
 
     .brandImages img {
         height: 60px;
     }
-    
-    .shippingContainer{
+
+    .shippingContainer {
         margin-left: -15px;
         margin-right: 20px;
     }
 
-    .carousel, .carouselTwo, .carouselThree{
-		margin-left: 35px;
-	}
+    .carousel,
+    .carouselTwo,
+    .carouselThree {
+        margin-left: 35px;
+    }
 
-	.trending, .trendingTwo, .trendingThree {
-		width: calc(92% / 5);
-		text-align: center;
-	}
+    .trending,
+    .trendingTwo,
+    .trendingThree {
+        width: calc(92% / 5);
+        text-align: center;
+    }
 
-	#prev, #prev2, #prev3{
-		margin-left: 2px;
-	}
+    #prev,
+    #prev2,
+    #prev3 {
+        margin-left: 2px;
+    }
 
-	#next, #next2, #next3 {
-	    margin-right: 10px;
-	}
+    #next,
+    #next2,
+    #next3 {
+        margin-right: 10px;
+    }
 
     /* footer /////  */
 
@@ -103,17 +131,18 @@
         font-size: 22px;
     }
 
-    .footerForm{
-        align-items: flex-start; 
+    .footerForm {
+        align-items: flex-start;
         margin-left: 16%;
     }
-    .footerFormInput{
+
+    .footerFormInput {
         width: 100%;
         height: 40px;
 
     }
 
-    .footerFormButton{
+    .footerFormButton {
         height: 40px;
         font-size: 1.1rem;
         padding: 0px 20px;
@@ -124,7 +153,7 @@
 
 /* ---------------desktop queries---------------- */
 
-@media (min-width: 900px){
+@media (min-width: 858px) {
 
 
     .brandImages img {
@@ -134,34 +163,42 @@
 
     .slider-frame img {
         height: 400px;
-	    text-align: center;
+        text-align: center;
 
-	}
+    }
 
-	.carouselTitle {
-		height: 85px;
-	}
+    .carouselTitle {
+        height: 85px;
+    }
 
-	.trending, .trendingTwo, .trendingThree {
-		width: calc(97% / 5);
-		text-align: center;
-		font-size: 20px;
-	}
+    .trending,
+    .trendingTwo,
+    .trendingThree {
+        width: calc(97% / 5);
+        text-align: center;
+        font-size: 20px;
+    }
 
-	.trending p, .trendingTwo p, .trendingThree p {
-		font-size: 25px;
-		
-	}
+    .trending p,
+    .trendingTwo p,
+    .trendingThree p {
+        font-size: 25px;
 
-	.trending img, .trendingTwo img, .trendingThree img {
-		width: 110px;
-    	height: 120px;
-		border: none;
-	}
+    }
 
-	.trending h3, .trendingTwo h3, .trendingThree h3 {
-		font-size: 30px;
-	}
+    .trending img,
+    .trendingTwo img,
+    .trendingThree img {
+        width: 110px;
+        height: 120px;
+        border: none;
+    }
+
+    .trending h3,
+    .trendingTwo h3,
+    .trendingThree h3 {
+        font-size: 30px;
+    }
 
 
     .bannerBottom img {
@@ -211,11 +248,11 @@
         font-size: 25px;
     }
 
-    .logofoot{
-       width: 45%
+    .logofoot {
+        width: 45%
     }
 
-    .detailsContainer{
+    .detailsContainer {
         margin-top: 8%;
     }
 }
