@@ -1,8 +1,166 @@
+html {
+    box-shadow: inset -1px 1px 20px 0px rgba(2, 2, 2, 0.50);
+}
 
-
-.filtersContainer{
+.filtersContainer {
     display: flex;
-    flex-direction: column-reverse;
+    flex-direction: column;
+}
+
+.flexContainer {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.productTitle {
+    text-align: center;
+    color: white;
+    background: palevioletred;
+    font-size: 22px;
+    margin-top: 10px;
+    box-shadow: inset 0px 13px 20px 3px rgba(2, 2, 2, 0.50);
+
+}
+
+.productList {
+    width: 50%;
+    height: 13%;
+    display: flex;
+    justify-content: center;
+}
+
+.ProductsDetailsContainer h4{
+    padding: 10px;
+    margin-top: -28px;
 }
 
 
+.productDetails {
+    height: 303px;
+    width: 600px;
+    margin: 15px;
+    flex: 0 0 80%;
+    overflow: hidden;
+    box-shadow: inset -2px -2px 20px 0px rgba(2, 2, 2, 0.50);
+}
+
+
+.productDetails:hover img {
+    scale: 110%;
+}
+
+.productImg {
+    height: 70%;
+    max-width: 100%;
+    width: 100%;
+    transition: scale 400ms;
+}
+
+.infoProduct {
+    border-top: 3px solid palevioletred;
+    padding: 8px;
+    position: relative;
+    height: 86px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.productText,
+.productDecimals {
+    color: lightslategray;
+    display: flex;
+    width: 35%;
+    justify-content: space-evenly;
+    align-content: center;
+    font-size: 12px;
+}
+
+
+
+
+.fa-cart-shopping {
+    display: block;
+    font-size: 16px;
+    padding: 5px;
+    width: 30px;
+    height: 30px;
+    color: palevioletred;
+    border: 1px solid palevioletred;
+    background-color: white;
+    border-radius: 50%;
+    position: absolute;
+    right: 7px;
+    top: -15px;
+}
+
+
+.productDetails,
+.infoProduct,
+.fa-cart-shopping:hover {
+    transform: rotate(360deg);
+    transition: 1s;
+}
+
+#buttonAdm {
+    height: 36px;
+    padding: 0px 10px;
+    background-color: palevioletred;
+    border: none;
+    border-radius: 15px;
+    color: rgb(255, 255, 255);
+    font-family: Montserrat, sans-serif;
+    position: relative;
+    right: -104px;
+    margin-top: 14px;
+}
+
+.productButtons {
+    height: 36px;
+    padding: 0px 10px;
+    background-color: palevioletred;
+    border: none;
+    border-radius: 15px;
+    color: rgb(255, 255, 255);
+    font-family: Montserrat, sans-serif;
+    text-align: 12px;
+
+}
+
+/* ----------- Details product ----------*/
+
+.volver {
+    height: 30px;
+    padding: 0px 7px;
+    border: 1px solid white;
+    border-radius: 15px;
+    position: relative;
+    top: -29px;
+    right: -10px;
+    background-color: palevioletred;
+}
+
+#iconShopping {
+    position: relative;
+    top: 43px;
+    right: -46%;
+}
+
+.InfoDetailed {
+    box-shadow: inset 0px 13px 20px 3px rgba(2, 2, 2, 0.50);
+    padding: 20px;
+    text-align: center;
+}
+
+.dbProductDetail {
+    margin: 12px 0;
+}
+
+.productButtonsContainer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.productButtons:hover {
+    background-color: rgba(2, 2, 2, 0.50)
+}

@@ -33,6 +33,7 @@
 	height: 50px;
 	color: white;
 	padding-left: 30px;
+	box-shadow: inset 0px 12px 20px 0px rgba(2, 2, 2, 0.50);
 }
 
 .carouselTitle p{

@@ -1,70 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<%- include('../partials/head') %>
+<%- include('../partials/head', {title: 'Detalle de productos' , styles: ['products']}) %>
 
     <body>
 
         <%- include('../partials/header') %>
 
             <main>
+                <% products.forEach((product)=> { %>
 
-        <button class="btn-add"><a class='volver' href="/products/indexProduct">Volver </a></button>
+                    <h2 class="productTitle">
+                        <%= product.name %>
+                    </h2>
+                    <button class="volver"><a href="/products/indexProduct"> ← </a></button>
 
-                <h2> Detalle de producto %></h2>
-                
-                <section class="">
-                    <article class="">
-                        <% products.forEach((product)=> { %>
+                    <section>
+
+                        <section class="ProductsDetailsContainer">
 
                             <h4>
                                 <%= product.brands.name %> > <%= product.categories.name %>
                             </h4>
 
-                            <button class="btn-add prod">Agregar al carrito</button>
+                            <div class="InfoDetailed">
+                                <button id="iconShopping" class="btn-add prod"><i
+                                        class="fa-solid fa-cart-shopping"></i></button>
 
-                        </div>
-                            <div class="">
-                                <img src="/img/<%= product.product_images[0]?product.product_images[0].url:'default.jpg' %>"
+                                <img class="productImg"
+                                    src="/img/<%= product.product_images[0]?product.product_images[0].url:'default.jpg' %>"
                                     alt="ST">
-                                <h4>
-                                    <%= product.name %>
-                                </h4>
-                                <p>
-                                    <%= product.description %>
-                                </p>
-                                <h4>
-                                    <%= product.processor %>
-                                </h4>
-                                <h4>
-                                    <%= product.ram %>
-                                </h4>
-                                <h4>
-                                    <%= product.memory %>
-                                </h4>
-                                <h4>
-                                    <%= product.status %>
-                                </h4>
-                                <h4>
-                                    <%= product.discount %>%
-                                </h4>
-                                
-                                <h4>
-                                    <%= product.salePrice.toLocaleString('en-US', { style: 'currency' , currency: 'COP'
-                                        }) %>
-                                </h4>
 
-                                <button class="btn-add"><a class='button-detalle-de-producto'
-                                        href="/products/edit/<%= product.id %>">Editar </a></button>
-                                <form action="/products/delete/<%=product.id %>?_method=DELETE" method="POST">
-                                <button type="submit"> bORRAR </button>
+                                <article class="wholeInfo">
 
-                        </form>
-                                
-                            <% }) %>
-                    </article>
-                </section>
+                                    <p class="dbProductDetail">
+                                        Descripcion:<%= product.description %>
+                                    </p>
+                                    <h4 class="dbProductDetail">
+                                        Procesador:<%= product.processor %>
+                                    </h4>
+                                    <h4 class="dbProductDetail">
+                                        Ram:<%= product.ram %>
+                                    </h4>
+                                    <h4 class="dbProductDetail">
+                                        Capacidad:<%= product.memory %>
+                                    </h4>
+                                    <h4 class="dbProductDetail">
+                                        Estado:<%= product.status %>
+                                    </h4>
+                                    <% if (locals.userLogged) { %>
+                                        <h4 class="dbProductDetail">
+                                            Descuento:<%= product.discount %>%
+                                        </h4>
 
+                                        <h4 class="dbProductDetail">
+                                            Precio de compra:<%= product.purchasePrice.toLocaleString('en-US', {
+                                                style: 'currency' , currency: 'COP' }) %>
+                                        </h4>
+                                        <% } %>
+                                            <h4 class="dbProductDetail">
+                                                Precio:<%= product.salePrice.toLocaleString('en-US', { style: 'currency'
+                                                    , currency: 'COP' }) %>
+                                            </h4>
+                                </article>
+
+                                <% if (locals.userLogged) { %>
+
+                                    <section class="productButtonsContainer">
+
+                                        <button class="productButtons"><a class='button-detalle-de-producto'
+                                                href="/products/edit/<%= product.id %>">Editar </a></button>
+
+                                        <form action="/products/delete/<%=product.id %>?_method=DELETE" method="POST">
+                                            <button class="productButtons" type="submit"> Borrar </button>
+
+                                        </form>
+                                    </section>
+                                    <% } %>
+
+                                        <% }) %>
+                            </div>
+
+                        </section>
+
+                    </section>
 
             </main>
 

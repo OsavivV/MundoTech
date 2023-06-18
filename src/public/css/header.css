@@ -12,23 +12,24 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   background-blend-mode: unset;
-
+  box-shadow: inset 0px 13px 20px 3px rgba(2, 2, 2, 0.50);
 }
 
-.smallScreen{
+.smallScreen {
   text-align: center;
 }
 
 .fa-bars {
   position: relative;
-  right: 12%;
+  right: 1%;
   width: 33px;
   margin: 10px 0px;
   height: 34px;
   background-color: palevioletred;
-    box-shadow: 2px 0 25px rgba(2, 2, 2, 0.50);
+  box-shadow: inset -1px 1px 20px 0px rgba(2, 2, 2, 0.50);
   border: none;
   border-radius: 10px;
+  color: white;
 
 }
 
@@ -37,7 +38,7 @@ body {
   background-color: palevioletred;
   box-shadow: 2px 0 25px rgba(2, 2, 2, 0.50);
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
 
 
@@ -61,6 +62,7 @@ nav img {
   width: 100px;
   margin-bottom: 15px;
   cursor: pointer;
+  display: none;
 }
 
 
