@@ -13,31 +13,16 @@ Retrospectiva del 3° Sprint: Template Engines
 
 En esta etapa, como se menciono anteriormente, practicamente este spring ya habia completado solo, en su medida porque adelante bastante al momento de estructurar el proyecto con el uso de ejs. pero no quiere decir que se quedo solo alli, en este parte del proceso me hize la interrogante? que podriamos hacer para reducir codigo y que se vea un poco mas reducido , adicionalmente tambien otras de estas preguntas fue que sabia que debia imprimir mediante ejs las etiquetas para poder hacer unas par de validaciones y asi fue , con el uso de los template engines pude resolver estas incognitas y mi proyecto se acercaba cada vez mas a lo deseado. 
 
-(Listado de productos
-○ Detalle del producto) falta esto Resolverlo ASAP
 
 
 Retrospectiva del 4° Sprint:  JSON + Métodos HTTP
 
-En esta etapa, se definio una carpeta llamada data en la cual fue almacenado los registros de usuarios, y los productos con sus categorias,  tambien mediante uno de los modulos que nos ofrece express llamado multer se empezo a almacenar imagenes de forma local , pero se empezaron a hacer pruebas de almacenamiento alterno de informacion en una base de datos de pruebas para ir abriendo camino al futuro uso de las bases de datos
-
-( Voy aca y estoy pegado aca osea en los CRUD (nada mas y nada menos ) asi que avanze manito que va quedado ud puede )
- 
-(Administración completa de productos con:
-○ Listado
-○ Detalle
-○ Creación
-○ Edición
-○ Eliminación)
+En esta etapa, se definio una carpeta llamada data en la cual fue almacenado los registros de usuarios, y los productos con sus categorias,  tambien mediante uno de los modulos que nos ofrece express llamado multer se empezo a almacenar imagenes de forma local , pero se empezaron a hacer pruebas de almacenamiento alterno de informacion en una base de datos de pruebas para ir abriendo camino al futuro uso de las bases de datos, Ademas tambien se aplico integracion de metodos de Crud para compartir , y traer informacion desde Json y la Db con las vistas del proyecto.
 
 
 Retrospectiva del 5° Sprint:  Middlewares y autenticación 
 
-en esta etapa , se definieron los form de regisro y login con los campos requeridos , se encrytpo las contraselas mediante el uso de la libreria bcrypt . 
-(pending)
-(Subida de una imagen de perfil,(Opcional) Función de recordar al usuario, Las de huéspedes deberán redireccionar   al perfil si el usuario está logeado
-○ Las de usuarios deberán redireccionar al login si el usuario no está logeado )
-
+en esta etapa , se definieron los form de regisro y login con los campos requeridos , se encrytpo las contraselas mediante el uso de la libreria bcrypt, tambien se definieron ciertos middleware de aplicacion , para que al momento que nuestros usuarios se logearan como usuario, administrador o invitado cada uno fuece re dirigido a un sitio en especial. tambien de bloqueo el acceso desde las rutas a posibles usuarios que no se logearan.  para evitar procesos de inconvenientes de suplantacion de indentidad con la funcionalidad de auth. ademas con ciertas etiquetas de ejs pudimos definiir porcionesy fragmentos de rutas visibles dependiendo de casa rol de usuario.
 
 Retrospectiva del 6° Sprint:  Bases de datos
 

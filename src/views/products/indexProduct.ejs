@@ -1,47 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<%- include('../partials/head') %>
+<%- include('../partials/head', {title: 'Home  productos' , styles: ['products']}) %>
 
-<body>
+    <body>
 
-    <%- include('../partials/header') %>
+        <%- include('../partials/header') %>
 
-        <%- include('../partials/filters') %>
+            <%- include('../partials/filters') %>
 
-    <main>
+                <main class="productsContainer">
 
-        <h2> Todos los productos que del mercado aqui </h2>
-
-        
-        <button class="btn-add"><a class='button-detalle-de-producto'
-            href="/products/create">crear Producto </a></button>
-
-        <section class="destacados">
-            <article class="DestacadosArt">
-                <% products.forEach((product)=> { %>
-                    <div class="infoDestacado">
-                        <img src="/img/<%= product.product_images[0]?product.product_images[0].url:'default.jpg' %>" alt="ST">
-                        <h4>
-                            <%= product.name %>
-                        </h4>
-                        <h4> <%= product.salePrice.toLocaleString('en-US', { style: 'currency', currency: 'COP' }) %>
-                        </h4>
-                        <button class="btn-add"><a class='button-detalle-de-producto'
-                                href="/products/detail/<%= product.id %>">DETALLE</a></button>
-                        <button class="btn-add prod">Agregar al carrito</button>
-                    </div>
-                    <% }) %>
-            </article>
-        </section>
+                    <h2 class="productTitle"> Todos los productos que del mercado aqui </h2>
 
 
-    </main>
+                    <% if (locals.userLogged) { %>
+                        <button class="productButtons" id="buttonAdm"><a class='button-detalle-de-producto'
+                                href="/products/create">crear Producto </a></button>
+                        <% } %>
 
-    <%- include('../partials/footer') %>
+                        <section class="flexContainer">
 
-</body>
+                        
+                            <% products.forEach((product)=> { %>
+
+                                <section class="productList">
+
+                                    <div class="productDetails">
+
+                                        <img class="productImg"
+                                            src="/img/<%= product.product_images[0]?product.product_images[0].url:'default.jpg' %>"
+                                            alt="ST">
+                                        <article class="infoProduct">
+                                            <h4 class="productText">
+                                                <%= product.name %>
+                                            </h4>
+                                            <h4 class="productDecimals">
+                                                <%= product.salePrice.toLocaleString('en-US', { style: 'currency' ,
+                                                    currency: 'COP' }) %>
+                                            </h4>
+                                            <button class="productButtons"><a class='button-detalle-de-producto'
+                                                    href="/products/detail/<%= product.id %>">DETALLE</a></button>
+                                            <button class="addCar"> <i class="fa-solid fa-cart-shopping"
+                                                    id="shoppingBut"></i></button>
+                                        </article>
+                                    </div>
+
+                                </section>
+                                <% }) %>
+                            </section>
+                </main>
+
+                <%- include('../partials/footer') %>
+
+    </body>
 
 </html>
-
-

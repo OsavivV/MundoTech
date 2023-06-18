@@ -8,6 +8,9 @@
     height: 80px;
     align-items: center;
     justify-content: space-evenly;
+    box-shadow: inset -1px -3px 20px 0px rgba(2, 2, 2, 0.50);
+    margin-bottom: 4px;
+
     
 }
 
@@ -43,6 +46,10 @@ footer{
     text-align: center;
 }
 
+.footerTop{
+    box-shadow: inset 0px 13px 20px 3px rgba(2, 2, 2, 0.50);
+}
+
 
 .logofoot{
     width: 50%;
@@ -52,7 +59,7 @@ footer{
     padding: 15px;
     margin-left: 11%;
     width: 75%;
-    color: rgb(188, 188, 188);
+    color: whitesmoke;
     font-weight: 300;
 }
 
@@ -77,23 +84,25 @@ footer{
 .footerFormButton {
     margin-top: 20px;
     margin-bottom: 10px;
-    height: 50px;
+    height: 30px;
     padding: 0px 25px;
     background-color: rgb(232, 51, 158);
     border: none;
     border-radius: 15px;
     color: rgb(255, 255, 255);
-    font-size: 1.4rem;
+    font-size: 1.1rem;
     font-weight: 300;
     font-family: Montserrat, sans-serif;
+    box-shadow: inset 0px 13px 20px 3px rgba(2, 2, 2, 0.50);
 }
 
 
 .detailsContainer{
     display: flex;
-    padding-left: 60px;
-    padding: 10px 40px;
-    margin: 15px 0;
+    justify-content: space-between;
+    font-size: 12px;
+    margin: 12px;
+    padding: 20px;
 }
 
 .detailTittle{
@@ -103,7 +112,7 @@ footer{
 }
 
 .footerDetail, .footerRoutes{
-   margin-right: 30px;
+   
 }
 
 .footerBottom {
@@ -112,8 +121,8 @@ footer{
 }
 
 .footIcons{
-    width: 8%;
-    font-size: 35px;
+    width: 15%;
+    font-size: 30px;
 }
 
 .copyright{
