@@ -1,3 +1,5 @@
+
+
 .slider-frame {
 	overflow: hidden;
 }
@@ -42,10 +44,13 @@
 
 .carousel, .carouselTwo, .carouselThree {
 	display: flex;
-	margin: 15px 20px;
-	overflow-x: hidden;
-	transition: transform 0.5s ease-in-out;
+    margin: 15px 20px;
+    overflow-x: hidden;
+    transition: transform 0.5s ease-in-out;
+    background: white;
 }
+
+
   
 .trending, .trendingTwo, .trendingThree {
 	width: calc(95% / 3);
@@ -53,15 +58,19 @@
 	padding: 1rem;
     border-radius: 18px;
 	margin: 5px 5px 20px 2px ;
-	box-shadow: 0px 0px 9px -2px #777;
+	box-shadow: inset 0px 1px 5px 0px rgba(2, 2, 2, 0.50);
 }
 
 .trending h3, .trendingTwo h3, .trendingThree h3{
 	font-size: 15px ;
 }
 
+.trending a, .trendingTwo a, .trendingThree a {
+	color: black;
+}
+
 .trending p, .trendingTwo p, .trendingThree p{
-	font-size: 13px;
+	font-size: 12px;
 	color: gray ;
 }
 
@@ -69,29 +78,36 @@
 	scroll-snap-align: start;
 	width: 60px;
     height: 65px;
-	border-bottom: #D3D3D3 1px solid;
+	border-bottom: 5px solid hotpink;
 	
 }
+
+
 
 .carouselButtons{
 	display: flex;
     justify-content: space-between;
 }
+
+.caroousellContainerButtons{
+	display: flex;
+	align-items: end;
+}
   
 .btn {
 	border: none;
     background-color: transparent;
-	color: lightgray;
+	
 }
   
 #prev, #prev2, #prev3 {
-	margin-top: -130px;
-    margin-left: -10px;
+	margin-top: -80%;
+    margin-left: 2%;
 }
 
 #next, #next2, #next3  {
-	margin-right: -10px;
-    margin-top: -130px;
+	margin-right: 2%;
+    margin-top: -80%;
 }
 
 @keyframes slide {

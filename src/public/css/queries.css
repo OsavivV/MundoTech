@@ -182,13 +182,14 @@
     #prev,
     #prev2,
     #prev3 {
-        margin-left: 2px;
+        margin-top: -45% !important;
+
     }
 
     #next,
     #next2,
     #next3 {
-        margin-right: 10px;
+        margin-top: -45% !important;
     }
 
     /* login Register vista */
@@ -337,25 +338,25 @@
     .trending h3,
     .trendingTwo h3,
     .trendingThree h3 {
-        font-size: 30px;
+        font-size: 30px !important;
     }
 
 
     .bannerBottom img {
-        height: 500px;
+        height: 500px !important;
     }
 
     .shipping p {
-        font-size: 30px;
+        font-size: 30px !important;
     }
 
     .payments h3 {
-        font-size: 45px;
+        font-size: 45px !important;
     }
 
     .payments img {
         margin: 25px 0px;
-        max-width: 100%;
+        max-width: 100% !important;
         height: 180px;
     }
 
@@ -407,6 +408,14 @@
 
     .detailsContainer {
         margin-top: 8%;
+    }
+
+    .footerDetail, .footerRoutes {
+        margin: 14px;
+    }
+
+    .detailTittle {
+        font-size: 35px;
     }
 }
 

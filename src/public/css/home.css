@@ -156,13 +156,9 @@ li>a:only-child:after {
 
 .shipping {
     text-align: center;
-    margin-left: 10px;
-    padding: 10px;
+    margin-left: 12px;
+    padding: 28px;
     box-shadow: inset 0px 13px 20px 3px rgba(2, 2, 2, 0.50);
-    background: url("/images/background/back.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-blend-mode: unset;
 }
 
 .shipping p {
