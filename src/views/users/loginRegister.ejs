@@ -6,6 +6,7 @@
   <body>
 
     <%- include('../partials/header') %>
+<main class="llContainer">
 
       <section class="user">
 
@@ -53,8 +54,8 @@
                           </div>
                           <% } %>
                       </div>
-                      <label>
-                        <input type="checkbox" name="remenberMe"> Recordar mi usuario
+                      <label class="cookieAccount">
+                        <input class="accountCookie" type="checkbox" name="remenberMe"> Recuerdame
                       </label>
                     </fieldset>
                     <div class="forms_buttons">
@@ -133,9 +134,9 @@
 
       <script src="/js/registerValidations.js"></script>
       <script src="/js/loginRegister.js"></script>
-
+  
       <%- include('../partials/footer') %>
-
+    </main>
   </body>
 
 </html>

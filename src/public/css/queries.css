@@ -97,6 +97,12 @@
         margin-right: 20px;
     }
 
+    #buttonAdm {
+        right: -42% !important;
+        margin-top: 20px !important;
+        margin-bottom: 10px !important;
+    }
+
     .productImg {
         width: 422px !important;
     }
@@ -107,38 +113,49 @@
 
     .InfoDetailed {
         display: flex;
-        justify-content: flex-end;
-        text-align: center;
+
     }
 
-    .InfoDetailed p {
-        color: gainsboro;
+    .productImgDescription {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        box-shadow: inset 3px -7px 20px 0px rgba(2, 2, 2, 0.50);
+        padding: 15px;
     }
 
     .productList {
-        width: 33%;
+        width: 33% !important;
     }
 
     .wholeInfo {
         font-size: 18px;
-        background: url("/images/background/back.jpg");
+        background: url(/images/background/back.jpg);
         background-repeat: no-repeat;
         background-size: cover;
         background-blend-mode: unset;
-        box-shadow: inset 0px 13px 20px 3px rgba(2, 2, 2, 0.50);
+        padding: 20px;
+        color: gainsboro;
     }
 
     .ProductsDetailsContainer h4 {
-        padding: 25px !important;
+        padding: 19px !important;
     }
 
     .fa-cart-shopping {
-        font-size: 28px !important;
-        padding: 11px !important;
-        width: 56px !important;
-        height: 51px !important;
-        right: -10px !important;
-        top: -15px !important;
+        font-size: 24px !important;
+        padding: 8px !important;
+        width: 49px !important;
+        height: 39px !important;
+        right: -1px !important;
+        top: -28px !important;
+    }
+
+    .productButtonsContainer {
+        position: absolute;
+        bottom: 36%;
+        left: 26%;
     }
 
     .carousel,
@@ -173,6 +190,46 @@
     #next3 {
         margin-right: 10px;
     }
+
+    /* login Register vista */
+
+    .user {
+        width: 97% !important;
+        margin-bottom: 12% !important;
+    }
+
+    .user_options-forms .forms_title {
+        margin-left: 10px !important;
+        font-size: 3.5rem !important;
+    }
+
+    .user_options-forms .forms_field:not(:last-of-type) {
+        margin-bottom: 35px !important;
+    }
+
+    .user_options-forms .user_forms-signup,
+    .user_options-forms .user_forms-login {
+        left: 38px !important;
+        width: calc(138% - 189px) !important;
+    }
+
+    .user_options-forms {
+        margin-left: -3%;
+    }
+
+    .user_options-forms .forms_buttons {
+        align-items: flex-end !important;
+        flex-direction: column !important;
+        align-content: center !important;
+        justify-content: center !important;
+        flex-wrap: wrap !important;
+    }
+
+    .user_options-registered,
+    .user_options-unregistered {
+        padding: 101px 63px !important;
+    }
+
 
     /* footer /////  */
 
@@ -213,8 +270,13 @@
         margin: 10px 0;
     }
 
+    #buttonAdm {
+        right: -11% !important;
+        font-size: 29px;
+    }
+
     .productList {
-        width: 25%;
+        width: 25% !important;
     }
 
     #iconShopping {
@@ -241,6 +303,20 @@
         padding: 9px;
     }
 
+    .productButtonsContainer {
+        bottom: 37%;
+        left: 26%;
+    }
+
+    .productImgDescription {
+        padding: 1%;
+        font-size: 22px;
+    }
+
+    .productButtons {
+        padding: 0 31% !important;
+    }
+
     .trending,
     .trendingTwo,
     .trendingThree {
@@ -256,7 +332,7 @@
 
     }
 
-    
+
 
     .trending h3,
     .trendingTwo h3,
@@ -283,24 +359,37 @@
         height: 180px;
     }
 
-    .filtersButtonsContainer {
-        top: 200px;
-        right: 100px;
-    }
-
-    .filtersButtonsContainer button {
-        width: 80px;
-        height: 45px;
-    }
-
-    .filtersBrandscontainer {
-        height: 120px;
-    }
 
     .brandImages img {
         width: 100px;
         height: 80px;
     }
+
+    /* login Register view  */
+
+
+    .user {
+        height: 417px !important;
+        width: 93% !important;
+        margin-bottom: 12% !important;
+        
+    }
+
+    .user_options-forms .user_forms-signup,
+    .user_options-forms .user_forms-login {
+        width: calc(132% - 207px) !important;
+    }
+
+    .user_options-forms {
+        width: calc(57% - 31px);
+        margin-left: 0%;
+
+    }
+
+    .user_options-registered, .user_options-unregistered {
+        padding: 123px 63px !important;
+    }
+
 
     /* ///// footer  */
 
@@ -325,6 +414,39 @@
 
     #iconShopping {
         right: -29% !important;
+    }
+
+    .productTitle {
+        font-size: 33px !important;
+        margin-top: 4px !important;
+    }
+
+    #buttonAdm {
+        right: -12% !important;
+        padding: 0 30% !important;
+        font-size: 35px;
+    }
+
+    .productButtonsContainer {
+        bottom: 35%;
+        left: 28%;
+    }
+
+    .productButtons {
+        padding: 0 50% !important;
+    }
+
+    .productImg {
+        width: 80% !important
+    }
+
+    .productImgDescription {
+        padding: 1%;
+        font-size: 32px;
+    }
+
+    .wholeInfo {
+        font-size: 38px;
     }
 
 }

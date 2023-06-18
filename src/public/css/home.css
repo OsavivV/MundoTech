@@ -25,7 +25,7 @@ body {
 }
 
 .frontPage{
-    box-shadow: inset -1px 1px 20px 3px rgba(2, 2, 2, 0.50);
+    box-shadow: inset -1px 1px 20px 0px rgba(2, 2, 2, 0.50);
     text-align: center;
     background: url(/images/background/back.jpg);
     background-repeat: no-repeat;
@@ -50,11 +50,11 @@ body {
     height: 39px;
     display: flex;
     justify-content: center;
-    background-color: palevioletred;
+    background-color: hotpink;
+    box-shadow: inset 5px -5px 20px 0px rgba(2, 2, 2, 0.50);
     margin: 5px 0;
     border-radius: 10px;
     align-items: center;
-    box-shadow: inset 0px 12px 20px 4px rgba(2, 2, 2, 0.50);
     transition: scale 400ms;
 }
 
@@ -136,7 +136,7 @@ li>a:only-child:after {
     margin-bottom: 10px;
     height: 40px;
     padding: 0px 25px;
-    background-color: palevioletred;
+    background-color: hotpink;
     box-shadow: inset 0px 11px 20px 0px rgba(2, 2, 2, 0.50);
     border: none;
     border-radius: 15px;
@@ -185,10 +185,11 @@ li>a:only-child:after {
 .paymentsTittle{
     text-align: center;
     color: white;
-    background: palevioletred;
+    background-color: hotpink;
+    box-shadow: inset 5px -5px 20px 0px rgba(2, 2, 2, 0.50);
     font-size: 22px;
     margin-top: 10px;
-    box-shadow: inset 0px 13px 20px 3px rgba(2, 2, 2, 0.50);
+    
 }
 
 .payments img {

@@ -26,16 +26,19 @@
                             <div class="InfoDetailed">
                                 <button id="iconShopping" class="btn-add prod"><i
                                         class="fa-solid fa-cart-shopping"></i></button>
-
-                                <img class="productImg"
-                                    src="/img/<%= product.product_images[0]?product.product_images[0].url:'default.jpg' %>"
-                                    alt="ST">
-
-                                <article class="wholeInfo">
+                                        
+                                <div class="productImgDescription">
+                                    <img class="productImg"
+                                        src="/img/<%= product.product_images[0]?product.product_images[0].url:'default.jpg' %>"
+                                        alt="ST">
 
                                     <p class="dbProductDetail">
                                         Descripcion:<%= product.description %>
                                     </p>
+                                </div>
+                                <article class="wholeInfo">
+
+
                                     <h4 class="dbProductDetail">
                                         Procesador:<%= product.processor %>
                                     </h4>
