@@ -28,7 +28,7 @@ body {
     box-shadow: inset -1px 1px 20px 0px rgba(2, 2, 2, 0.50);
     text-align: center;
     background: url(/images/background/back.jpg);
-    background-repeat: no-repeat;
+    background-repeat: round;
     background-size: cover;
     background-blend-mode: unset;
 }
@@ -134,8 +134,8 @@ li>a:only-child:after {
 .searchFormButton {
     margin-top: 20px;
     margin-bottom: 10px;
-    height: 40px;
-    padding: 0px 25px;
+    height: 30px;
+    padding: 0px 18px;
     background-color: hotpink;
     box-shadow: inset 0px 11px 20px 0px rgba(2, 2, 2, 0.50);
     border: none;

@@ -1,25 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<%- include('../partials/head') %>
+<%- include('../partials/head', {title: 'Edicion de productos' , styles: ['products']}) %>
 
     <body>
 
         <%- include('../partials/header') %>
 
-            <section>
+            <section class="creationsContainer">
 
-                <button class="btn-add"><a class='volver' href="/products/indexProduct">Volver </a></button>
+                <h1 class="productTitle"> MODIFICAR UN PRODUCTO</h1>
 
-                <h1> MODIFICAR UN PRODUCTO</h1>
+                <button class="volver"><a href="/products/indexProduct"> ← </a></button>
 
-                <form method="POST" action="/products/edit/<%=product.id %>?_method=PUT" class="">
+                
 
-                    <fieldset class="editForm">
+                <form method="POST" action="/products/edit/<%=product.id %>?_method=PUT" >
+
+                    <fieldset class="createForm">
 
                         <div>
                             <label> NOMBRE DEL PRODUCTO :</label>
-                            <input type="text" id="name" name="name" value="<%=product.name %>" required>
+                            <input type="text" id="name" name="titleProduct" value="<%=product.name %>" required>
                         </div>
 
                         <div>
@@ -39,7 +41,7 @@
                             <label> CUAL ES LA MEMORIA: </label>
                             <input type="text" id="memory" name="memory" value="<%=product.memory %>">
                         </div>
-                        <div>
+                        <div class="stateProduct">
                             <label> STATUS: </label>
                             <input type="radio" id="status" name="status"> Nuevo
                             <input type="radio" id="status" name="status"> Usado <br>
@@ -83,17 +85,20 @@
                             </select>
                         </div>
 
-                    </fieldset>
+                        <br>
+                        <br>
 
-                    <div class="boxButton">
+                    <div class="boxButtonCreate">
 
-                            <button type="submit"> Actualizar Producto </button>
+                            <button class="buttonsCreate" type="submit"> Actualizar Producto </button>
 
                     </div>
+                </fieldset>
+
                 </form>
 
                 <form action="/products/delete/<%=product.id %>?_method=DELETE" method="POST">
-                    <button type="submit"> Eliminar Producto </button>
+                    <button class="buttonsCreate" type="submit"> Eliminar Producto </button>
 
                 </form>
 

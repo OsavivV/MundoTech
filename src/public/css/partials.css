@@ -40,7 +40,7 @@
 footer{
     margin: 0 auto;
     background: url("/images/background/back.jpg");
-    background-repeat: no-repeat;
+    background-repeat: round;
     background-size: cover;
     background-blend-mode: unset;
     text-align: center;

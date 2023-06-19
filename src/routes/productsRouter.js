@@ -10,7 +10,7 @@ router.get('/indexProduct', productsControllers.list);
 
 router.get('/create', productsControllers.create);   
 
-router.post('/create', uploadFile.single("img"),createValidations, productsControllers.save); 
+router.post('/create',createValidations , uploadFile.single("img"), productsControllers.save); 
 
 router.get('/detail/:id', productsControllers.detail);   
  

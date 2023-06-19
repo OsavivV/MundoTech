@@ -39,10 +39,15 @@ const controller = {
 
         // let productValidations = validationResult (req)
 
-        // if (!productValidations)
+        // if (productValidations.isEmpty()) {
+        //     return res.render('./products/createProduct', {
+        //         errors: errors.mapped(),
+        //         oldData: req.body,
+        //     });
+        // }
 
         const product = await db.Product.create({
-            name: req.body.name,
+            name: req.body.titleProduct,
             description: req.body.description,
             processor: req.body.processor,
             ram: req.body.ram,

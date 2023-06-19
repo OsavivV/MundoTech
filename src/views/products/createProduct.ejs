@@ -1,64 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<%- include('../partials/head') %> 
+<%- include('../partials/head', {title: 'creacion de productos' , styles: ['products']} ) %> 
 
 <body>
 
     <%- include('../partials/header') %>
 
-    <section>
+    <section class="creationsContainer">
 
-        <h1> CREAR PRODUCTO</h1>
+        <h1 class="productTitle"> CREAR PRODUCTO</h1>
+        <button class="volver"><a href="/products/indexProduct"> ← </a></button>
 
         <form method="POST" action="/products/create" class=""  enctype="multipart/form-data"> 
 
         <fieldset class="createForm">  
 
             <div>
-                <label> INGRESE EL NOMBRE :</label>
-                <input type="text" id="name" name="name" required>
+                <label> INGRESE EL TITULO :</label>
+                <input type="text" id="name" name="titleProduct" required>
+               
             </div>
 
             <div >
                 <label> INGRESE LA IMAGEN DEL PRODUCTO </label>
-                <input  type="file" name="img" required >
+                <input  type="file" name="img" required>
             </div>
             
             <div>
                 <label> INGRESE UNA DESCRIPCION: </label>
-                <textarea name="description" placeholder="Descripción" required></textarea>
+                <textarea name="description" required></textarea>
+                
                 
             </div>
             <div>
                 <label> CUAL ES EL PROCESADOR: </label>
                 <input type="text" id="processor" name="processor">
+                
             </div>
             <div>
                 <label> CUAL ES LA RAM: </label>
                 <input type="text" id="ram" name="ram">
+                
             </div>
             <div>
                 <label> CUAL ES LA MEMORIA: </label>
                 <input type="text" id="memory" name="memory">
+                
             </div>
-            <div>
+            <div class="stateProduct">
                 <label> STATUS: </label>
                 <input type="radio" id="status" name="status" > Nuevo 
-                <input type="radio" id="status" name="status"> Usado <br>
+                <input type="radio" id="status" name="status"> Usado 
                     
             </div>
             <div>
                 <label> DESCUENTO:</label>
                 <input type="number" id="discount" name="discount">
+                
             </div>
             <div>
                 <label> PRECIO DE COMPRA: </label>
-                <input type="number" id="purchasePrice" name="purchasePrice" required>
+                <input type="number" id="purchasePrice" name="purchasePrice">
+                
             </div>
             <div>
                 <label> PRECIO DE VENTA: </label>
                 <input type="number" id="salePrice" name="salePrice" required>
+               
             </div>
             <div>
                 <label>SELECCIONE LA CATEGORIA:</label>
@@ -69,6 +78,7 @@
                         </option>
                     <% } %>
                 </select>
+                
             </div>
             
             <div>
@@ -80,14 +90,18 @@
                         </option>
                     <% } %>
                 </select>
+               
+            </div>
+<br>
+<br>
+
+            <div class="boxButtonCreate">
+                <button class="buttonsCreate" type="reset"> BORRAR </button> 
+                <button class="buttonsCreate" type="submit"> CREAR </button> 
             </div>
 
         </fieldset>
 
-            <div class="boxButton">
-                <button class="createButton" type="reset"> BORRAR </button> 
-                <button class="createButton" type="submit"> CREAR </button> 
-            </div>
 
         </form>
 
