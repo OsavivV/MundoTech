@@ -318,6 +318,23 @@
         padding: 0 31% !important;
     }
 
+    .createForm input, textarea {
+        width: 85% !important;
+        height: 44px !important;
+    }
+
+    .createForm label {
+        font-size: 30px !important;
+    }
+
+    .createForm textarea {
+        height: 103px !important;
+    }
+
+    .createForm select {
+        width: 100% !important
+    }
+
     .trending,
     .trendingTwo,
     .trendingThree {

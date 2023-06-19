@@ -2,8 +2,8 @@ const path = require('path');
 const { body } = require('express-validator')
 
 
-module.exports = [
-    body('name').notEmpty().withMessage('*Tienes que escribir un nombre*'),
+const createValidations = [
+    body('titleProduct').notEmpty().withMessage('*Tienes que escribir un titulo para este producto*'),
 
     body('description').notEmpty().withMessage('*Tienes que a;adir una descripcion del producto*'),
 
@@ -19,6 +19,11 @@ module.exports = [
 
     body('salePrice').notEmpty().withMessage('*El campo Precio de venta no puede estar vacio*'),
 
+    // body('categories').notEmpty().withMessage('*El campo categorias no puede estar vacio*'),
+   
+    // body('brand').notEmpty().withMessage('*El campo categorias no puede estar vacio*'),
+
+
     body('img').custom((value, { req}) => {
         let file = req.file;
         let accepted = ['.jpg', '.png', '.jpeg'];
@@ -33,3 +38,5 @@ module.exports = [
         return true;
     })
 ]
+
+module.exports = createValidations

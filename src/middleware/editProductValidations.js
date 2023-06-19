@@ -3,7 +3,7 @@ const { body } = require('express-validator')
 
 
 module.exports = [
-    body('name').notEmpty().withMessage('*Tienes que escribir un nombre*'),
+    body('titleProduct').notEmpty().withMessage('*Tienes que escribir un nombre*'),
 
     body('description').notEmpty().withMessage('*Tienes que a;adir una descripcion del producto*'),
 
