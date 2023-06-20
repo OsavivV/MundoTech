@@ -6,6 +6,9 @@ const router = Router();
 const indexControllers = require('../controllers/indexController');
 
 router.get('/', indexControllers.index);
+
+router.get('/aboutUs', indexControllers.us);
+
 // router.get('/shoppingCar', indexControllers.car)
 
 

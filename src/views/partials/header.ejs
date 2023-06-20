@@ -6,7 +6,7 @@
                 <button id="showIcon" class="fa-sharp fa-solid fa-bars"> </button>
                     <div class="hiddenIcons" id="hiddenIcons">
                         <a href="/" class="smallIcons"> <i class="fa-sharp fa-solid fa-house"></i>
-                        <a class="smallIcons"><i class="fa-solid fa-globe"></i>
+                        <a href="/aboutUs" class="smallIcons"><i class="fa-solid fa-globe"></i>
                         <a href="/shoppingCar" class="smallIcons"><i class="fa-solid fa-bag-shopping"></i>
                             <% if (locals.userLogged) { %>
                         <a href="#" class="smallIcons"> <i class="fa-solid fa-star"></i>
@@ -16,14 +16,14 @@
                             <% } else { %>
                         <a href="/users/login" class="smallIcons"><i class="fa-solid fa-right-to-bracket"></i>
                         <a href="/users/register" class="smallIcons"> <i class="fa-solid fa-registered"></i>
-                            <% } %>
+                            <% } %>   
                     </div>
         </section>
         <div class="menuProfileContainer">
             <a href="/" class="menu-nav" id="test"> <i class="fa-sharp fa-solid fa-house"></i>
                 <p>Inicio</p>
             </a>
-            <a class="menu-nav"><i class="fa-solid fa-globe"></i>
+            <a href="/aboutUs" class="menu-nav"><i class="fa-solid fa-globe"></i>
                 <p>Sobre nosotros</p>
             </a>
             <a href="/shoppingCar" class="menu-nav"> <i class="fa-solid fa-bag-shopping"></i>

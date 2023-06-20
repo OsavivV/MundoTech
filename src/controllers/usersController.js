@@ -80,35 +80,30 @@ const controller = {
     },
 
     updateUser: async (req, res) => {
-        try {
+        const user = await db.User.findByPk(req.params.id)
+
             const errors = validationResult(req);
             console.log(errors);
             if (!errors.isEmpty()) {
-                return res.render('./users/userEdit', {
+                return res.render('./users/profile', {
                     errors: errors.mapped(),
                     oldData: req.body,
-                });
+                }).then(function (user) {
+                    res.render('./users/profile', {user});
+        
+                })
             }
-            const userId = req.params.id;
-            const { firstName, lastName, email, password } = req.body;
-            const updatedUser = await db.User.update(
-                { firstName, lastName, email, password },
-                { where: { id: userId } }
-            );
-            if (updatedUser[0] === 0) {
-                res.json({ error: 'Usuario no encontrado' });
-            } else {
-                res.json({ message: 'Usuario actualizado correctamente' });
-            }
-        }
-        catch (error) {
-            console.log(error);
-            res.render('./users/userEdit', {
-                errors: { error: { msg: 'Error al editar el usuario' } },
-                oldData: req.body,
-                form: 'userEdit'
-            });
-        }
+            
+            const userTodb = await db.User.update({ 
+                firstName: req.body.firstName,
+                lastName: req.body.lastName, 
+                email: req.body.email, 
+            }, { 
+                    where: {
+                     id: req.params.id 
+                    }
+                })
+            res.render('./users/profile' + req.params.id , {user, userTodb})
     },
 
     destroyUser: async (req, res) => {
@@ -169,15 +164,19 @@ const controller = {
     },
 
     profile: async (req, res) => {
+
         const user = await db.User.findByPk(req.session.userLogged.id, {
             include: [
                 { model: db.Rol, as: "roles" },
 
             ]
         });
-        return res.render('./users/profile', {
-            user
-        });
+        
+        const users = await db.User.findAll({ include: [{ model: db.Rol, as: "roles" }] })
+
+        return res.render('./users/profile', { users, user,}
+        );
+        
 
     },
 
