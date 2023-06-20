@@ -1,5 +1,6 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700");
+
 body {
   font-family: "Roboto Condensed", sans-serif;
   background: #F5F5F5;
@@ -7,25 +8,19 @@ body {
 
 .body-wrapper {
   position: relative;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-auto-rows: auto 100%;
+
 }
 
-
-.columnOne {
-  grid-column: 1/2;
-  grid-row: 2/3;
-  padding: 20px;
-}
 
 .user-profile-container {
   position: relative;
   width: 100%;
   border: 1px solid #ccc;
-  box-shadow: 0px 1px 2px 1px #ccc;
+  box-shadow: inset 0px 1px 20px 0px rgba(2, 2, 2, 0.50);
   border-radius: 0 0 8px 8px;
+  padding: 2%
 }
+
 .user-profile-container .top-div {
   position: relative;
   top: 0;
@@ -33,8 +28,14 @@ body {
   width: 100%;
   height: 90px;
   display: flex;
-  background: linear-gradient(to right, #00618c, #283E4A);
+  background: url(/images/background/back.jpg);
+  background-repeat: round;
+  background-size: cover;
+  background-blend-mode: unset;
+  box-shadow: inset 0px 1px 20px 0px rgba(2, 2, 2, 0.50);
+
 }
+
 .user-profile-container #user-profile-picture {
   position: absolute;
   height: 55px;
@@ -46,10 +47,12 @@ body {
   border: 2px solid #ccc;
   margin-top: 40px;
 }
+
 .user-profile-container .content-div {
   position: relative;
   padding-top: 25px;
 }
+
 .user-profile-container .content-div .name-and-information {
   position: relative;
   display: flex;
@@ -57,17 +60,20 @@ body {
   align-items: center;
   flex-direction: column;
 }
+
 .user-profile-container .content-div .name-and-information h1 {
   margin: 0;
   padding: 0;
   font-size: 18px;
 }
+
 .user-profile-container .content-div .name-and-information h2 {
   margin: 0;
   padding: 0;
   font-size: 15px;
   color: #555;
 }
+
 .user-profile-container .content-div .profile-stats {
   position: relative;
   margin-top: 30px;
@@ -79,99 +85,118 @@ body {
   justify-items: center;
   grid-row-gap: 30px;
 }
+
 .user-profile-container .content-div .profile-stats .info-container {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   font-size: 12px;
-  border-bottom: 1px solid gray;
+
 }
+
 .user-profile-container .content-div .profile-stats .info-container i {
   margin-bottom: 1px;
 }
 
-.two {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  grid-column: 2/4;
-  grid-row: 2/3;
-  padding: 20px;
+.user-profile-container .content-div .profile-stats .info-container i:hover {
+  color: hotpink;
 }
 
 .details {
   display: grid;
   width: 100%;
   height: 70px;
-  padding: 5px 0;
+  padding: 10%;
   -ms-grid-columns: auto auto;
   grid-template-columns: auto auto;
   position: relative;
   bottom: 50px;
   border-radius: 0 0 8px 8px;
-  border: 1px solid #ccc;
-  box-shadow: 0px 1px 2px 1px #ccc;
+  box-shadow: inset 0px 1px 20px 0px rgba(2, 2, 2, 0.50);
 }
 
-.primary-text{
+.primary-text {
   border-bottom: 1px solid gray;
 }
 
-.details > div {
+.details>div {
   text-align: center;
   margin: -10px -3px 0 0;
 }
-.details > div:first-child {
+
+.details>div:first-child {
   border-right: 2px solid rgba(255, 255, 255, 0.08);
 }
 
-.aboutMe{
+.aboutMe {
   display: grid;
   width: 100%;
-  padding: 5px 0;
+  padding: 5%;
   position: relative;
   bottom: 40px;
   border-radius: 0 0 8px 8px;
   border: 1px solid #ccc;
-  box-shadow: 0px 1px 2px 1px #ccc;
+  box-shadow: inset 0px 1px 20px 0px rgba(2, 2, 2, 0.50);
+
 }
 
-.describeMe, .socialsLink{
-  text-align: center;
-  margin: 5px;
-}
-
-.links{
+.personalInfo{
   display: grid;
   width: 100%;
+  padding: 3%;
+  position: relative;
+  bottom: 37px;
+  border-radius: 0 0 8px 8px;
+  border: 1px solid #ccc;
+  box-shadow: inset 0px 1px 20px 0px rgba(2, 2, 2, 0.50);
+}
+
+.infoProfiledb-hidden{
+  display: grid;
+  width: 100%;
+  padding: 3%;
+  position: relative;
+  bottom: 37px;
+  border-radius: 0 0 8px 8px;
+  border: 1px solid #ccc;
+  box-shadow: inset 0px 1px 20px 0px rgba(2, 2, 2, 0.50)
+}
+
+#buttonAdmP {
+  height: 36px;
+  padding: 0px 10px;
+  background-color: hotpink;
+  box-shadow: inset 5px -5px 20px 0px rgba(2, 2, 2, 0.50);
+  border: none;
+  border-radius: 15px;
+  color: rgb(255, 255, 255);
+  font-family: Montserrat, sans-serif;
+  position: relative;
+  right: -0%;
+  margin-top: 14px;
+}
+
+.links {
+  display: grid;
+  background: url(/images/background/back.jpg);
+  background-repeat: round;
+  background-size: cover;
+  background-blend-mode: unset;
+  width: 100%;
   height: 70px;
-  padding: 5px 0;
+  padding: 5%;
   position: relative;
   bottom: 15px;
   border-radius: 0 0 8px 8px;
   border: 1px solid #ccc;
-  box-shadow: 0px 1px 2px 1px #ccc;
+  box-shadow: inset 0px 1px 20px 0px rgba(2, 2, 2, 0.50);
+
 }
 
-
-
-
-.two .moodle-container {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  background: white;
-  border-radius: 2px;
+.describeMe,
+.socialsLink, .personalInfo {
+  text-align: center;
+  margin: 5px;
 }
 
-.three {
-  grid-column: 4/5;
-  grid-row: 2/3;
-  padding: 20px;
-}
-
-.column {
-  position: relative;
-}

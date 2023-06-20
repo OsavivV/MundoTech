@@ -12,7 +12,6 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   background-blend-mode: unset;
-  box-shadow: inset 0px 1px 20px 0px rgba(2, 2, 2, 0.50);
 }
 
 .smallScreen {
@@ -34,7 +33,7 @@ body {
 }
 
 .hiddenIcons {
-  height: 5%;
+  height: 45%;
   background-color: hotpink;
   box-shadow: inset 5px -5px 20px 0px rgba(2, 2, 2, 0.50);
   display: flex;
@@ -56,6 +55,7 @@ nav {
   display: flex;
   justify-content: center;
   flex-direction: column;
+  height: 100px;
 }
 
 nav img {
@@ -126,12 +126,19 @@ nav .menuProfileContainer label {
 nav .menuProfileContainer .me-information-toggle {
   position: absolute;
   background: white;
-  width: 250px;
-  top: 65px;
-  right: -4px;
+  display: none;
+  width: 134px;
+    top: 91px;
+  right: -71px;
   border: #ccc;
   box-shadow: 0px 1px 2px 1px #ccc;
-  display: none;
+  background: url(/images/background/back.jpg);
+  background-repeat: round;
+  background-size: cover;
+  background-blend-mode: unset;
+  box-shadow: inset 1px -5px 16px 0px rgba(2, 2, 2, 0.50);
+  opacity: 0.9;
+  z-index: 1;
 }
 
 nav .menuProfileContainer .me-information-toggle:after {
@@ -147,14 +154,14 @@ nav .menuProfileContainer .me-information-toggle:after {
 
 nav .menuProfileContainer .me-information-toggle h3 {
   position: relative;
-  display: block;
-  padding: 20px;
-  border-bottom: 1px solid #ccc;
-  color: black;
+    display: block;
+    padding: 7px;
+    border-bottom: 1px solid palevioletred;
+    color: ghostwhite;
 }
 
 nav .menuProfileContainer .me-information-toggle h3:hover {
-  background: lightgray;
+  color:hotpink ;
 }
 
 

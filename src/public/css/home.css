@@ -25,7 +25,7 @@ body {
 }
 
 .frontPage{
-    box-shadow: inset -1px 1px 20px 0px rgba(2, 2, 2, 0.50);
+    /* box-shadow: inset -1px 1px 20px 0px rgba(2, 2, 2, 0.50); */
     text-align: center;
     background: url(/images/background/back.jpg);
     background-repeat: round;

@@ -1,83 +1,290 @@
 <%- include('../partials/head', {title: 'Perfil Usuarios' , styles: ['profile']}) %>
-<body>
-    
-    <%- include('../partials/header') %>
 
-<div class="body-wrapper">
+    <body>
 
-    <div class="columnOne">
-        <div class="user-profile-container">
+        <%- include('../partials/header') %>
 
-            <div class="top-div">
-                <img id="user-profile-picture" src="/images/logo/back.png" />
-            </div>
-            <div class="content-div">
-                <div class="name-and-information">
-                    <h1>Charlie Marcotte</h1>
-                    <h2>Web & UX Developer</h2>
-                </div>
-                <div class="profile-stats">
-                    <div class="info-container"><i class="fa-solid fa-bag-shopping"></i>
-                        <h4>762 compras</h4>
+            <section class="body-wrapper">
+
+                <section class="columnOne">
+                    <div class="user-profile-container">
+
+                        <div class="top-div">
+                            <img id="user-profile-picture" src="/images/logo/back.png" />
+                        </div>
+                        <div class="content-div">
+                            <div class="name-and-information">
+                                <h1> Bienvenid@:
+                                    <%= user.firstName %>
+                                        <%= user.lastName %>
+                                </h1>
+                                <h2>Web & UX Developer</h2>
+                            </div>
+                            <div class="profile-stats">
+                                <div class="info-container"><i class="fa-solid fa-bag-shopping"></i>
+                                    <h4>762 compras</h4>
+                                </div>
+                                <div class="info-container"><i class="fa-solid fa-box"></i>
+                                    <h4>40 ventas</h4>
+                                </div>
+                                <div class="info-container"><i class="fa-solid fa-pencil"></i>
+                                    <h4>12 Posts</h4>
+                                </div>
+                                <div class="info-container"><i class="fa-solid fa-gear"></i>
+                                    <h4>1 Pendiente</h4>
+                                </div>
+                                <div class="info-container"><i class="fa-solid fa-heart"></i>
+                                    <h4> 5 deseados</h4>
+                                </div>
+                                <div class="info-container"><i class="fa-solid fa-lock"></i>
+                                    <h4> verificado</h4>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="info-container"><i class="fa-solid fa-box"></i>
-                        <h4>40 ventas</h4>
+                    <br>
+                    <br>
+                    <br>
+
+                    <div class="details">
+                        <div class="rating">
+                            <h6 class="primary-text"> 86% </h6>
+                            <h6 class="secondary-text"> Rating </h6>
+                        </div>
+                        <div class="activity">
+                            <h6 class="primary-text"> 92% </h6>
+                            <h6 class="secondary-text"> Activity </h6>
+                        </div>
                     </div>
-                    <div class="info-container"><i class="fa-solid fa-pencil"></i>
-                        <h4>12 Posts</h4>
+
+                    <div class="aboutMe">
+                        <div class="describeMe">
+                            <h3> Descripcion personal: </h3>
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, numquam
+                                reprehenderit eaque aut unde aperiam sequi minima exercitationem est laboriosam debitis
+                                nemo omnis assumenda excepturi, aliquid rem voluptates veniam possimus.</p>
+
+                        </div>
+
                     </div>
-                    <div class="info-container"><i class="fa-solid fa-gear"></i>
-                        <h4>1 Pendiente</h4>
+
+                    <div class="personalInfo">
+                        <div class="infoProfiledb">
+                            <h3> Informacion personal: </h3>
+                            <h4>Nombres: </h4>
+                            <p>
+                                <%= user.firstName %>
+                            </p>
+                            <h4>Apellidos: </h4>
+                            <p>
+                                <%= user.lastName %>
+                            </p>
+                            <h4>Correo Electronico:</h4>
+                            <p>
+                                <%= user.email %>
+                            </p>
+                            <h4>Rol: </h4>
+                            <p>
+                                <%= user.roles.name %>
+                            </p>
+
+
+
+                            <button class="admButtons" id="buttonAdmP"><a class='button-detalle-de-producto'
+                                    >Editar </a></button>
+                        </div>
+
+                        <div class="infoProfiledb-hidden">
+                            <form method="POST" action="/users/update/<%=user.id %>?_method=PUT" class="userEdit">
+                                
+                                    <fieldset class="">
+                                      <div class=""> Nombres:
+                                        <input type="text" name="firstName" placeholder="Nombres" class=""
+                                          value="<%= user.firstName%>" /> 
+                                        <% if (locals.errors && locals.errors.firstName) { %>
+                                          <div id="firstNameError" class="error-message">
+                                            <%= locals.errors.firstName.msg %>
+                                          </div>
+                                          <% } %>
+                                            <div id="firstNameError" class="error-message"></div>
+                                      </div>
+                                      <div class=""> Apellidos:
+                                        <input type="text" name="lastName" placeholder="Apellidos" class=""
+                                          value="<%= user.lastName%>" />
+                                        <% if (locals.errors && locals.errors.lastName) { %>
+                                          <div id="lastNameError" class="error-message">
+                                            <%= locals.errors.lastName.msg %>
+                                          </div>
+                                          <% } %>
+                                            <div id="lastNameError" class="error-message"></div>
+                
+                                      </div>
+                                      <div class=""> Correo Electronico:
+                                        <input type="email" name="email" placeholder="Correo Electrónico" class=""
+                                          value="<%= user.email%>" />
+                                        <% if (locals.errors && locals.errors.email) { %>
+                                          <div id="emailError" class="error-message">
+                                            <%= errors.email.msg %>
+                                          </div>
+                                          <% } %>
+                                            <div id="emailError" class="error-message"></div>
+                
+                                      </div>
+                                      
+                                    </fieldset>
+                                    <div class="boxButtonEdit">
+                                      <button type="submit" class="admButtons" id="buttonAdmP"> Actualizar Usuario </button>
+                                    </div>
+                              </form>
+                              <button class="admButtons" id="volver"> Volver </button>
+
+                        </div>
                     </div>
-                    <div class="info-container"><i class="fa-solid fa-heart"></i>
-                        <h4> 5 deseados</h4>
+
+                    <div class="billingInfo">
+                        <div class="infoBillingDb">
+                            <h3> Informacion de facturacion </h3>
+                            <h4>Celular: </h4>
+                            <p>
+                                
+                            </p>
+                            <h4>Direccion: </h4>
+                            <p>
+                                
+                            </p>
+                            <h4>Ciudad:</h4>
+                            <p>
+                                
+                            </p>
+                            <h4>Municipio: </h4>
+                            <p>
+                                
+                            </p>
+                            <h4>Pais: </h4>
+                            <p>
+                                
+                            </p>
+                            <h4>Codigo de area: </h4>
+                            <p>
+                                
+                            </p>
+
+
+
+                            <button class="admButtons" id="buttonAdmB"><a class='button-detalle-de-producto'
+                                    >Editar </a></button>
+                        </div>
+
+                        <div class="infoBillingDb-hidden">
+                            <form method="POST" action="/users/billing/ %>?_method=PUT" class="profileEdit">
+                                
+                                    <fieldset class="">
+                                      <div class=""> Numero de celular:
+                                        <input type="text" name="phoneNumber" placeholder="Numero Celular" class=""
+                                          value="" /> 
+                                        <% if (locals.errors && locals.errors.phoneNumber) { %>
+                                          <div id="phoneNumberError" class="error-message">
+                                            <%= locals.errors.phoneNumber.msg %>
+                                          </div>
+                                          <% } %>
+                                            <div id="firstNameError" class="error-message"></div>
+                                      </div>
+
+                                      <div class=""> avatar:
+                                        <input  type="file" name="img" class=""
+                                          value="" />
+                                        <% if (locals.errors && locals.errors.avatar) { %>
+                                          <div id="avatarError" class="error-message">
+                                            <%= locals.errors.avatar.msg %>
+                                          </div>
+                                          <% } %>
+                                            <div id="avatarError" class="error-message"></div>
+                
+                                      </div>
+
+                                      <div class=""> Direccion:
+                                        <input type="text" name="homeAddress" placeholder="Dirreccion" class=""
+                                          value="" />
+                                        <% if (locals.errors && locals.errors.homeAddress) { %>
+                                          <div id="homeAddressError" class="error-message">
+                                            <%= locals.errors.homeAddress.msg %>
+                                          </div>
+                                          <% } %>
+                                            <div id="homeAddressError" class="error-message"></div>
+                
+                                      </div>
+                                      <div class=""> Ciudad:
+                                        <input type="text" name="city" placeholder="Ciudad" class=""
+                                          value="" />
+                                        <% if (locals.errors && locals.errors.city) { %>
+                                          <div id="cityError" class="error-message">
+                                            <%= errors.city.msg %>
+                                          </div>
+                                          <% } %>
+                                            <div id="cityError" class="error-message"></div>
+                
+                                      </div>
+                                      <div class=""> Municipio:
+                                        <input type="text" name="estate" placeholder="Municipio" class=""
+                                          value="" />
+                                        <% if (locals.errors && locals.errors.estate) { %>
+                                          <div id="estateError" class="error-message">
+                                            <%= errors.estate.msg %>
+                                          </div>
+                                          <% } %>
+                                            <div id="estateError" class="error-message"></div>
+                
+                                      </div>
+                                      <div class=""> Pais:
+                                        <input type="text" name="country" placeholder="Pais" class=""
+                                          value="" />
+                                        <% if (locals.errors && locals.errors.country) { %>
+                                          <div id="countryError" class="error-message">
+                                            <%= errors.country.msg %>
+                                          </div>
+                                          <% } %>
+                                            <div id="countryError" class="error-message"></div>
+                
+                                      </div>
+                                      <div class=""> ZipCode:
+                                        <input type="text" name="zipCode" placeholder="ZipCode" class=""
+                                          value="" />
+                                        <% if (locals.errors && locals.errors.zipCode) { %>
+                                          <div id="zipCodeError" class="error-message">
+                                            <%= errors.zipCode.msg %>
+                                          </div>
+                                          <% } %>
+                                            <div id="zipCodeError" class="error-message"></div>
+                
+                                      </div>
+                                      
+                                    </fieldset>
+                                    <div class="boxButtonEdit">
+                                      <button type="submit" class="admButtons" id="buttonAdmP"> Actualizar Usuario </button>
+                                    </div>
+                              </form>
+
+                              <button class="admButtons" id="volveR"> Volver </button>
+
+                        </div>
                     </div>
-                    <div class="info-container"><i class="fa-solid fa-lock"></i>
-                        <h4> verificado</h4>
+
+                    <div class="links">
+                        <div class="socialsLink">
+                            <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook"></i></a>
+                            <a href="https://api.whatsapp.com/"><i class="fa-brands fa-whatsapp"></i></a>
+                            <a href=""></a>
+                        </div>
                     </div>
-                </div>
-            </div>
-        </div>
-        <br>
-        <br>
-        <br>
 
-        <div class="details">
-            <div class="rating">
-                <h6 class="primary-text"> 86% </h6>
-                <h6 class="secondary-text"> Rating </h6>
-            </div>
-            <div class="activity">
-                <h6 class="primary-text"> 92% </h6>
-                <h6 class="secondary-text"> Activity </h6>
-            </div>
-        </div>
+                </section>
+                <script src="/js/profile.js"></script>
 
-        <div class="aboutMe">
-            <div class="describeMe">
-                <h3> Sobre Mi : </h3>
-                <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus cum nobis culpa delectus,
-                    perspiciatis cupiditate molestias, quasi veniam sit nihil ut odio omnis. Aut accusantium perferendis
-                    consectetur quasi non. Sed! </p>
-            </div>
-        </div>
+            </section>
 
-        <div class="links">
-            <div class="socialsLink">
-                <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
-                <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook"></i></a>
-                <a href="https://api.whatsapp.com/"><i class="fa-brands fa-whatsapp"></i></a>
-                <a href=""></a>
-            </div>
-        </div>
-
-    </div>
-
-
-</div>
-
-<%- include('../partials/footer') %>
+            <%- include('../partials/footer') %>
 
 
 
-</body>
+    </body>

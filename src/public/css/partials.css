@@ -11,6 +11,11 @@
     box-shadow: inset -1px -3px 20px 0px rgba(2, 2, 2, 0.50);
     margin-bottom: 4px;
 
+}
+
+.filtersImagen img{
+    
+        width: 100%;
     
 }
 
@@ -107,7 +112,7 @@ footer{
 
 .detailTittle{
     display: none;
-    color: rgb(188, 188, 188);
+    color: grey;
     margin-bottom: 10px;
 }
 
