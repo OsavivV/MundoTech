@@ -8,6 +8,9 @@
         <%- include('../partials/header') %>
 
             <%- include('../partials/filters') %>
+            <form action="submit" class="searchForm">
+                <input class="searchFormInput" id="buscador" type="text" placeholder="Que estas Buscando ...?">
+            </form>
 
                 <main class="productsContainer">
 
@@ -52,7 +55,7 @@
                 </main>
 
                 <%- include('../partials/footer') %>
-
+                <script src="/js/search.js"></script>
     </body>
 
 </html>
