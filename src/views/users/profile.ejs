@@ -10,7 +10,7 @@
                     <div class="user-profile-container">
 
                         <div class="top-div">
-                            <img id="user-profile-picture" src="/images/logo/back.png" />
+                            <img id="user-profile-picture" src="/images/usersImg/dbprofile.jpg" />
                         </div>
                         <div class="content-div">
                             <div class="name-and-information">
@@ -68,6 +68,20 @@
 
                     </div>
 
+
+                </section>
+
+                <section class="columntwo">
+
+                    <div class="links">
+                        <div class="socialsLink">
+                            <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook"></i></a>
+                            <a href="https://api.whatsapp.com/"><i class="fa-brands fa-whatsapp"></i></a>
+                            <a href=""></a>
+                        </div>
+                    </div>
+                    
                     <div class="personalInfo">
                         <div class="infoProfiledb">
                             <h3> Informacion personal: </h3>
@@ -97,7 +111,7 @@
                         <div class="infoProfiledb-hidden">
                             <form method="POST" action="/users/update/<%=user.id %>?_method=PUT" class="userEdit">
                                 
-                                    <fieldset class="">
+                                    <fieldset class="profileFormss">
                                       <div class=""> Nombres:
                                         <input type="text" name="firstName" placeholder="Nombres" class=""
                                           value="<%= user.firstName%>" /> 
@@ -141,6 +155,7 @@
                         </div>
                     </div>
 
+
                     <div class="billingInfo">
                         <div class="infoBillingDb">
                             <h3> Informacion de facturacion </h3>
@@ -178,7 +193,7 @@
                         <div class="infoBillingDb-hidden">
                             <form method="POST" action="/users/billing/ %>?_method=PUT" class="profileEdit">
                                 
-                                    <fieldset class="">
+                                    <fieldset class="profileFormss">
                                       <div class=""> Numero de celular:
                                         <input type="text" name="phoneNumber" placeholder="Numero Celular" class=""
                                           value="" /> 
@@ -269,16 +284,10 @@
                         </div>
                     </div>
 
-                    <div class="links">
-                        <div class="socialsLink">
-                            <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
-                            <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook"></i></a>
-                            <a href="https://api.whatsapp.com/"><i class="fa-brands fa-whatsapp"></i></a>
-                            <a href=""></a>
-                        </div>
-                    </div>
-
+                    
+                    
                 </section>
+
                 <script src="/js/profile.js"></script>
 
             </section>

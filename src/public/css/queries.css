@@ -231,6 +231,24 @@
         padding: 101px 63px !important;
     }
 
+    .user-profile-container .content-div .profile-stats .info-container {
+        
+        font-size: 23px !important;
+    }
+
+    .details{
+        font-size: 23px;
+    }
+
+
+    .body-wrapper{
+        display: flex;
+          align-items: center;
+      }
+
+    .columnOne, .columntwo{
+width: 50%;
+    }
 
     /* footer /////  */
 
