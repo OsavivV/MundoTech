@@ -34,7 +34,7 @@ const usersRouter = require('./routes/usersRouter');
 const productsRouter = require('./routes/productsRouter');
 
 //Aquí llamo a las rutas de las APIs
-// const apiArtistasRouter = require('./routes/api/artistas');      declaro la constante de las apis y las requiero .
+// const apiUsers = require('./routes/userApiRouter');      
 
 
 app.use('/', indexRouter);
@@ -43,7 +43,7 @@ app.use('/products', productsRouter);  //  Sprint 4 saltar json usar db
 
 
 //Aquí creo la colección de mis recursos de APIs
-// app.use('/api/artistas',apiArtistasRouter);              definir rutas de las apis 
+// app.use('/api', userApiRouter);             
 
 
 
